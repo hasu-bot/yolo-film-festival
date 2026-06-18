@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================
+       SEO / META  (TODO: 仮の値。公開前に実テキスト・URL・画像へ差し替え)
+       ============================================================ -->
+  <title>あなたのまちの映画祭 ｜ Your Town Film Festival</title>
+  <meta name="description" content="九州の短編映画が集う、小さな物語たちの映画祭。テーマは「地元」。熊本・電気館（Denkikan）にて開催。上映後の監督トーク、実写部門、AI部門を予定。（※内容は仮・準備中）">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/"><!-- TODO: 本番URLに差し替え -->
+
+  <!-- Open Graph (TODO: og:url と og:image を本番値・実画像に差し替え) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="あなたのまちの映画祭">
+  <meta property="og:title" content="あなたのまちの映画祭 ｜ Your Town Film Festival">
+  <meta property="og:description" content="九州の短編映画が集う、小さな物語たちの映画祭。テーマは「地元」。熊本・電気館にて開催。（※内容は仮・準備中）">
+  <meta property="og:url" content="https://example.com/"><!-- TODO -->
+  <meta property="og:image" content="https://example.com/assets/ogp.jpg"><!-- TODO: 1200x630 のOGP画像に差し替え -->
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="あなたのまちの映画祭 ｜ Your Town Film Festival">
+  <meta name="twitter:description" content="九州の短編映画が集う、小さな物語たちの映画祭。テーマは「地元」。">
+  <meta name="twitter:image" content="https://example.com/assets/ogp.jpg"><!-- TODO -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ===== LEFT FILM RAIL ===== -->
+  <div class="rail">
+    <div class="rail__sprockets">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="rail__mid">
+      <div class="rail__vtext">YOUR TOWN FILM FESTIVAL</div>
+    </div>
+    <div class="rail__bottom">
+      <div class="rail__scroll">Scroll</div>
+      <div class="scrollline"></div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="siteHeader" class="header">
+    <a href="#" class="logo" data-logo>
+      <span class="logo__ja">あなたのまちの映画祭</span>
+      <span class="logo__en">YOUR TOWN FILM FESTIVAL</span>
+    </a>
+    <nav class="nav">
+      <a href="#" class="navlink">TOP</a>
+      <a href="#concept" class="navlink">ABOUT</a>
+      <a href="#program" class="navlink">PROGRAM</a>
+      <a href="#" class="navlink">SCHEDULE</a>
+      <a href="#" class="navlink">ACCESS</a>
+      <a href="#" class="navlink">NEWS</a>
+      <a href="#" class="navlink">ARCHIVE</a>
+      <a href="#submit" class="btn btn--red btn--pill btn--sm">チケット情報</a>
+    </nav>
+    <button class="burger" data-burger aria-label="メニューを開く">
+      <span><span></span><span></span><span></span></span>
+    </button>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div id="mNav" class="mnav">
+    <a href="#" class="mnav__link">TOP</a>
+    <a href="#concept" class="mnav__link">ABOUT</a>
+    <a href="#program" class="mnav__link">PROGRAM</a>
+    <a href="#" class="mnav__link">SCHEDULE</a>
+    <a href="#" class="mnav__link">ACCESS</a>
+    <a href="#" class="mnav__link">ARCHIVE</a>
+    <a href="#submit" class="btn btn--red btn--pill btn--mnav">チケット情報</a>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <div class="site-main">
+
+    <!-- HERO -->
+    <section class="hero grain">
+      <!-- Constructed background (no photo): gradients + projector glow + grain -->
+      <div class="hero__bg kb">
+        <div class="hero__glow flick"></div>
+        <div class="hero__scanlines"></div>
+        <div class="hero__sprocket hero__sprocket--left"></div>
+        <div class="hero__sprocket hero__sprocket--right"></div>
+        <div class="hero__vignette"></div>
+        <div class="hero__darken"></div>
+      </div>
+
+      <div class="hero__in">
+        <div class="eyebrow">
+          <span class="eyebrow__rule"></span>
+          <span class="eyebrow__label eyebrow__label--hero">SHORT FILM FESTIVAL · 第2回 2026</span>
+        </div>
+        <h1 class="h-hero">ひとつの出会いが、<br>誰かの心を動かす。</h1>
+        <p class="hero__lead">あなたのまちで生まれた物語を、あなたのまちの映画館で。<br>九州の短編映画が集う、小さな物語たちの映画祭。</p>
+        <div></div>
+      </div>
+
+      <!-- hero bottom: ticket CTA + date card -->
+      <div class="hero__bottom">
+        <div class="hero__bottom-left">
+          <div class="hero__tagline">A festival of small stories, in your town.</div>
+          <a href="#submit" class="btn btn--red btn--pill btn--md hero__cta">チケット情報はこちら →</a>
+        </div>
+
+        <!-- ticket-style date card -->
+        <div class="ticketcard">
+          <div class="ticketcard__body">
+            <div class="ticketcard__edition">2ND EDITION · ADMIT ONE</div>
+            <div class="ticketcard__year">2026</div>
+            <div class="ticketcard__date">日程は近日発表 <em>Coming Soon</em></div>
+            <div class="ticketcard__venue">会場 Denkikan（熊本）</div>
+          </div>
+          <div class="ticketcard__stub"><span>TICKET</span></div>
+          <div class="ticketcard__notch ticketcard__notch--top"></div>
+          <div class="ticketcard__notch ticketcard__notch--bottom"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWS TICKER ===== -->
+    <div class="ticker">
+      <div class="ticker__cap ticker__cap--left">
+        <span class="ticker__dot"></span>
+        <span class="ticker__label">NEWS</span>
+      </div>
+      <div class="ticker__mask">
+        <!-- items duplicated ×2 for a seamless -50% marquee loop -->
+        <div class="ticker__track">
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.06.18</span><span class="ticker__head">公式サイトを公開しました。</span><span class="ticker__sep">／</span></a>
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.06.01</span><span class="ticker__head">第2回「あなたのまちの映画祭」の開催が決定しました。</span><span class="ticker__sep">／</span></a>
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.05.20</span><span class="ticker__head">テーマ「地元」の出品作品を公募開始。</span><span class="ticker__sep">／</span></a>
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.06.18</span><span class="ticker__head">公式サイトを公開しました。</span><span class="ticker__sep">／</span></a>
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.06.01</span><span class="ticker__head">第2回「あなたのまちの映画祭」の開催が決定しました。</span><span class="ticker__sep">／</span></a>
+          <a href="#" class="ticker__item"><span class="ticker__date">2026.05.20</span><span class="ticker__head">テーマ「地元」の出品作品を公募開始。</span><span class="ticker__sep">／</span></a>
+        </div>
+      </div>
+      <a href="#" class="ticker__cap ticker__cap--right">一覧 →</a>
+    </div>
+
+    <!-- ===== CONCEPT ===== -->
+    <section id="concept" class="concept grain">
+      <div class="concept__grid">
+
+        <!-- image side (placeholder photo — replace before launch) -->
+        <div class="concept__img" data-reveal>
+          <img class="kb" src="assets/still-02.jpg" alt="">
+          <div class="concept__img-grad1"></div>
+          <div class="concept__img-grad2"></div>
+          <div class="tick-corner tick-corner--tl"></div>
+          <div class="tick-corner tick-corner--bl"></div>
+          <div class="concept__caption">a town at night — your town</div>
+          <div class="concept__note">※ 写真は仮 / 差し替え前提</div>
+        </div>
+
+        <!-- text side -->
+        <div class="concept__text" data-reveal data-delay="120ms">
+          <div class="eyebrow-num">
+            <span class="eyebrow-num__n">01</span>
+            <span class="eyebrow__label">CONCEPT</span>
+          </div>
+          <h2 class="h-concept">映画は、<br>まちの記憶をつなぐ。</h2>
+          <div class="concept__rule"></div>
+          <p class="concept__body">何気ない日常、忘れられない風景、まちでの小さな出会い。<br>このまちには、語られるのを待っている物語がいくつもある。<br><br>「地元」をテーマに、九州の作り手が撮った短編映画を、地元の映画館に集める。スクリーンに映るのは、どこか懐かしい——あなたのまちの記憶。観たあとには、いつもの通りが少しだけ違って見える。</p>
+          <div class="concept__keywords">
+            <div><div class="kw__term">地元</div><div class="kw__sub">YOUR TOWN</div></div>
+            <div class="kw__div"></div>
+            <div><div class="kw__term">映画</div><div class="kw__sub">SHORT FILM</div></div>
+            <div class="kw__div"></div>
+            <div><div class="kw__term">記憶</div><div class="kw__sub">MEMORY</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM PICK UP ===== -->
+    <section id="program" class="program">
+      <div class="program__head" data-reveal>
+        <div>
+          <div class="eyebrow-num">
+            <span class="eyebrow-num__n">02</span>
+            <span class="eyebrow__label">PROGRAM PICK UP</span>
+          </div>
+          <h2 class="h-section">最新回の上映作品</h2>
+        </div>
+        <div class="program__actions">
+          <a href="#" class="navlink">すべて見る →</a>
+          <div class="program__arrows">
+            <button class="arrbtn" data-scroll="prev" aria-label="前へ">←</button>
+            <button class="arrbtn" data-scroll="next" aria-label="次へ">→</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 作品データはダミー。監督名は確定前のため仮テキスト「監督名（仮）」で表示。 -->
+      <div data-reveal data-delay="80ms">
+        <div id="pgmScroll" class="hscroll">
+          <a href="#" class="filmcard">
+            <div class="filmcard__media">
+              <img class="fc-img" src="assets/still-03.jpg" alt="">
+              <div class="fc-grad"></div>
+              <div class="fc-play"><span></span></div>
+              <span class="fc-badge fc-badge--live">実写部門</span>
+            </div>
+            <div class="filmcard__body">
+              <div class="filmcard__title">海辺の記憶</div>
+              <div class="filmcard__meta">監督名（仮） · 福岡 · 15min</div>
+            </div>
+          </a>
+          <a href="#" class="filmcard">
+            <div class="filmcard__media">
+              <img class="fc-img" src="assets/still-01.jpg" alt="">
+              <div class="fc-grad"></div>
+              <div class="fc-play"><span></span></div>
+              <span class="fc-badge fc-badge--live">実写部門</span>
+            </div>
+            <div class="filmcard__body">
+              <div class="filmcard__title">あの日の帰り道</div>
+              <div class="filmcard__meta">監督名（仮） · 熊本 · 18min</div>
+            </div>
+          </a>
+          <a href="#" class="filmcard">
+            <div class="filmcard__media">
+              <img class="fc-img" src="assets/still-05.jpg" alt="">
+              <div class="fc-grad"></div>
+              <div class="fc-play"><span></span></div>
+              <span class="fc-badge fc-badge--ai">AI部門</span>
+            </div>
+            <div class="filmcard__body">
+              <div class="filmcard__title">夜をつなぐ</div>
+              <div class="filmcard__meta">監督名（仮） · 長崎 · 22min</div>
+            </div>
+          </a>
+          <a href="#" class="filmcard">
+            <div class="filmcard__media">
+              <img class="fc-img" src="assets/still-04.jpg" alt="">
+              <div class="fc-grad"></div>
+              <div class="fc-play"><span></span></div>
+              <span class="fc-badge fc-badge--live">実写部門</span>
+            </div>
+            <div class="filmcard__body">
+              <div class="filmcard__title">渡し場の朝</div>
+              <div class="filmcard__meta">監督名（仮） · 天草 · 14min</div>
+            </div>
+          </a>
+          <a href="#" class="filmcard">
+            <div class="filmcard__media">
+              <img class="fc-img" src="assets/still-06.jpg" alt="">
+              <div class="fc-grad"></div>
+              <div class="fc-play"><span></span></div>
+              <span class="fc-badge fc-badge--ai">AI部門</span>
+            </div>
+            <div class="filmcard__body">
+              <div class="filmcard__title">商店街のラジオ</div>
+              <div class="filmcard__meta">監督名（仮） · 熊本 · 12min</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="program__note">※ 作品情報・写真・監督名はダミーです（差し替え前提）</div>
+    </section>
+
+    <!-- ===== FESTIVAL FEATURES ===== -->
+    <section class="features">
+      <div class="features__head" data-reveal>
+        <div class="eyebrow-num eyebrow-num--center">
+          <span class="eyebrow-num__n">03</span>
+          <span class="eyebrow__label">FESTIVAL FEATURES</span>
+        </div>
+        <h2 class="h-section">この映画祭の、4つの特徴</h2>
+      </div>
+
+      <div class="featgrid" data-reveal data-delay="80ms">
+        <div class="featitem">
+          <div class="featic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 2 9l10 5 8-4v6"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></div>
+          <div class="featitem__title">九州の監督</div>
+          <div class="featitem__body">福岡・熊本・長崎ほか、九州を拠点に活動する作り手の短編が集まります。</div>
+        </div>
+        <div class="featitem">
+          <div class="featic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></svg></div>
+          <div class="featitem__title">監督トーク</div>
+          <div class="featitem__body">上映後には監督が登壇。作品の背景や、まちへの想いを語ります。</div>
+        </div>
+        <div class="featitem">
+          <div class="featic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12" rx="1"/><path d="M16 10l6-3v10l-6-3"/></svg></div>
+          <div class="featitem__title">実写 / AI部門</div>
+          <div class="featitem__body">従来の実写部門に加え、新しい表現に挑むAI部門を構想しています。</div>
+        </div>
+        <div class="featitem">
+          <div class="featic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v13M7 8l5-5 5 5M5 21h14"/></svg></div>
+          <div class="featitem__title">公募作品枠</div>
+          <div class="featitem__body">テーマ「地元」で広く作品を公募。あなたのまちの物語をお待ちしています。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUBMIT CTA (kinari paper) ===== -->
+    <section id="submit" class="submit">
+      <div class="paper-card grain" data-reveal>
+        <div class="paper-card__bar"></div>
+        <div class="paper-tick paper-tick--tl"></div>
+        <div class="paper-tick paper-tick--br"></div>
+
+        <div class="submit__inner">
+          <div class="submit__lead">
+            <div class="eyebrow">
+              <span class="eyebrow__rule"></span>
+              <span class="eyebrow__label eyebrow__label--red">CALL FOR ENTRIES</span>
+            </div>
+            <h2 class="h-cta">小さな物語が、<br>まちをつなぐ。</h2>
+            <p class="submit__body">テーマは「地元」——あなたのまち。<br>あなたが撮った短編映画を、あなたのまちのスクリーンへ。九州の作り手からの応募をお待ちしています。</p>
+          </div>
+
+          <div class="subcard-wrap">
+            <div class="subcard">
+              <div class="subcard__label">SUBMISSION</div>
+              <div class="subcard__title">作品を応募する</div>
+              <div class="subcard__list">
+                <div class="subcard__row subcard__row--div"><span>テーマ</span><strong>地元</strong></div>
+                <div class="subcard__row subcard__row--div"><span>部門</span><strong>実写 / AI</strong></div>
+                <div class="subcard__row"><span>締切</span><strong>近日発表</strong></div>
+              </div>
+              <a href="#" class="btn btn--red btn--rect btn--block subcard__cta">応募する →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-ja">あなたのまちの映画祭</div>
+          <div class="footer__brand-en">YOUR TOWN FILM FESTIVAL</div>
+          <p class="footer__blurb">ひとつの出会いが、誰かの心を動かす。小さな物語たちの映画祭。<br>主催 YOLO（熊本のクリエイティブコミュニティ）<br>会場 Denkikan ／ 熊本市中央区新市街8-2</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <a href="#concept" class="navlink">映画祭について</a>
+            <a href="#program" class="navlink">上映プログラム</a>
+            <a href="#" class="navlink">タイムテーブル</a>
+            <a href="#" class="navlink">アクセス</a>
+          </div>
+          <div class="footer__col">
+            <a href="#" class="navlink">ニュース</a>
+            <a href="#" class="navlink">過去の開催</a>
+            <a href="#submit" class="navlink">作品応募</a>
+            <a href="#" class="navlink">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 YOLO — Your Town Film Festival</span>
+        <span class="footer__place">熊本 · KUMAMOTO</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
