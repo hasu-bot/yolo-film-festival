@@ -58,14 +58,21 @@
   if (logoLink) logoLink.addEventListener('click', closeMenu);
 
   /* ---- Program horizontal scroller ----
-     342 = card width 320 + gap 22. Native scroll + snap. */
+     Step = one card width + gap, measured from the DOM so it stays
+     correct as the editorial card width is fluid (min(82vw,420px)). */
   var scroller = document.getElementById('pgmScroll');
-  var STEP = 342;
+  function stepSize() {
+    if (!scroller) return 440;
+    var card = scroller.querySelector('.filmcard');
+    if (!card) return 440;
+    var gap = parseFloat(getComputedStyle(scroller).columnGap) || 28;
+    return card.getBoundingClientRect().width + gap;
+  }
   document.querySelectorAll('[data-scroll]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (!scroller) return;
       var dir = btn.getAttribute('data-scroll') === 'prev' ? -1 : 1;
-      scroller.scrollBy({ left: dir * STEP, behavior: 'smooth' });
+      scroller.scrollBy({ left: dir * stepSize(), behavior: 'smooth' });
     });
   });
 })();

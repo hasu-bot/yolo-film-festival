@@ -1,71 +1,64 @@
 /* ============================================================
    tokens.css — あなたのまちの映画祭 / Your Town Film Festival
-   Design tokens, reset, and type primitives.
-   Shared across all pages (top page = Phase-1; about/program/etc. to come).
+   EDITORIAL re-skin (v2): photo-forward, magazine/art-book.
+   Light gallery base + generous whitespace + one bold accent,
+   with dark "spread" bands for contrast. Photography is the star.
 
-   Palette note: this is a project-specific dark-cinema scheme
-   (アイボリー＋墨＋朱赤). It is NOT the LAST CALL sea-blue palette —
-   reuse only the LAST CALL type stack, not its colors.
+   Design tokens, reset, type primitives. Shared across all pages.
    ============================================================ */
 
 :root {
-  /* Backgrounds (dark) */
-  --bg:   #15110D;
-  --bg2:  #1E1813;
-  --bg3:  #2A2018;
+  /* Light editorial base (paper / gallery) */
+  --paper:   #F6F3EC;  /* page background (warm white) */
+  --paper-2: #FFFFFF;  /* cards / raised surfaces */
+  --paper-3: #EDE8DD;  /* subtle fill */
 
-  /* Lines (dark) */
-  --line-d: #3A2F25;
+  /* Ink on light */
+  --ink:       #17140E; /* near-black, warm */
+  --ink-2:     #5B5446; /* body / muted */
+  --ink-3:     #8C8473; /* captions */
+  --ink-faint: #B3AB9B; /* hairline labels */
 
-  /* Text on dark */
-  --ink:       #F3ECDD;
-  --ink-mute:  #B8A98F;
-  --ink-faint: #8A7B66;
+  /* Hairlines */
+  --line:   #E1DBCE;
+  --line-2: #CEC6B5;
 
-  /* Paper (kinari / off-white) */
-  --paper:      #E7DCC3;
-  --paper2:     #F0E7D4;
-  --paper-line: #CFC2A4;
-  --paper-div:  #E3D8BE; /* hairline divider on paper */
+  /* Dark "spread" band (full-bleed contrast sections) */
+  --dark:       #141009;
+  --dark-2:     #1D180F;
+  --dark-ink:   #F4EFE3;
+  --dark-ink-2: #B5AC98;
+  --dark-faint: #857B68;
+  --dark-line:  #342D20;
 
-  /* Text on paper */
-  --paper-ink:  #2A2017;
-  --paper-ink2: #5E513E;
+  /* Accent (editorial vermilion) */
+  --accent:   #D63A24;
+  --accent-d: #B12C17;
 
-  /* Accent (vermilion / 朱赤) + gold */
-  --red:   #BE4230;
-  --red-d: #9E3221;
-  --gold:  #D7B98C;
+  /* Type stacks (unchanged loaded fonts) */
+  --font-mincho: 'Shippori Mincho B1', serif;   /* display / headlines */
+  --font-serif:  'Noto Serif JP', serif;        /* body */
+  --font-sans:   'Noto Sans JP', sans-serif;    /* labels / nav / UI */
+  --font-latin:  'Cormorant Garamond', serif;   /* big numerals / dates */
 
-  /* Type stacks */
-  --font-mincho: 'Shippori Mincho B1', serif;       /* display / headings / titles */
-  --font-serif:  'Noto Serif JP', serif;            /* body */
-  --font-sans:   'Noto Sans JP', sans-serif;        /* UI / labels / nav / buttons */
-  --font-latin:  'Cormorant Garamond', serif;       /* latin display / dates (often italic) */
+  /* Layout — generous editorial margins */
+  --gutter: clamp(22px, 6vw, 96px);
+  --maxw: 1360px;
+  --maxw-text: 620px;
 
-  /* Layout */
-  --gutter: 56px;        /* desktop section padding L/R */
-  --gutter-mobile: 24px; /* ≤1024px */
-  --rail-w: 46px;
-  --maxw: 1200px;
-  --maxw-feature: 1100px;
-  --maxw-cta: 1080px;
-
-  /* Radii */
-  --r-card: 8px;
-  --r-badge: 3px;
+  /* Radii — editorial = mostly sharp, minimal rounding */
+  --r-sm: 3px;
   --r-pill: 999px;
-  --r-rect: 6px;
-
-  /* Shadows */
-  --sh-card:    0 14px 34px rgba(0,0,0,.3);
-  --sh-paper:   0 26px 60px rgba(0,0,0,.4);
-  --sh-subcard: 0 10px 26px rgba(40,24,12,.12);
-  --sh-header:  0 1px 0 rgba(243,236,221,.07);
 
   /* Motion */
-  --ease-out: cubic-bezier(.16,1,.3,1);
+  --ease: cubic-bezier(.16, 1, .3, 1);
   --t-reveal: 1100ms;
+
+  /* Fluid type scale */
+  --fs-hero:    clamp(38px, 4.6vw, 56px);
+  --fs-display: clamp(34px, 5.2vw, 66px);
+  --fs-h2:      clamp(28px, 3.6vw, 46px);
+  --fs-num:     clamp(48px, 7vw, 96px);
 }
 
 /* ---- Reset / base ---- */
@@ -74,26 +67,34 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  background: var(--bg);
+  background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   overflow-x: hidden;
 }
 a { text-decoration: none; color: inherit; }
-img { -webkit-user-drag: none; max-width: 100%; }
+img { -webkit-user-drag: none; display: block; max-width: 100%; }
 
-/* Respect reduced motion globally for in-page anchor jumps too */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
 
-/* ---- Grain overlay (shared texture primitive) ---- */
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: .10;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+/* ---- Shared focus ring (accessibility) ---- */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
+
+/* ---- Editorial primitives ---- */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.kicker-num {
+  font-family: var(--font-latin); font-style: italic;
+  font-size: var(--fs-num); line-height: .8; color: var(--accent);
+}
+.rule { height: 1px; background: var(--line-2); border: 0; }
