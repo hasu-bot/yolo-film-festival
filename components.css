@@ -16,6 +16,34 @@ body{padding-left:44px}
 .hero__sprockets::before{left:0}
 .hero__sprockets::after{right:0}
 .still-card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(230,192,137,.45);z-index:2;pointer-events:none}
+/* news ticker (marquee) */
+.news-ticker{position:relative;z-index:3;display:flex;align-items:center;height:50px;background:var(--accent);color:#fff;overflow:hidden}
+.news-ticker__label{flex:none;display:flex;align-items:center;gap:9px;height:100%;padding:0 22px;background:rgba(0,0,0,.16);border-right:1px solid rgba(255,255,255,.18);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.22em}
+.news-ticker__dot{width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.25)}
+.news-ticker__mask{flex:1;overflow:hidden}
+.news-ticker__track{display:flex;width:max-content;animation:ticker 40s linear infinite}
+.news-ticker__track:hover{animation-play-state:paused}
+.news-ticker__track a{display:inline-flex;align-items:center;gap:12px;padding:0 26px;color:#fff;white-space:nowrap}
+.news-ticker__track time{font-family:var(--roman);font-style:italic;font-size:15px;opacity:.85}
+.news-ticker__track span{font-family:var(--serif);font-size:13.5px;letter-spacing:.04em}
+.news-ticker__track i{opacity:.4;margin-left:14px}
+.news-ticker__more{flex:none;display:flex;align-items:center;height:100%;padding:0 22px;background:rgba(0,0,0,.16);border-left:1px solid rgba(255,255,255,.18);font-family:var(--sans);font-size:11px;letter-spacing:.12em;white-space:nowrap}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.news-ticker__track{animation:none}.news-ticker__mask{overflow-x:auto}}
+/* ADMIT ONE ticket (entries) */
+.ticket{position:relative;background:rgba(247,240,223,.96);color:var(--ink)}
+.ticket__head{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 30px;background:var(--dark-2);color:var(--cream)}
+.ticket__edition{font-family:var(--roman);font-style:italic;font-size:18px;letter-spacing:.04em;color:var(--dark-gold)}
+.ticket__admit{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.26em}
+.ticket::before,.ticket::after{content:"";position:absolute;top:45px;width:18px;height:18px;border-radius:50%;background:var(--accent);z-index:1}
+.ticket::before{left:-9px}
+.ticket::after{right:-9px}
+.ticket__body{position:relative;padding:26px 30px 30px}
+.ticket__body::before{content:"";position:absolute;top:0;left:12px;right:12px;border-top:2px dashed rgba(44,32,20,.2)}
+.ticket__label{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.ticket dl{margin:0 0 22px}
+.ticket dl>div{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:13px 0}
+.ticket dl>div:last-child{border-bottom:1px solid var(--line)}
 [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}[data-reveal].visible{opacity:1;transform:none}@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none}}
 @media (max-width:900px){.desktop-nav{display:none}.menu-button{display:block}.site-header{height:68px}.news-strip__inner{grid-template-columns:1fr;gap:0;padding-block:20px}.news-strip .section-kicker{margin:0 0 10px}.news-item,.news-more{border-left:0;border-top:1px solid var(--line);padding:12px 0}.section-grid,.entry-card,.site-footer{grid-template-columns:1fr}.concept-visual{min-height:auto}.still-card--large{aspect-ratio:1/1}.section-head{display:block}.program-actions{justify-content:space-between;margin-top:20px}.hero__meta{display:grid;gap:8px}.hero__meta span+span{border-left:0;padding-left:0}.hero__eyebrow{letter-spacing:.18em}.hero__eyebrow span{width:22px}.feature-list article{grid-template-columns:70px 1fr}.footer-bottom{display:grid;gap:10px}.keyword-row{grid-template-columns:1fr}.keyword-row span{border-left:0;border-top:1px solid var(--line)}.keyword-row span:first-child{border-top:0}}
 @media (max-width:560px){body{font-size:14px}.hero{padding-inline:26px}.section{padding-inline:26px}.program-rail{grid-auto-columns:82vw}.feature-list article{grid-template-columns:1fr;gap:10px}.feature-list span{font-size:42px}.entry-card{padding:34px 26px}.site-footer{padding-inline:26px}.brand-ja{font-size:15px}.brand-en{font-size:11px}}

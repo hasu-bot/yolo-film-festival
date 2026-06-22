@@ -72,14 +72,19 @@
       <a class="scroll-cue" href="#news">Scroll</a>
     </section>
 
-    <section class="news-strip" id="news" aria-label="最新のお知らせ">
-      <div class="news-strip__inner">
-        <p class="section-kicker">Latest</p>
-        <a href="news.html" class="news-item"><time>2026.06.18</time><span>公式サイトを公開しました。</span></a>
-        <a href="news.html" class="news-item"><time>2026.06.01</time><span>第2回の開催が決定しました。</span></a>
-        <a href="news.html" class="news-item"><time>2026.05.20</time><span>テーマ「地元」の作品を公募開始。</span></a>
-        <a href="news.html" class="news-more">News 一覧 →</a>
+    <section class="news-ticker" id="news" aria-label="最新のお知らせ">
+      <div class="news-ticker__label"><span class="news-ticker__dot" aria-hidden="true"></span>NEWS</div>
+      <div class="news-ticker__mask">
+        <div class="news-ticker__track">
+          <a href="news.html"><time>2026.06.18</time><span>公式サイトを公開しました。</span><i aria-hidden="true">／</i></a>
+          <a href="news.html"><time>2026.06.01</time><span>第2回の開催が決定しました。</span><i aria-hidden="true">／</i></a>
+          <a href="news.html"><time>2026.05.20</time><span>テーマ「地元」の作品を公募開始。</span><i aria-hidden="true">／</i></a>
+          <a href="news.html" aria-hidden="true"><time>2026.06.18</time><span>公式サイトを公開しました。</span><i>／</i></a>
+          <a href="news.html" aria-hidden="true"><time>2026.06.01</time><span>第2回の開催が決定しました。</span><i>／</i></a>
+          <a href="news.html" aria-hidden="true"><time>2026.05.20</time><span>テーマ「地元」の作品を公募開始。</span><i>／</i></a>
+        </div>
       </div>
+      <a href="news.html" class="news-ticker__more">一覧 →</a>
     </section>
 
     <section class="section concept" id="concept">
@@ -165,14 +170,20 @@
           <h2>小さな物語が、<br>まちをつなぐ。</h2>
           <p>テーマは「地元」——あなたのまち。あなたが撮った短編映画を、あなたのまちのスクリーンへ。九州の作り手からの応募をお待ちしています。</p>
         </div>
-        <div class="submission-card" aria-label="応募概要">
-          <p>Submission</p>
-          <dl>
-            <div><dt>テーマ</dt><dd>地元</dd></div>
-            <div><dt>部門</dt><dd>実写 / AI</dd></div>
-            <div><dt>締切</dt><dd>近日発表</dd></div>
-          </dl>
-          <a class="button" href="mailto:info@example.com?subject=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%BE%E3%81%A1%E3%81%AE%E6%98%A0%E7%94%BB%E7%A5%AD%20%E5%BF%9C%E5%8B%9F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">応募する →</a>
+        <div class="ticket" aria-label="応募概要">
+          <div class="ticket__head">
+            <span class="ticket__edition">2nd Edition</span>
+            <span class="ticket__admit">ADMIT ONE</span>
+          </div>
+          <div class="ticket__body">
+            <p class="ticket__label">Submission</p>
+            <dl>
+              <div><dt>テーマ</dt><dd>地元</dd></div>
+              <div><dt>部門</dt><dd>実写 / AI</dd></div>
+              <div><dt>締切</dt><dd>近日発表</dd></div>
+            </dl>
+            <a class="button" href="mailto:info@example.com?subject=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%BE%E3%81%A1%E3%81%AE%E6%98%A0%E7%94%BB%E7%A5%AD%20%E5%BF%9C%E5%8B%9F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">応募する →</a>
+          </div>
         </div>
       </div>
     </section>
