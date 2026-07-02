@@ -6,6 +6,9 @@
 **デザイン: 「上映前の、あの一瞬」＝暖色の光・感動トーン**（明朝・小さめ・余白・生成り＋琥珀＋朱赤）。
 意図の詳細は `docs/DESIGN_BRIEF.md` を参照。
 
+**運営設計（収益・スポンサー・審査・応募・年間スケジュール）は [`docs/FESTIVAL-MASTER-PLAN.md`](./docs/FESTIVAL-MASTER-PLAN.md)** を参照。
+Creative YOLO 全体の計画は yolo-members リポジトリの `docs/creative-yolo/` にある。
+
 ## 構成（複数ページ）
 
 ```
