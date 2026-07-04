@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品応募 — あなたのまちの映画祭</title>
+  <meta name="description" content="「あなたのまちの映画祭」第2回 作品募集。テーマは「地元」。九州ゆかりの短編を実写・AI部門で公募します。応募無料・締切2026年9月30日・全応募者に審査講評をお返しします。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="作品応募 — あなたのまちの映画祭" />
+  <meta property="og:description" content="テーマは「地元」。九州の短編を公募します。応募無料・締切2026年9月30日・全応募者に講評をお返しします。熊本・Denkikanにて上映。" />
+  <meta property="og:url" content="https://hasu-bot.github.io/yolo-film-festival/entry.html" />
+  <meta property="og:image" content="https://hasu-bot.github.io/yolo-film-festival/assets/hero-wide.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C0432C'/%3E%3Cpath d='M25 19v26l22-13z' fill='%23F7F0DF'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* ── 募集要項テーブル ── */
+    .spec-table {
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .spec-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .spec-key {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 18px 16px 18px 0;
+      color: var(--ink);
+    }
+    .spec-val {
+      font-size: 14px;
+      padding: 18px 0;
+      color: var(--ink-mid);
+      line-height: 1.9;
+    }
+    .spec-val strong { color: var(--red); }
+    @media (max-width: 600px) {
+      .spec-row { grid-template-columns: 1fr; }
+      .spec-key { padding-bottom: 2px; }
+      .spec-val { padding-top: 4px; }
+    }
+
+    /* ── 部門カード ── */
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .dept-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px 24px;
+      position: relative;
+    }
+    .dept-tag {
+      display: inline-block;
+      font-family: var(--label);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      background: var(--red);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .dept-tag.ai { background: var(--navy); }
+    .dept-card h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .dept-card p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.9; }
+
+    /* ── 応募ステップ ── */
+    .flow {
+      margin-top: 36px;
+      counter-reset: flow;
+    }
+    .flow-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .flow-num {
+      counter-increment: flow;
+      font-family: var(--label);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--red);
+      opacity: 0.7;
+      flex-shrink: 0;
+      width: 40px;
+      line-height: 1.2;
+    }
+    .flow-num::before { content: counter(flow, decimal-leading-zero); }
+    .flow-body h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .flow-body p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.85; }
+
+    /* ── 要件チェックリスト ── */
+    .req-list { margin-top: 28px; }
+    .req-list li {
+      position: relative;
+      padding: 10px 0 10px 30px;
+      font-size: 14px;
+      color: var(--ink-mid);
+      border-bottom: 1px dashed var(--border);
+      line-height: 1.8;
+    }
+    .req-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* ── FAQ ── */
+    .faq { margin-top: 32px; }
+    .faq details {
+      border-bottom: 1px solid var(--border);
+      padding: 4px 0;
+    }
+    .faq summary {
+      cursor: pointer;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 16px 24px 16px 0;
+      position: relative;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 14px;
+      font-size: 20px;
+      color: var(--red);
+      transition: transform 0.2s;
+    }
+    .faq details[open] summary::after { content: '−'; }
+    .faq p {
+      font-size: 13.5px;
+      color: var(--ink-mid);
+      line-height: 1.9;
+      padding: 0 0 18px;
+    }
+
+    /* ── 応募CTA帯 ── */
+    .entry-cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 56px 20px;
+    }
+    .entry-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .entry-cta p {
+      margin-top: 14px;
+      font-size: 14px;
+      opacity: 0.8;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 2;
+    }
+    .entry-cta .btn {
+      margin-top: 28px;
+      padding: 16px 44px;
+      font-size: 15px;
+    }
+    .entry-cta .cta-note {
+      margin-top: 16px;
+      font-size: 12px;
+      opacity: 0.55;
+    }
+    .callout {
+      background: var(--ivory-dark);
+      border-left: 3px solid var(--red);
+      padding: 18px 20px;
+      margin-top: 28px;
+      font-size: 13.5px;
+      color: var(--ink-mid);
+      line-height: 1.9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="film-strip">
+  <div class="perforations">
+    <div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div>
+  </div>
+  <div class="film-strip-text">YOLO FILM FESTIVAL &nbsp;•&nbsp; CALL FOR ENTRIES &nbsp;•&nbsp; 2026</div>
+  <div class="perforations" style="margin-left:auto">
+    <div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div><div class="perf-hole"></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-main">あなたのまちの映画祭</span>
+      <span class="logo-sub">YOLO FILM FESTIVAL</span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="about.html">映画祭について</a>
+      <a href="program.html">上映プログラム</a>
+      <a href="schedule.html">タイムテーブル</a>
+      <a href="access.html">アクセス</a>
+      <a href="news.html">ニュース</a>
+      <a href="entry.html" class="nav-ticket">作品応募</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-label">Call for Entries</div>
+  <h1>作品を、募集しています</h1>
+  <p>テーマは「地元」。あなたのまちで生まれた物語を、熊本・Denkikanのスクリーンへ。</p>
+</div>
+
+<!-- 募集概要 -->
+<section>
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">Overview</span>
+    <h2 class="section-title">募集概要</h2>
+    <p class="section-lead">第2回「あなたのまちの映画祭」の上映作品を公募します。九州にゆかりのある作り手による短編映画をお待ちしています。</p>
+
+    <div class="spec-table">
+      <div class="spec-row"><div class="spec-key">テーマ</div><div class="spec-val"><strong>地元</strong>（あなたのまち）</div></div>
+      <div class="spec-row"><div class="spec-key">応募資格</div><div class="spec-val">九州在住・九州出身、または九州で撮影した作品の作り手（個人・チーム不問／プロ・アマ不問）</div></div>
+      <div class="spec-row"><div class="spec-key">部門</div><div class="spec-val">実写部門 ／ AI部門（下記）</div></div>
+      <div class="spec-row"><div class="spec-key">作品の尺</div><div class="spec-val">本編 <strong>5〜25分</strong>（予告・クレジットを含む）</div></div>
+      <div class="spec-row"><div class="spec-key">完成時期</div><div class="spec-val">2025年10月以降に完成した作品（目安）</div></div>
+      <div class="spec-row"><div class="spec-key">応募料</div><div class="spec-val"><strong>無料</strong></div></div>
+      <div class="spec-row"><div class="spec-key">応募締切</div><div class="spec-val"><strong>2026年9月30日（火）23:59</strong></div></div>
+      <div class="spec-row"><div class="spec-key">結果通知</div><div class="spec-val">2026年10月中（<strong>応募者全員に審査講評をお返しします</strong>）</div></div>
+      <div class="spec-row"><div class="spec-key">上映</div><div class="spec-val">2026年12月・Denkikan（熊本市中央区新市街）</div></div>
+    </div>
+
+    <div class="callout">
+      「うまく撮れているか」より、「あなたのまちの物語であるか」を大切にします。はじめての一本でも、ぜひ応募してください。落選の場合も、審査員からの講評を必ずお送りします。
+    </div>
+  </div>
+</section>
+
+<div class="section-inner" style="padding: 0 20px;">
+  <div class="ticket-divider"><div class="ticket-divider-circle"></div></div>
+</div>
+
+<!-- 部門 -->
+<section style="padding-top:0">
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">Categories</span>
+    <h2 class="section-title">2つの部門</h2>
+    <div class="dept-grid">
+      <div class="dept-card">
+        <span class="dept-tag">実写部門</span>
+        <h3>実写部門</h3>
+        <p>カメラで撮影した実写の短編映画。ドラマ・ドキュメンタリー・実験映像など形式は問いません。「地元」を舞台に、あなたのまちの物語を。</p>
+      </div>
+      <div class="dept-card">
+        <span class="dept-tag ai">AI部門</span>
+        <h3>AI部門</h3>
+        <p>生成AIを制作の主要な工程に用いた作品。機材や予算がなくても挑戦できる新しい表現の入口です。使用ツールと工程を応募時に申告いただきます（審査基準は実写と同じ「物語と地元性」）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 応募方法 -->
+<section style="background:var(--ivory-dark)">
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">How to Apply</span>
+    <h2 class="section-title">応募の流れ</h2>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-num"></div>
+        <div class="flow-body">
+          <h3>作品と素材を準備する</h3>
+          <p>本編（限定公開URL可）／スチール写真2枚以上／あらすじ（200字）／監督プロフィールをご用意ください。AI部門の方は使用ツールの情報も。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num"></div>
+        <div class="flow-body">
+          <h3>応募フォームから送信する</h3>
+          <p>下のボタンから応募フォームを開き、必要事項を入力して送信します。送信後、控えのメールが届きます（それが受付の確認になります）。締切まで内容の修正が可能です。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num"></div>
+        <div class="flow-body">
+          <h3>受付確認</h3>
+          <p>事務局で形式を確認し、受付番号をご連絡します（不備がある場合は個別にご案内します）。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num"></div>
+        <div class="flow-body">
+          <h3>審査・結果通知</h3>
+          <p>10月中に審査結果をメールでお知らせします。上映作品には詳細をご案内し、惜しくも選外となった作品にも審査講評をお送りします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 応募要件 -->
+<section>
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">Requirements</span>
+    <h2 class="section-title">応募にあたっての確認事項</h2>
+    <p class="section-lead">応募時に、以下についてご確認・ご同意いただきます。</p>
+    <ul class="req-list">
+      <li>本作品の著作権は応募者（または応募者が代表するチーム）に帰属し、応募の権限を有していること</li>
+      <li>使用楽曲の権利処理（許諾・フリー素材の規約確認等）が完了していること</li>
+      <li>出演者全員から、本映画祭での上映および広報での使用について同意を得ていること（未成年の出演者は保護者の同意を含む）</li>
+      <li>ロケ地について、必要な撮影許可を得ていること</li>
+      <li>第三者の著作物を権利処理なく使用していないこと</li>
+      <li>18歳未満の方は、保護者の同意のうえ応募すること</li>
+    </ul>
+    <div class="callout">
+      <strong>上映許諾について：</strong>ご応募いただいた作品は、本映画祭での上映と、広報・記録を目的としたスチール・予告編・本編の一部（3分以内）の使用、公式アーカイブへの作品情報の掲載についてのみ許諾をいただきます。<strong>それ以外の権利はすべて応募者に残ります。</strong>配信・商用利用などが生じる場合は、事前に改めてご相談します。
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--ivory-dark)">
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>映像制作の経験がなくても応募できますか？</summary>
+        <p>はい。プロ・アマ、経験の有無は問いません。「あなたのまちの物語」であれば、はじめての一本でも歓迎します。落選の場合も審査講評をお送りするので、次の制作にもつながります。</p>
+      </details>
+      <details>
+        <summary>「九州にゆかりがある」とは？</summary>
+        <p>九州在住の方、九州出身の方、または九州で撮影した作品であれば応募できます。テーマ「地元」は必ずしも九州のまちに限りませんが、九州のまちを舞台にした作品を特に歓迎します。</p>
+      </details>
+      <details>
+        <summary>AI部門と実写部門、どちらに応募すればいい？</summary>
+        <p>生成AIを制作の主要な工程（映像生成・脚本・音楽など）に使った作品はAI部門へ。色調整などの部分的な補助のみであれば実写部門で構いません。迷ったらお問い合わせください。</p>
+      </details>
+      <details>
+        <summary>複数作品の応募はできますか？</summary>
+        <p>可能です。作品ごとに応募フォームからお送りください。</p>
+      </details>
+      <details>
+        <summary>過去に他の映画祭で上映された作品でも応募できますか？</summary>
+        <p>応募いただけます。本映画祭は初公開作品に限定していません。ただし権利処理が完了している必要があります。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 応募CTA -->
+<!--
+  ▼▼▼ 差し替えポイント（1箇所だけ）▼▼▼
+  Googleフォームを作成したら、下の <a> の href="mailto:..." を
+  作成したフォームのURL（https://forms.gle/xxxx 等）に置き換えてください。
+  フォームの作り方は docs/ENTRY-FORM-SPEC.md にすべて記載しています。
+  フォーム公開までの間は、メールでの応募受付として機能します。
+  ▲▲▲
+-->
+<div class="entry-cta">
+  <h2>あなたのまちの物語を、<br>お待ちしています。</h2>
+  <p>応募無料・締切2026年9月30日。まずは応募フォームから、作品の情報をお送りください。</p>
+  <a class="btn btn-primary"
+     href="mailto:creative.yolo0406@gmail.com?subject=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%BE%E3%81%A1%E3%81%AE%E6%98%A0%E7%94%BB%E7%A5%AD%20%E4%BD%9C%E5%93%81%E5%BF%9C%E5%8B%9F&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E4%BD%9C%E5%93%81%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%EF%BC%9A%0A%E9%83%A8%E9%96%80%EF%BC%88%E5%AE%9F%E5%86%99%2FAI%EF%BC%89%EF%BC%9A%0A%E5%B0%BA%EF%BC%88%E5%88%86%EF%BC%89%EF%BC%9A%0A%E6%9C%AC%E7%B7%A8URL%EF%BC%9A%0A%E3%81%82%E3%82%89%E3%81%99%E3%81%98%EF%BC%88200%E5%AD%97%EF%BC%89%EF%BC%9A">応募する →</a>
+  <p class="cta-note">ご不明な点は creative.yolo0406@gmail.com までお気軽に。</p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">あなたのまちの映画祭</div>
+    <div class="footer-tagline">YOLO FILM FESTIVAL — KUMAMOTO</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="about.html">映画祭について</a>
+        <a href="program.html">上映プログラム</a>
+        <a href="schedule.html">タイムテーブル</a>
+        <a href="access.html">アクセス</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="news.html">ニュース</a>
+        <a href="archive.html">過去の開催</a>
+        <a href="entry.html">作品応募</a>
+      </div>
+      <div class="footer-col">
+        <h4>Organizer</h4>
+        <a href="about.html">YOLO（熊本）</a>
+        <a href="mailto:creative.yolo0406@gmail.com">お問い合わせ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 あなたのまちの映画祭 / YOLO</p>
+      <p>Denkikan, Kumamoto</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
