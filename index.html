@@ -18,6 +18,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Josefin+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@300;400&family=Shippori+Mincho+B1:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tokens.css" />
   <link rel="stylesheet" href="components.css" />
+  <style>
+    /* 01 Concept: 画像なし・中央寄せの単一カラム表示 */
+    .section-grid--solo{grid-template-columns:1fr;justify-items:center;text-align:center}
+    .section-grid--solo .section-copy{max-width:680px}
+    .section-grid--solo .section-copy p:not(.chapter):not(.section-kicker){margin-left:auto;margin-right:auto}
+    .section-grid--solo .keyword-row{margin-left:auto;margin-right:auto;max-width:680px}
+
+    /* 02 Program: 作品募集中の Coming Soon 表示 */
+    .coming-soon{max-width:640px;margin:0 auto;text-align:center}
+    .coming-soon p{color:rgba(246,237,216,.82);margin:0 0 30px;line-height:2;font-size:15px}
+    .coming-soon .button{width:auto;display:inline-flex;padding:14px 36px}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -92,7 +104,7 @@
     </section>
 
     <section class="section concept" id="concept">
-      <div class="section-grid">
+      <div class="section-grid section-grid--solo">
         <div class="section-copy" data-reveal>
           <p class="chapter">01</p>
           <p class="section-kicker">Concept</p>
@@ -105,52 +117,19 @@
             <span><strong>記憶</strong><small>Memory</small></span>
           </div>
         </div>
-        <div class="concept-visual" data-reveal aria-label="映画館に灯る光のイメージ" role="img">
-          <div class="still-card still-card--large">
-            <span class="still-card__label">Still Image / Dummy</span>
-          </div>
-        </div>
       </div>
     </section>
 
     <section class="section program section-dark" id="program">
-      <div class="section-head" data-reveal>
-        <div>
-          <p class="chapter">02</p>
-          <p class="section-kicker">Program Pick Up</p>
-          <h2>最新回の上映作品</h2>
-        </div>
-        <div class="program-actions">
-          <a href="program.html" class="text-link">すべて見る →</a>
-          <div class="round-buttons" aria-label="作品カードを横に移動">
-            <button type="button" data-scroll-prev aria-label="前へ">←</button>
-            <button type="button" data-scroll-next aria-label="次へ">→</button>
-          </div>
-        </div>
+      <div class="section-head section-head--stack" data-reveal>
+        <p class="chapter">02</p>
+        <p class="section-kicker">Program — Coming Soon</p>
+        <h2>上映作品は、これから集まる。</h2>
       </div>
-      <div class="program-rail" data-program-rail data-reveal>
-        <article class="film-card">
-          <div class="film-card__image image-01"></div>
-          <div class="film-card__body"><span class="tag tag-live">実写部門</span><h3>海辺の記憶</h3><p>監督名（仮） · 福岡 · 15min</p></div>
-        </article>
-        <article class="film-card">
-          <div class="film-card__image image-02"></div>
-          <div class="film-card__body"><span class="tag tag-live">実写部門</span><h3>あの日の帰り道</h3><p>監督名（仮） · 熊本 · 18min</p></div>
-        </article>
-        <article class="film-card">
-          <div class="film-card__image image-03"></div>
-          <div class="film-card__body"><span class="tag tag-ai">AI部門</span><h3>夜をつなぐ</h3><p>監督名（仮） · 長崎 · 22min</p></div>
-        </article>
-        <article class="film-card">
-          <div class="film-card__image image-04"></div>
-          <div class="film-card__body"><span class="tag tag-live">実写部門</span><h3>渡し場の朝</h3><p>監督名（仮） · 天草 · 14min</p></div>
-        </article>
-        <article class="film-card">
-          <div class="film-card__image image-05"></div>
-          <div class="film-card__body"><span class="tag tag-ai">AI部門</span><h3>商店街のラジオ</h3><p>監督名（仮） · 熊本 · 12min</p></div>
-        </article>
+      <div class="coming-soon" data-reveal>
+        <p>いま、九州にゆかりのある短編映画を募集しています。上映プログラムは応募締切後、順次発表します。</p>
+        <a class="button" href="entry.html">作品を応募する →</a>
       </div>
-      <p class="dummy-note">※ 作品情報・写真・監督名はダミーです（差し替え前提）</p>
     </section>
 
     <section class="section features" id="features">
@@ -163,7 +142,7 @@
         <article><span>01</span><div><h3>九州の監督</h3><p>福岡・熊本・長崎ほか、九州を拠点に活動する作り手の短編が集まります。</p></div></article>
         <article><span>02</span><div><h3>監督トーク</h3><p>上映後には監督が登壇。作品の背景や、まちへの想いを語ります。</p></div></article>
         <article><span>03</span><div><h3>実写 / AI部門</h3><p>従来の実写部門に加え、新しい表現に挑むAI部門を構想しています。</p></div></article>
-        <article><span>04</span><div><h3>公募作品枠</h3><p>テーマ「地元」で広く作品を公募。あなたのまちの物語をお待ちしています。</p></div></article>
+        <article><span>04</span><div><h3>公募作品枠</h3><p>テーマは「地元」。ただし、縛りはゆるやかに。観た人が「あの場所に行ってみたい」「なんだか気になる」——そう思えるなら、解釈は自由です。あなたが撮りたい「地元」をお待ちしています。</p></div></article>
       </div>
     </section>
 
