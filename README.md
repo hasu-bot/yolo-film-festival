@@ -6,10 +6,15 @@
 **デザイン: 「上映前の、あの一瞬」＝暖色の光・感動トーン**（明朝・小さめ・余白・生成り＋琥珀＋朱赤）。
 意図の詳細は `docs/DESIGN_BRIEF.md` を参照。
 
+**運営設計（収益・スポンサー・審査・応募・年間スケジュール）は [`docs/FESTIVAL-MASTER-PLAN.md`](./docs/FESTIVAL-MASTER-PLAN.md)** を参照。
+応募フォームの設計は [`docs/ENTRY-FORM-SPEC.md`](./docs/ENTRY-FORM-SPEC.md)。
+Creative YOLO 全体の計画は yolo-members リポジトリの `docs/creative-yolo/` にある。
+
 ## 構成（複数ページ）
 
 ```
 index.html       トップ（暖色の光ヒーロー＋Concept / Program / Features / 応募CTA）
+entry.html       作品応募（募集要項・実写/AI部門・応募フロー・要件・FAQ）
 about.html       映画祭について
 program.html     上映プログラム（実写・AI部門タブ／作品詳細）
 schedule.html    タイムテーブル
@@ -25,9 +30,11 @@ docs/DESIGN_BRIEF.md  デザイン設計書（ハンドオフ仕様）
 
 ## 公開
 
-GitHub Pages（`claude/film-festival-site-progress-wpt3ym` ブランチから配信）:
-**https://hasu-bot.github.io/yolo-film-festival/**
-（push すると自動で再ビルド。ローカル確認は `npx http-server . -p 8080`）
+**Vercel（`main` ブランチから自動デプロイ）**。push すると自動で再ビルド・反映される。
+ローカル確認は `npx http-server . -p 8080`。
+
+※以前は GitHub Pages（`claude/film-festival-site-progress-wpt3ym` ブランチ配信）で運用していたが、
+デプロイの安定性向上のため Vercel に移行した。旧ブランチは履歴として残置。
 
 最終形態はスタンドアロン静的HTML想定。**この専用リポジトリで独立管理**します
 （※以前 lumina リポジトリ内にも同種のサイトがありましたが、こちらに集約）。
