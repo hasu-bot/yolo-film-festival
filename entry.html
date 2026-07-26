@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>作品応募 — あなたのまちの映画祭</title>
-  <meta name="description" content="「あなたのまちの映画祭」第2回 作品募集。テーマは「あなたのまち」。九州ゆかりの短編を実写・AI部門で公募します。応募無料・締切2026年9月30日・全応募者に審査講評をお返しします。" />
+  <meta name="description" content="「あなたのまちの映画祭」第2回 作品募集。テーマは「あなたのまち」。短編映画を実写・AI部門で公募します。応募無料・締切2026年9月30日・地域不問。" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="作品応募 — あなたのまちの映画祭" />
-  <meta property="og:description" content="テーマは「あなたのまち」。九州の短編を公募します。応募無料・締切2026年9月30日・全応募者に講評をお返しします。熊本・Denkikanにて上映。" />
+  <meta property="og:description" content="テーマは「あなたのまち」。短編映画を公募します。応募無料・締切2026年9月30日・地域不問。熊本・Denkikanにて上映。" />
   <meta property="og:url" content="https://hasu-bot.github.io/yolo-film-festival/entry.html" />
-  <meta property="og:image" content="https://hasu-bot.github.io/yolo-film-festival/assets/hero-wide.jpg" />
+  <meta property="og:image" content="https://hasu-bot.github.io/yolo-film-festival/assets/og-image.jpg" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C0432C'/%3E%3Cpath d='M25 19v26l22-13z' fill='%23F7F0DF'/%3E%3C/svg%3E" />
@@ -58,7 +58,9 @@
       border-radius: 4px;
       padding: 28px 24px;
       position: relative;
+      overflow: hidden;
     }
+    .dept-image { width: calc(100% + 48px); height: 180px; margin: -28px -24px 24px; object-fit: cover; display: block; }
     .dept-tag {
       display: inline-block;
       font-family: var(--label);
@@ -236,7 +238,7 @@
       <a href="schedule.html">タイムテーブル</a>
       <a href="access.html">アクセス</a>
       <a href="news.html">ニュース</a>
-      <a href="entry.html" class="nav-ticket">作品応募</a>
+      <a href="#apply" class="nav-ticket">作品応募</a>
     </nav>
   </div>
 </header>
@@ -252,22 +254,22 @@
   <div class="section-inner" style="max-width:820px">
     <span class="section-label">Overview</span>
     <h2 class="section-title">募集概要</h2>
-    <p class="section-lead">第2回「あなたのまちの映画祭」の上映作品を公募します。九州にゆかりのある作り手による短編映画をお待ちしています。</p>
+    <p class="section-lead">第2回「あなたのまちの映画祭」の上映作品を公募します。地域は問いません。あなたのまちで生まれた短編映画をお待ちしています。</p>
 
     <div class="spec-table">
       <div class="spec-row"><div class="spec-key">テーマ</div><div class="spec-val"><strong>あなたのまち</strong></div></div>
-      <div class="spec-row"><div class="spec-key">応募資格</div><div class="spec-val">九州在住・九州出身、または九州で撮影した作品の作り手（個人・チーム不問／プロ・アマ不問）</div></div>
+      <div class="spec-row"><div class="spec-key">応募資格</div><div class="spec-val"><strong>どなたでも応募できます</strong>（個人・チーム不問／プロ・アマ不問／お住まいの地域は問いません）</div></div>
       <div class="spec-row"><div class="spec-key">部門</div><div class="spec-val">実写部門 ／ AI部門（下記）</div></div>
       <div class="spec-row"><div class="spec-key">作品の尺</div><div class="spec-val">本編 <strong>5〜25分</strong>（予告・クレジットを含む）</div></div>
-      <div class="spec-row"><div class="spec-key">完成時期</div><div class="spec-val">2025年10月以降に完成した作品（目安）</div></div>
+      <div class="spec-row"><div class="spec-key">完成時期</div><div class="spec-val"><strong>制限はありません</strong>。すでに完成している作品、他の映画祭やネットで公開済みの作品も応募できます（第1回で上映した作品を除く）</div></div>
       <div class="spec-row"><div class="spec-key">応募料</div><div class="spec-val"><strong>無料</strong></div></div>
-      <div class="spec-row"><div class="spec-key">応募締切</div><div class="spec-val"><strong>2026年9月30日（火）23:59</strong></div></div>
-      <div class="spec-row"><div class="spec-key">結果通知</div><div class="spec-val">2026年10月中（<strong>応募者全員に審査講評をお返しします</strong>）</div></div>
-      <div class="spec-row"><div class="spec-key">上映</div><div class="spec-val">2026年12月・Denkikan（熊本市中央区新市街）</div></div>
+      <div class="spec-row"><div class="spec-key">応募締切</div><div class="spec-val"><strong>2026年9月30日（水）23:59</strong></div></div>
+      <div class="spec-row"><div class="spec-key">結果通知</div><div class="spec-val">2026年10月中に、応募者全員へメールでお知らせします</div></div>
+      <div class="spec-row"><div class="spec-key">上映</div><div class="spec-val"><strong>2026年12月12日（土）18:00〜21:00</strong>・Denkikan（熊本市中央区新市街）</div></div>
     </div>
 
     <div class="callout">
-      「うまく撮れているか」より、「あなたのまちの物語であるか」を大切にします。はじめての一本でも、ぜひ応募してください。落選の場合も、審査員からの講評を必ずお送りします。
+      「うまく撮れているか」より、「あなたのまちの物語であるか」を大切にします。はじめての一本でも、ぜひ応募してください。
     </div>
   </div>
 </section>
@@ -283,15 +285,53 @@
     <h2 class="section-title">2つの部門</h2>
     <div class="dept-grid">
       <div class="dept-card">
+        <img class="dept-image" src="assets/archive-2025/2025-08.jpg" alt="第1回の上映中の客席とスクリーン">
         <span class="dept-tag">実写部門</span>
-        <h3>実写部門</h3>
-        <p>カメラで撮影した実写の短編映画。ドラマ・ドキュメンタリー・実験映像など形式は問いません。舞台は、あなたのまち。</p>
+        <h3>あなたのまちを、カメラで撮る。</h3>
+        <p>あなたが暮らすまち、育ったまち、心に残る風景や人。その土地から生まれた物語を、実写の短編映画にしてください。ドラマ・ドキュメンタリー・実験映像など形式は問いません。</p>
       </div>
       <div class="dept-card">
+        <img class="dept-image" src="assets/ai-division-town.jpg" alt="まちの記憶から未来の景色を描くAI部門のイメージ">
         <span class="dept-tag ai">AI部門</span>
-        <h3>AI部門</h3>
-        <p>生成AIを制作の主要な工程に用いた作品。機材や予算がなくても挑戦できる新しい表現の入口です。使用ツールと工程を応募時に申告いただきます（審査基準は実写部門と同じです）。</p>
+        <h3>あなたのまちから、まだ見ぬ景色を描く。</h3>
+        <p>地元の記憶、風景、昔話、誰かとの出来事。まちから生まれた物語を、生成AIを使って映像にしてください。実在の街並みをそのまま映す必要はありません。<strong>本編映像の半分以上を生成AIでつくった作品</strong>が対象です。</p>
       </div>
+    </div>
+    <div class="callout">どちらの部門も、テーマは<strong>「あなたのまち」</strong>です。使う方法は違っても、まちから生まれた物語を待っています。AI部門では、地域に根ざした物語であれば、未来のまちや架空の景色として表現しても構いません。</div>
+  </div>
+</section>
+
+<div class="section-inner" style="padding: 0 20px;">
+  <div class="ticket-divider"><div class="ticket-divider-circle"></div></div>
+</div>
+
+<!-- 審査 -->
+<section style="padding-top:0">
+  <div class="section-inner" style="max-width:820px">
+    <span class="section-label">Judging</span>
+    <h2 class="section-title">審査について</h2>
+    <p class="section-lead">どこを見て選ぶのかを先に公開します。審査基準は実写部門・AI部門で共通です。</p>
+
+    <div class="spec-table">
+      <div class="spec-row"><div class="spec-key">物語</div><div class="spec-val"><strong>40点</strong>　心が動くか</div></div>
+      <div class="spec-row"><div class="spec-key">まちらしさ</div><div class="spec-val"><strong>30点</strong>　テーマ「あなたのまち」との響き合い</div></div>
+      <div class="spec-row"><div class="spec-key">技術・表現</div><div class="spec-val"><strong>30点</strong>　部門の特性を考慮して評価します</div></div>
+      <div class="spec-row"><div class="spec-key">審査の体制</div><div class="spec-val">主催者と、映像に関わる方々で審査します。詳細は決まり次第サイトでお知らせします</div></div>
+    </div>
+
+    <div class="callout">
+      「うまく撮れているか」より「あなたのまちの物語であるか」を見ます。撮影機材や予算の差で不利になることはありません。
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:18px;font-weight:700;margin-top:40px">上映と入選</h3>
+    <div class="spec-table">
+      <div class="spec-row"><div class="spec-key">上映本数</div><div class="spec-val">当日の上映枠は<strong>合計95分</strong>です。作品の尺によって本数は変わり、<strong>おおよそ5〜8本</strong>を予定しています。うち2枠はAI部門に確保します</div></div>
+      <div class="spec-row"><div class="spec-key">入選作品</div><div class="spec-val">上映作品とは別に、<strong>入選作品を公式サイトに掲載</strong>します（作品名・監督名・スチール）</div></div>
+      <div class="spec-row"><div class="spec-key">賞</div><div class="spec-val">グランプリ ／ 部門賞（実写・AI） ／ 観客賞（当日の来場者投票）</div></div>
+    </div>
+
+    <div class="callout">
+      上映できる本数はかぎられていますが、<strong>入選作品として名前を残す枠</strong>を用意しています。今回だけの一度きりにせず、来年もまた応募してもらえる映画祭にしたいと考えています。
     </div>
   </div>
 </section>
@@ -313,21 +353,21 @@
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>応募フォームから送信する</h3>
-          <p>下のボタンから応募フォームを開き、必要事項を入力して送信します。送信後、控えのメールが届きます（それが受付の確認になります）。締切まで内容の修正が可能です。</p>
+          <p>下のボタンから応募フォームを開き、必要事項を入力して送信します。送信すると受付番号が発行され、控えのメールが届きます。メール内のリンクから、締切まで何度でも内容を差し替えられます。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>受付確認</h3>
-          <p>事務局で形式を確認し、受付番号をご連絡します（不備がある場合は個別にご案内します）。</p>
+          <p>受付番号は送信時に自動で発行されます。事務局で形式を確認し、不備がある場合のみ個別にご連絡します。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>審査・結果通知</h3>
-          <p>10月中に審査結果をメールでお知らせします。上映作品には詳細をご案内し、惜しくも選外となった作品にも審査講評をお送りします。</p>
+          <p>10月中に審査結果をメールでお知らせします。上映作品・入選作品の方には、あわせて詳細をご案内します。</p>
         </div>
       </div>
     </div>
@@ -362,15 +402,16 @@
     <div class="faq">
       <details>
         <summary>映像制作の経験がなくても応募できますか？</summary>
-        <p>はい。プロ・アマ、経験の有無は問いません。「あなたのまちの物語」であれば、はじめての一本でも歓迎します。落選の場合も審査講評をお送りするので、次の制作にもつながります。</p>
+        <p>はい。プロ・アマ、経験の有無は問いません。「あなたのまちの物語」であれば、はじめての一本でも歓迎します。</p>
       </details>
       <details>
-        <summary>「九州にゆかりがある」とは？</summary>
-        <p>九州在住の方、九州出身の方、または九州で撮影した作品であれば応募できます。テーマ「あなたのまち」は必ずしも九州のまちに限りませんが、九州のまちを舞台にした作品を特に歓迎します。</p>
+        <summary>九州の人でないと応募できませんか？</summary>
+        <p>いいえ。<strong>お住まいの地域は問いません。</strong>「あなたのまち」はどこのまちでも構いません。上映は熊本で行うため、九州のまちを舞台にした作品や九州にゆかりのある作り手の応募は特に歓迎しますが、応募の条件ではありません。</p>
       </details>
       <details>
         <summary>AI部門と実写部門、どちらに応募すればいい？</summary>
-        <p>生成AIを制作の主要な工程（映像生成・脚本・音楽など）に使った作品はAI部門へ。色調整などの部分的な補助のみであれば実写部門で構いません。迷ったらお問い合わせください。</p>
+        <p><strong>本編の映像のうち、AIが生成した画が半分以上を占めるならAI部門です。</strong>それ未満なら実写部門です。脚本づくり・音楽・色調整・ノイズ除去などにAIを使っていても、映っている画がカメラで撮ったものなら実写部門で応募してください。</p>
+        <p>ちょうど半分くらい、などどちらとも言える場合は、応募者ご自身で選んでいただいて構いません。判断に迷ったらお問い合わせください。事務局の確認で明らかに部門が合っていない場合は、こちらから部門の変更をご提案します（それを理由に落とすことはありません）。</p>
       </details>
       <details>
         <summary>複数作品の応募はできますか？</summary>
@@ -385,21 +426,13 @@
 </section>
 
 <!-- 応募CTA -->
-<!--
-  ▼▼▼ 差し替えポイント（1箇所だけ）▼▼▼
-  Googleフォームを作成したら、下の <a> の href="mailto:..." を
-  作成したフォームのURL（https://forms.gle/xxxx 等）に置き換えてください。
-  フォームの作り方は docs/ENTRY-FORM-SPEC.md にすべて記載しています。
-  フォーム公開までの間は、メールでの応募受付として機能します。
-  ▲▲▲
--->
 <div class="entry-cta" id="apply">
   <h2>あなたのまちの物語を、<br>お待ちしています。</h2>
-  <p>応募無料・締切2026年9月30日。下記のメールアドレスに、作品情報を送ってご応募ください。</p>
+  <p>応募無料・地域不問・締切2026年9月30日（水）23:59。フォームから送信すると受付番号を発行し、控えのメールをお送りします。</p>
   <a class="btn btn-primary"
-     href="mailto:creative.yolo0406@gmail.com?subject=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%BE%E3%81%A1%E3%81%AE%E6%98%A0%E7%94%BB%E7%A5%AD%20%E4%BD%9C%E5%93%81%E5%BF%9C%E5%8B%9F&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E4%BD%9C%E5%93%81%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%EF%BC%9A%0A%E9%83%A8%E9%96%80%EF%BC%88%E5%AE%9F%E5%86%99%2FAI%EF%BC%89%EF%BC%9A%0A%E5%B0%BA%EF%BC%88%E5%88%86%EF%BC%89%EF%BC%9A%0A%E6%9C%AC%E7%B7%A8URL%EF%BC%9A%0A%E3%81%82%E3%82%89%E3%81%99%E3%81%98%EF%BC%88200%E5%AD%97%EF%BC%89%EF%BC%9A"
-     onclick="window.gtag && window.gtag('event', 'entry_submit_click', { event_category: 'engagement' });">メールで応募する（メールアプリが開きます）</a>
-  <p class="cta-note">うまく開かないときは、下記アドレスへ直接お送りください：<br><strong>creative.yolo0406@gmail.com</strong>（応募専用フォームは近日公開予定）</p>
+     href="https://yolo-tickets.vercel.app/yolo-ff-20261212/entry"
+     onclick="window.gtag &amp;&amp; window.gtag('event', 'entry_submit_click', { event_category: 'engagement' });">応募フォームへ進む →</a>
+  <p class="cta-note">締切まで、フォームから応募内容の差し替えができます。<br>ご不明な点は <strong>creative.yolo0406@gmail.com</strong> へ。</p>
 </div>
 
 <footer class="site-footer">

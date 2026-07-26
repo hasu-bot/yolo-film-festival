@@ -73,6 +73,113 @@
     .stat-value { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--red); line-height: 1; }
     .stat-label { font-size: 11px; color: var(--ink-light); margin-top: 4px; letter-spacing: 0.1em; }
 
+    .edition-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .edition-gallery .shot {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: var(--navy);
+      border-radius: 3px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: zoom-in;
+      display: block;
+    }
+    .edition-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .edition-gallery .shot:hover img,
+    .edition-gallery .shot:focus-visible img { transform: scale(1.05); }
+    .gallery-heading {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 700;
+      margin: 28px 0 0;
+    }
+
+    /* ライトボックス */
+    .lightbox[hidden] { display: none; }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(16, 12, 8, .93);
+      display: grid;
+      grid-template-rows: 1fr auto;
+      place-items: center;
+      padding: 24px;
+      gap: 14px;
+    }
+    .lightbox img {
+      max-width: min(100%, 1200px);
+      max-height: 78vh;
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox figcaption {
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+      text-align: center;
+      max-width: 640px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,.4);
+      border: 0;
+      color: white;
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 14px 18px;
+    }
+    .lightbox-nav.prev { left: 12px; }
+    .lightbox-nav.next { right: 12px; }
+    .gallery-note {
+      font-size: 11px;
+      color: var(--ink-light);
+      margin-top: 10px;
+      letter-spacing: 0.04em;
+    }
+    .edition-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--ivory-dark);
+    }
+    .fact-item { font-size: 13px; }
+    .fact-key {
+      font-size: 11px;
+      color: var(--ink-light);
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .fact-val { color: var(--ink-mid); line-height: 1.7; }
+
     .upcoming-card {
       background: var(--ivory-dark);
       border: 2px dashed var(--border);
@@ -144,8 +251,12 @@
     <!-- 2026 coming -->
     <div class="upcoming-card" style="margin-bottom:32px">
       <div class="upcoming-year">2026</div>
-      <div class="upcoming-label">第2回 開催準備中<br>詳細は決定次第お知らせします。</div>
-      <a href="news.html" class="btn btn-outline" style="margin-top:20px;display:inline-block">最新情報をニュースで確認する</a>
+      <div class="upcoming-label">
+        <strong>第2回 / 2026年12月12日（土）18:00〜21:00</strong><br>
+        Denkikan（熊本市中央区新市街）<br>
+        テーマ「あなたのまち」の短編を、2026年9月30日（水）まで募集しています。
+      </div>
+      <a href="entry.html" class="btn btn-outline" style="margin-top:20px;display:inline-block">作品を応募する →</a>
     </div>
 
     <!-- 2025 -->
@@ -153,48 +264,73 @@
       <div class="edition-header">
         <div class="edition-year">2025</div>
         <div class="edition-meta">
-          <div class="edition-date">第1回 / 2025年9月23日（火・祝）</div>
-          <div class="edition-venue">Denkikan（熊本市中央区新市街）</div>
+          <div class="edition-date">第1回 / 2025年9月23日（火・祝）18:00〜20:00</div>
+          <div class="edition-venue">Denkikan 3F（熊本市中央区新市街8-2）</div>
         </div>
       </div>
       <div class="edition-body">
         <div class="edition-theme">テーマ：「地元」</div>
         <p class="edition-summary">
-          熊本のクリエイティブコミュニティ「YOLO」が主催する短編映画祭の第1回。3人の監督が九州各地を舞台に制作した短編映画を上映。上映後の監督トーク、最後には3監督によるクロストークを実施した。約150名のお客様にご来場いただき、熊本・天草・阿蘇の風景が歴史ある映画館のスクリーンに映し出された。
+          熊本のクリエイティブ集団 YOLO が、はじめて開いた映画祭です。テーマは「地元」。九州の監督たちが撮った短編を、新市街の Denkikan 3F で上映しました。上映のあとは監督が登壇し、19:30からトークを行っています。
         </p>
 
-        <h4 style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:12px">上映作品</h4>
-        <div class="edition-films">
-          <div class="edition-film-item">
-            <div class="edition-film-title">夏の終わりに、川を渡る</div>
-            <div class="edition-film-director">監督：監督名（仮） ／ 22分 ／ 熊本市</div>
-          </div>
-          <div class="edition-film-item">
-            <div class="edition-film-title">朝凪</div>
-            <div class="edition-film-director">監督：監督名（仮） ／ 18分 ／ 天草市</div>
-          </div>
-          <div class="edition-film-item">
-            <div class="edition-film-title">草原のラジオ</div>
-            <div class="edition-film-director">監督：監督名（仮） ／ 25分 ／ 阿蘇市</div>
-          </div>
+        <h4 class="gallery-heading">当日の記録</h4>
+        <div class="edition-gallery">
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-12.jpg" data-caption="上映後、ステージに並んだ監督と出演者たちの記念撮影">
+            <img src="assets/archive-2025/2025-12.jpg" alt="上映後、ステージに並んだ監督と出演者たちの記念撮影" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-13.jpg" data-caption="ステージ上での記念撮影（別カット）">
+            <img src="assets/archive-2025/2025-13.jpg" alt="ステージ上での記念撮影（別カット）" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-07.jpg" data-caption="開場前、ロビーで開演を待つ来場者">
+            <img src="assets/archive-2025/2025-07.jpg" alt="開場前、ロビーで開演を待つ来場者" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-03.jpg" data-caption="開演前、スクリーン前のステージであいさつする司会">
+            <img src="assets/archive-2025/2025-03.jpg" alt="開演前、スクリーン前のステージであいさつする司会" loading="lazy" width="1068" height="1600">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-08.jpg" data-caption="暗くなった客席と、短編を映すスクリーン">
+            <img src="assets/archive-2025/2025-08.jpg" alt="暗くなった客席と、短編を映すスクリーン" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-01.jpg" data-caption="客席後方から見た、上映中のスクリーン">
+            <img src="assets/archive-2025/2025-01.jpg" alt="客席後方から見た、上映中のスクリーン" loading="lazy" width="1068" height="1600">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-02.jpg" data-caption="客席とスクリーンに映る短編作品">
+            <img src="assets/archive-2025/2025-02.jpg" alt="客席とスクリーンに映る短編作品" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-09.jpg" data-caption="上映後、ステージに立つ登壇者たち">
+            <img src="assets/archive-2025/2025-09.jpg" alt="上映後、ステージに立つ登壇者たち" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-04.jpg" data-caption="ステージでのトークセッションの様子">
+            <img src="assets/archive-2025/2025-04.jpg" alt="ステージでのトークセッションの様子" loading="lazy" width="1068" height="1600">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-10.jpg" data-caption="マイクを持って話す登壇者">
+            <img src="assets/archive-2025/2025-10.jpg" alt="マイクを持って話す登壇者" loading="lazy" width="1068" height="1600">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-05.jpg" data-caption="ステージに並ぶ監督たち">
+            <img src="assets/archive-2025/2025-05.jpg" alt="ステージに並ぶ監督たち" loading="lazy" width="1600" height="1068">
+          </button>
+          <button type="button" class="shot" data-full="assets/archive-2025/2025-06.jpg" data-caption="第1回のポスターを持つスタッフ">
+            <img src="assets/archive-2025/2025-06.jpg" alt="第1回のポスターを持つスタッフ" loading="lazy" width="1068" height="1600">
+          </button>
         </div>
+        <p class="gallery-note">写真：第1回「あなたのまちの映画祭」（2025年9月23日・Denkikan 3F）／ 写真をクリックすると拡大します</p>
 
-        <div class="edition-stats">
-          <div class="stat-item">
-            <div class="stat-value">3</div>
-            <div class="stat-label">上映作品数</div>
+        <div class="edition-facts">
+          <div class="fact-item">
+            <div class="fact-key">開催日時</div>
+            <div class="fact-val">2025年9月23日（火・祝）<br>18:00〜20:00</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">150</div>
-            <div class="stat-label">来場者数（名）</div>
+          <div class="fact-item">
+            <div class="fact-key">トークセッション</div>
+            <div class="fact-val">19:30〜20:00</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">65</div>
-            <div class="stat-label">上映総時間（分）</div>
+          <div class="fact-item">
+            <div class="fact-key">会場</div>
+            <div class="fact-val">Denkikan 3F<br>熊本市中央区新市街8-2</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">3</div>
-            <div class="stat-label">監督トーク数</div>
+          <div class="fact-item">
+            <div class="fact-key">主催・協力</div>
+            <div class="fact-val">主催：YOLO FILM FESTIVAL 実行委員会<br>協力：Denkikan</div>
           </div>
         </div>
 
@@ -235,11 +371,65 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 あなたのまちの映画祭 / YOLO</p>
+      <p>© 2026 あなたのまちの映画祭 / YOLO</p>
       <p>Denkikan, Kumamoto</p>
     </div>
   </div>
 </footer>
 
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="写真の拡大表示">
+  <button type="button" class="lightbox-close" data-close aria-label="閉じる">&times;</button>
+  <button type="button" class="lightbox-nav prev" data-prev aria-label="前の写真">&#8249;</button>
+  <button type="button" class="lightbox-nav next" data-next aria-label="次の写真">&#8250;</button>
+  <img id="lightbox-img" src="" alt="">
+  <figcaption id="lightbox-cap"></figcaption>
+</div>
+
+<script>
+(function () {
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.edition-gallery .shot'));
+  if (!shots.length) return;
+  var box = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-cap');
+  var index = 0, lastFocus = null;
+
+  function show(i) {
+    index = (i + shots.length) % shots.length;
+    var s = shots[index];
+    img.src = s.dataset.full;
+    img.alt = s.dataset.caption;
+    cap.textContent = s.dataset.caption + '（' + (index + 1) + ' / ' + shots.length + '）';
+  }
+  function open(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+    box.querySelector('[data-close]').focus();
+  }
+  function close() {
+    box.hidden = true;
+    img.src = '';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  shots.forEach(function (s, i) {
+    s.addEventListener('click', function () { open(i); });
+  });
+  box.querySelector('[data-close]').addEventListener('click', close);
+  box.querySelector('[data-prev]').addEventListener('click', function () { show(index - 1); });
+  box.querySelector('[data-next]').addEventListener('click', function () { show(index + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(index - 1);
+    if (e.key === 'ArrowRight') show(index + 1);
+  });
+})();
+</script>
 </body>
 </html>
