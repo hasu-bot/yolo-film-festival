@@ -48,3 +48,27 @@ body{padding-left:44px}
 @media (max-width:900px){.desktop-nav{display:none}.menu-button{display:block}.site-header{height:68px}.news-strip__inner{grid-template-columns:1fr;gap:0;padding-block:20px}.news-strip .section-kicker{margin:0 0 10px}.news-item,.news-more{border-left:0;border-top:1px solid var(--line);padding:12px 0}.section-grid,.entry-card,.site-footer{grid-template-columns:1fr}.concept-visual{min-height:auto}.still-card--large{aspect-ratio:1/1}.section-head{display:block}.program-actions{justify-content:space-between;margin-top:20px}.hero__meta{display:grid;gap:8px}.hero__meta span+span{border-left:0;padding-left:0}.hero__eyebrow{letter-spacing:.18em}.hero__eyebrow span{width:22px}.feature-list article{grid-template-columns:70px 1fr}.footer-bottom{display:grid;gap:10px}.keyword-row{grid-template-columns:1fr}.keyword-row span{border-left:0;border-top:1px solid var(--line)}.keyword-row span:first-child{border-top:0}.hero h1{letter-spacing:.06em}.section h2{letter-spacing:.04em}.section-kicker{letter-spacing:.18em}.film-card h3,.feature-list h3{letter-spacing:.05em}}
 @media (max-width:560px){body{font-size:14px}.hero{padding-inline:26px}.section{padding-inline:26px}.program-rail{grid-auto-columns:82vw}.feature-list article{grid-template-columns:1fr;gap:10px}.feature-list span{font-size:42px}.entry-card{padding:34px 26px}.site-footer{padding-inline:26px}.brand-ja{font-size:15px}.brand-en{font-size:11px}.hero h1{font-size:clamp(22px,6.2vw,28px);letter-spacing:.04em;line-height:1.9}.section h2{font-size:clamp(20px,5.5vw,26px);letter-spacing:.03em}.section-kicker{letter-spacing:.14em}.news-ticker__label{padding:0 14px}.news-ticker__more{padding:0 14px}.ticket__head{padding:0 20px}}
 @media (max-width:900px){body{padding-left:0}.film-rail{display:none}.site-header{left:0}}
+
+/* ── ヒーロー背景写真（第1回・2025）───────────────────────────
+   DESIGN_BRIEF §7 の「将来、感動が伝わる一枚に差し替え可能」を実装。
+   暖色グラデーションの上に実写を重ね、下方向の暗幕で文字の可読性を確保する。 */
+.hero__photo{position:absolute;inset:0;z-index:0;background-image:url("assets/hero-2025.jpg");background-size:cover;background-position:center 58%;opacity:.52}
+.hero__photo::after{content:"";position:absolute;inset:0;background:radial-gradient(78% 58% at 50% 42%,rgba(30,18,10,.80) 0%,rgba(30,18,10,.42) 62%,transparent 100%),linear-gradient(180deg,rgba(30,18,10,.52) 0%,rgba(30,18,10,.28) 34%,rgba(30,18,10,.55) 72%,rgba(30,18,10,.86) 100%)}
+.hero__bloom{opacity:.30}
+
+/* ── 第1回の様子（トップの写真一覧）── */
+.past{background:var(--dark);color:var(--cream)}
+.past .section-head{margin-bottom:34px}
+.past .section-kicker{color:var(--dark-gold)}
+.past h2{color:var(--cream)}
+.past__lead{max-width:620px;color:rgba(246,237,216,.78);margin:0 0 34px}
+.past__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:var(--max);margin:0 auto}
+.past__grid a{position:relative;display:block;overflow:hidden;background:var(--dark-2);aspect-ratio:4/3}
+.past__grid a:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.past__grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease);filter:saturate(.92)}
+.past__grid a:hover img,.past__grid a:focus-visible img{transform:scale(1.04)}
+.past__foot{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;max-width:var(--max);margin:26px auto 0}
+.past__caption{font-size:12px;letter-spacing:.06em;color:rgba(246,237,216,.55);margin:0}
+.past__more{font-family:var(--label);font-size:12px;letter-spacing:.18em;color:var(--dark-gold);border-bottom:1px solid currentColor;padding-bottom:3px}
+@media (max-width:900px){.past__grid{grid-template-columns:repeat(2,1fr)}.past__grid a:nth-child(1){grid-column:span 2;grid-row:auto;aspect-ratio:16/10}}
+@media (max-width:560px){.past__grid{gap:6px}}
