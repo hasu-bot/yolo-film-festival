@@ -38,16 +38,33 @@ README にも「今後の天草上映・**映画祭**でも再利用する共通
 本編URL＋パスワード／スチールURL／予告URL／**AI申告（両部門必須）**／各種同意チェック／
 `status`（`received` → `checked` → `screening` → `selected` / `honorable` / `rejected`）／`reviewComment`（講評）
 
-### 段取り
+### 実装状況（2026-07-26 実装完了・未デプロイ）
 
-1. `submissions` テーブルとマイグレーションを追加
-2. 応募フォーム（`/[eventSlug]/entry`）＋ 完了画面 ＋ Resend 受付メール
-3. `manageToken` による応募内容の編集（締切で自動クローズ）
-4. スタッフ画面に応募一覧・ステータス変更・講評入力・一括メール
-5. `entry.html` の応募CTAを本番URLに差し替え
+ブランチ `feat/film-festival-submissions`（yolo-tickets リポジトリ）。ローカルで全フロー検証済み。
 
-**11月には同じ instance で 12/12 のチケット予約を開く**（`denkikan-20261212` を seed するだけ）。
-応募と予約が同じ基盤に乗るので、当日の来場者対応もそのまま流用できる。
+| 画面 | パス |
+|---|---|
+| 応募フォーム | `/yolo-ff-20261212/entry` |
+| 応募完了 | `/yolo-ff-20261212/entry/done?t=…` |
+| 応募者の確認・差し替え | `/submission/[manageToken]` |
+| 事務局の応募管理 | `/staff/yolo-ff-20261212/submissions` |
+
+- イベントは `scripts/seed-festival.ts` で作成（slug `yolo-ff-20261212` / codePrefix `YTFF2` / capacity 150）
+- **応募締切は環境変数 `ENTRY_DEADLINE`**（`2026-09-30T23:59:59+09:00`）。
+  `events.startsAt`（上映日時）とは別物なので分けている。締切を過ぎると受付画面が自動で閉じる
+- 受付番号はイベント内の連番で自動採番（`YTFF2-001`）。手動採番は不要
+- 条件分岐は実装済み：年齢18歳未満 → 保護者欄／「生成AIを使った」→ AI申告欄
+- スタッフ画面では**上映予定の合計尺**を表示し、95分を超えると警告する（§3 の枠管理）
+
+**残作業**
+1. Vercel へデプロイし、`ENTRY_DEADLINE` を本番環境変数に設定
+2. 本番DB（Neon）で `db:migrate` と `seed-festival` を実行
+3. `entry.html` の応募CTAを本番URLに差し替え
+4. テスト応募を1件送って受付メールの到達を確認（Resend）
+
+**11月には同じ instance で 12/12 のチケット予約を開く**（料金区分は seed 済み。
+一般1,500／学生1,000／中学生以下無料）。応募と予約が同じ基盤に乗るので、
+当日のQR受付・ダッシュボードもそのまま使える。
 
 ---
 
