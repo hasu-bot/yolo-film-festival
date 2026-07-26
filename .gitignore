@@ -1,0 +1,4 @@
+.DS_Store
+
+# 画像の元データ。リポジトリでは最適化した書き出しのみを管理する
+assets/ai-division-town.png

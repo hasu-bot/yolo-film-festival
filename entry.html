@@ -58,7 +58,9 @@
       border-radius: 4px;
       padding: 28px 24px;
       position: relative;
+      overflow: hidden;
     }
+    .dept-image { width: calc(100% + 48px); height: 180px; margin: -28px -24px 24px; object-fit: cover; display: block; }
     .dept-tag {
       display: inline-block;
       font-family: var(--label);
@@ -283,16 +285,19 @@
     <h2 class="section-title">2つの部門</h2>
     <div class="dept-grid">
       <div class="dept-card">
+        <img class="dept-image" src="assets/archive-2025/2025-08.jpg" alt="第1回の上映中の客席とスクリーン">
         <span class="dept-tag">実写部門</span>
-        <h3>実写部門</h3>
-        <p>カメラで撮影した実写の短編映画。ドラマ・ドキュメンタリー・実験映像など形式は問いません。舞台は、あなたのまち。</p>
+        <h3>あなたのまちを、カメラで撮る。</h3>
+        <p>あなたが暮らすまち、育ったまち、心に残る風景や人。その土地から生まれた物語を、実写の短編映画にしてください。ドラマ・ドキュメンタリー・実験映像など形式は問いません。</p>
       </div>
       <div class="dept-card">
+        <img class="dept-image" src="assets/ai-division-town.jpg" alt="まちの記憶から未来の景色を描くAI部門のイメージ">
         <span class="dept-tag ai">AI部門</span>
-        <h3>AI部門</h3>
-        <p>本編の映像のうち、<strong>半分以上を生成AIでつくった作品</strong>。カメラや機材がなくても応募できます。使用したツールと工程は応募時に申告いただきます。審査の基準は実写部門と同じです。</p>
+        <h3>あなたのまちから、まだ見ぬ景色を描く。</h3>
+        <p>地元の記憶、風景、昔話、誰かとの出来事。まちから生まれた物語を、生成AIを使って映像にしてください。実在の街並みをそのまま映す必要はありません。<strong>本編映像の半分以上を生成AIでつくった作品</strong>が対象です。</p>
       </div>
     </div>
+    <div class="callout">どちらの部門も、テーマは<strong>「あなたのまち」</strong>です。使う方法は違っても、まちから生まれた物語を待っています。AI部門では、地域に根ざした物語であれば、未来のまちや架空の景色として表現しても構いません。</div>
   </div>
 </section>
 
