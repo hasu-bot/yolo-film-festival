@@ -238,7 +238,7 @@
       <a href="schedule.html">タイムテーブル</a>
       <a href="access.html">アクセス</a>
       <a href="news.html">ニュース</a>
-      <a href="entry.html" class="nav-ticket">作品応募</a>
+      <a href="#apply" class="nav-ticket">作品応募</a>
     </nav>
   </div>
 </header>
@@ -353,14 +353,14 @@
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>応募フォームから送信する</h3>
-          <p>下のボタンから応募フォームを開き、必要事項を入力して送信します。送信後、控えのメールが届きます（それが受付の確認になります）。締切まで内容の修正が可能です。</p>
+          <p>下のボタンから応募フォームを開き、必要事項を入力して送信します。送信すると受付番号が発行され、控えのメールが届きます。メール内のリンクから、締切まで何度でも内容を差し替えられます。</p>
         </div>
       </div>
       <div class="flow-item">
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>受付確認</h3>
-          <p>事務局で形式を確認し、受付番号をご連絡します（不備がある場合は個別にご案内します）。</p>
+          <p>受付番号は送信時に自動で発行されます。事務局で形式を確認し、不備がある場合のみ個別にご連絡します。</p>
         </div>
       </div>
       <div class="flow-item">
@@ -426,21 +426,13 @@
 </section>
 
 <!-- 応募CTA -->
-<!--
-  ▼▼▼ 差し替えポイント（1箇所だけ）▼▼▼
-  Googleフォームを作成したら、下の <a> の href="mailto:..." を
-  作成したフォームのURL（https://forms.gle/xxxx 等）に置き換えてください。
-  フォームの作り方は docs/ENTRY-FORM-SPEC.md にすべて記載しています。
-  フォーム公開までの間は、メールでの応募受付として機能します。
-  ▲▲▲
--->
 <div class="entry-cta" id="apply">
   <h2>あなたのまちの物語を、<br>お待ちしています。</h2>
-  <p>応募無料・締切2026年9月30日。下記のメールアドレスに、作品情報を送ってご応募ください。</p>
+  <p>応募無料・地域不問・締切2026年9月30日（水）23:59。フォームから送信すると受付番号を発行し、控えのメールをお送りします。</p>
   <a class="btn btn-primary"
-     href="mailto:creative.yolo0406@gmail.com?subject=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%BE%E3%81%A1%E3%81%AE%E6%98%A0%E7%94%BB%E7%A5%AD%20%E4%BD%9C%E5%93%81%E5%BF%9C%E5%8B%9F&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E4%BD%9C%E5%93%81%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%EF%BC%9A%0A%E9%83%A8%E9%96%80%EF%BC%88%E5%AE%9F%E5%86%99%2FAI%EF%BC%89%EF%BC%9A%0A%E5%B0%BA%EF%BC%88%E5%88%86%EF%BC%89%EF%BC%9A%0A%E6%9C%AC%E7%B7%A8URL%EF%BC%9A%0A%E3%81%82%E3%82%89%E3%81%99%E3%81%98%EF%BC%88200%E5%AD%97%EF%BC%89%EF%BC%9A"
-     onclick="window.gtag && window.gtag('event', 'entry_submit_click', { event_category: 'engagement' });">メールで応募する（メールアプリが開きます）</a>
-  <p class="cta-note">うまく開かないときは、下記アドレスへ直接お送りください：<br><strong>creative.yolo0406@gmail.com</strong>（応募専用フォームは近日公開予定）</p>
+     href="https://yolo-tickets.vercel.app/yolo-ff-20261212/entry"
+     onclick="window.gtag &amp;&amp; window.gtag('event', 'entry_submit_click', { event_category: 'engagement' });">応募フォームへ進む →</a>
+  <p class="cta-note">締切まで、フォームから応募内容の差し替えができます。<br>ご不明な点は <strong>creative.yolo0406@gmail.com</strong> へ。</p>
 </div>
 
 <footer class="site-footer">
