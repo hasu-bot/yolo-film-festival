@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hasu-bot.github.io/yolo-film-festival/sitemap.xml
