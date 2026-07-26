@@ -60,7 +60,16 @@
       position: relative;
       overflow: hidden;
     }
-    .dept-image { width: calc(100% + 48px); height: 180px; margin: -28px -24px 24px; object-fit: cover; display: block; }
+    /* カードのパディングを打ち消して全幅に。style.css の img{max-width:100%} が
+       calc(100% + 48px) を頭打ちにするため max-width も解除する */
+    .dept-image {
+      width: calc(100% + 48px);
+      max-width: none;
+      height: 180px;
+      margin: -28px -24px 24px;
+      object-fit: cover;
+      display: block;
+    }
     .dept-tag {
       display: inline-block;
       font-family: var(--label);
