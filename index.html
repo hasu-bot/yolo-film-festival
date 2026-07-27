@@ -8,10 +8,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="あなたのまちの映画祭 ｜ Your Town Film Festival" />
   <meta property="og:description" content="テーマは「あなたのまち」。短編映画が集う、小さな物語たちの映画祭。2026年12月12日、熊本・Denkikan にて開催。" />
-  <meta property="og:url" content="https://hasu-bot.github.io/yolo-film-festival/" />
-  <meta property="og:image" content="https://hasu-bot.github.io/yolo-film-festival/assets/og-image.jpg" />
+  <meta property="og:url" content="https://yolo-film-festival.vercel.app/" />
+  <meta property="og:image" content="https://yolo-film-festival.vercel.app/assets/og-image.jpg" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C0432C'/%3E%3Cpath d='M25 19v26l22-13z' fill='%23F7F0DF'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,18 +40,19 @@
     "@context": "https://schema.org",
     "@type": "ScreeningEvent",
     "name": "第2回 あなたのまちの映画祭",
-    "startDate": "2026-12-12T18:15+09:00",
+    "startDate": "2026-12-12T18:00+09:00",
     "endDate": "2026-12-12T21:00+09:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "description": "テーマは「あなたのまち」。短編映画が集まる映画祭。実写部門とAI部門の2部門で、地域を問わず作品を募集しています。",
-    "image": "https://hasu-bot.github.io/yolo-film-festival/assets/og-image.jpg",
-    "url": "https://hasu-bot.github.io/yolo-film-festival/",
+    "image": "https://yolo-film-festival.vercel.app/assets/og-image.jpg",
+    "url": "https://yolo-film-festival.vercel.app/",
     "location": {
       "@type": "MovieTheater",
-      "name": "Denkikan",
+      "name": "Denkikan 2階",
       "address": {
         "@type": "PostalAddress",
+        "postalCode": "860-0803",
         "streetAddress": "新市街8-2",
         "addressLocality": "熊本市中央区",
         "addressRegion": "熊本県",
@@ -59,19 +62,23 @@
     "organizer": {
       "@type": "Organization",
       "name": "YOLO FILM FESTIVAL 実行委員会",
-      "url": "https://hasu-bot.github.io/yolo-film-festival/"
+      "url": "https://yolo-film-festival.vercel.app/"
     }
   }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://yolo-film-festival.vercel.app/#website",
+      "url": "https://yolo-film-festival.vercel.app/",
+      "name": "あなたのまちの映画祭",
+      "alternateName": ["YOLO FILM FESTIVAL", "Your Town Film Festival"]
+    }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-
-  <div class="film-rail" aria-hidden="true">
-    <div class="film-rail__holes"><span></span><span></span><span></span><span></span><span></span></div>
-    <div class="film-rail__title">YOUR TOWN FILM FESTIVAL</div>
-    <div class="film-rail__scroll">Scroll</div>
-  </div>
 
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="あなたのまちの映画祭 トップへ">
@@ -108,7 +115,6 @@
       <div class="hero__photo" aria-hidden="true"></div>
       <div class="hero__bloom" aria-hidden="true"></div>
       <div class="hero__grain" aria-hidden="true"></div>
-      <div class="hero__sprockets" aria-hidden="true"></div>
       <div class="hero__vignette" aria-hidden="true"></div>
 
       <div class="hero__inner">
@@ -117,7 +123,7 @@
         <p class="hero__lead">テーマは「あなたのまち」。そのまちで生まれた短編映画を、熊本の映画館に集める映画祭です。</p>
         <div class="hero__meta" aria-label="開催概要">
           <span class="year">2026.12.12 SAT</span>
-          <span>開演 18:00</span>
+          <span>受付 17:30 ／ 開演 18:00</span>
           <span>会場 Denkikan（熊本）</span>
         </div>
         <a class="hero__categories" href="entry.html"><span>CALL FOR ENTRIES</span> 実写部門 ／ AI部門　→</a>
@@ -129,19 +135,14 @@
       <a class="scroll-cue" href="#news">Scroll</a>
     </section>
 
-    <section class="news-ticker" id="news" aria-label="最新のお知らせ">
-      <div class="news-ticker__label"><span class="news-ticker__dot" aria-hidden="true"></span>NEWS</div>
-      <div class="news-ticker__mask">
-        <div class="news-ticker__track">
-          <a href="news.html"><time>2026.07.26</time><span>第2回の開催日が決定しました（12月12日・Denkikan）。</span><i aria-hidden="true">／</i></a>
-          <a href="entry.html"><time>2026.07.26</time><span>テーマ「あなたのまち」の短編を募集中。締切は9月30日。</span><i aria-hidden="true">／</i></a>
-          <a href="archive.html"><time>2025.09.23</time><span>第1回を Denkikan にて開催しました。</span><i aria-hidden="true">／</i></a>
-          <a href="news.html" aria-hidden="true"><time>2026.07.26</time><span>第2回の開催日が決定しました（12月12日・Denkikan）。</span><i>／</i></a>
-          <a href="entry.html" aria-hidden="true"><time>2026.07.26</time><span>テーマ「あなたのまち」の短編を募集中。締切は9月30日。</span><i>／</i></a>
-          <a href="archive.html" aria-hidden="true"><time>2025.09.23</time><span>第1回を Denkikan にて開催しました。</span><i>／</i></a>
-        </div>
+    <section class="news-strip" id="news" aria-label="最新のお知らせ">
+      <div class="news-strip__inner">
+        <p class="section-kicker">Latest</p>
+        <a class="news-item" href="news.html"><time>2026.07.26</time><span>第2回の開催日が決定しました</span></a>
+        <a class="news-item" href="entry.html"><time>2026.07.26</time><span>テーマ「あなたのまち」の短編を募集中</span></a>
+        <a class="news-item" href="archive.html"><time>2025.09.23</time><span>第1回を Denkikan にて開催しました</span></a>
+        <a href="news.html" class="news-more">一覧 →</a>
       </div>
-      <a href="news.html" class="news-ticker__more">一覧 →</a>
     </section>
 
     <section class="section concept" id="concept">
@@ -207,7 +208,7 @@
       <div class="feature-list" data-reveal>
         <article><span>01</span><div><h3>誰でも応募できます</h3><p>お住まいの地域も、年齢も、制作の経験も問いません。応募は無料です。完成時期にも制限はないので、すでに撮ってある一本でご応募いただけます。</p></div></article>
         <article><span>02</span><div><h3>実写とAI、2つの部門</h3><p>本編映像の半分以上を生成AIでつくった作品はAI部門へ。カメラや機材がなくても応募できます。審査の基準は、どちらの部門も同じです。</p></div></article>
-        <article><span>03</span><div><h3>監督がステージに立ちます</h3><p>上映のあと、監督が登壇して撮影の背景を話します。観客と直接ことばを交わせる場をつくっています。</p></div></article>
+        <article><span>03</span><div><h3>作品の背景を聞ける時間</h3><p>上映のあとには、登壇可能な監督を迎えたクロストークを予定しています。作品やまちへの思いを聞ける時間をつくります。</p></div></article>
         <article><span>04</span><div><h3>会場は、まちの映画館</h3><p>上映は熊本・新市街の Denkikan。第1回と同じ、まちに根ざした映画館のスクリーンで上映します。開演は12月12日（土）18:00 です。</p></div></article>
       </div>
     </section>

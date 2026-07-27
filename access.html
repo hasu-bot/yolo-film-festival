@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>アクセス — あなたのまちの映画祭</title>
+  <meta name="description" content="会場Denkikanへのアクセスと、第2回「あなたのまちの映画祭」のチケット情報。">
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/access.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .access-grid {
@@ -115,6 +118,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
   <div class="perforations">
@@ -132,10 +136,10 @@
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
-    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+    <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="about.html">映画祭について</a>
       <a href="program.html">上映プログラム</a>
       <a href="schedule.html">タイムテーブル</a>
@@ -143,26 +147,27 @@
       <a href="news.html">ニュース</a>
       <a href="archive.html">過去の開催</a>
       <a href="entry.html">作品応募</a>
-      <a href="index.html#ticket" class="nav-ticket">チケット</a>
+      <a href="#tickets" class="nav-ticket">チケット</a>
     </nav>
   </div>
 </header>
 
+<main id="main">
 <div class="page-hero">
   <div class="page-hero-label">Access</div>
   <h1>アクセス</h1>
-  <p>Denkikan — 熊本市中央区新市街</p>
+  <p>Denkikan 2階 — 熊本市中央区新市街</p>
 </div>
 
 <section>
   <div class="section-inner">
     <div class="access-grid">
       <div>
-        <div class="venue-name">Denkikan</div>
+        <div class="venue-name">Denkikan 2階</div>
         <div class="venue-address">
-          〒860-0845<br>
+          〒860-0803<br>
           熊本市中央区新市街8-2<br>
-          Denkikanビル内
+          Denkikan 2階
         </div>
         <p style="font-size:14px;color:var(--ink-mid);line-height:2;margin-bottom:24px">
           熊本市内でもっとも歴史ある映画館のひとつ。アーケード商店街「上通・下通」に近く、市電・バスで便利にアクセスできます。レトロな外観とクラシックなロビーが特徴で、映画祭の会場として最高の雰囲気を持つ映画館です。
@@ -171,28 +176,28 @@
         <h3 style="font-family:var(--serif);font-size:17px;font-weight:700;margin-bottom:4px">アクセス方法</h3>
         <div class="route-list">
           <div class="route-item">
-            <div class="route-icon">🚃</div>
+            <div class="route-icon">市電</div>
             <div>
               <div class="route-name">市電（熊本市電）</div>
               <div class="route-desc">辛島町電停 徒歩約2分。A系統・B系統いずれも停車します。</div>
             </div>
           </div>
           <div class="route-item">
-            <div class="route-icon">🚌</div>
+            <div class="route-icon">バス</div>
             <div>
               <div class="route-name">バス</div>
               <div class="route-desc">辛島町バス停 徒歩約2分。熊本市内各方面からバスが運行しています。</div>
             </div>
           </div>
           <div class="route-item">
-            <div class="route-icon">🚗</div>
+            <div class="route-icon">車</div>
             <div>
               <div class="route-name">お車</div>
               <div class="route-desc">近隣にコインパーキング多数あり。熊本市中心部のため公共交通機関のご利用をおすすめします。</div>
             </div>
           </div>
           <div class="route-item">
-            <div class="route-icon">🚂</div>
+            <div class="route-icon">JR</div>
             <div>
               <div class="route-name">JR熊本駅から</div>
               <div class="route-desc">市電「辛島町」行きで約15分。または市内バスをご利用ください。</div>
@@ -203,29 +208,27 @@
 
       <div>
         <div class="map-area">
-          <div class="map-pin">📍</div>
-          <strong style="font-family:var(--serif);font-size:16px;color:var(--ink)">Denkikan</strong>
-          <p>熊本市中央区新市街8-2<br>辛島町電停 徒歩2分</p>
+          <div class="map-pin">MAP</div>
+          <strong style="font-family:var(--serif);font-size:16px;color:var(--ink)">Denkikan 2階</strong>
+          <p>熊本市中央区新市街8-2<br>辛島町電停 徒歩2分／全96席</p>
           <a href="https://maps.google.com/?q=Denkikan+熊本" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:12px;padding:8px 16px;margin-top:8px">Google マップで開く</a>
         </div>
 
-        <div class="ticket-box">
+        <div class="ticket-box" id="tickets">
           <h3>入場料金</h3>
           <div class="ticket-row">
             <span class="ticket-label">一般</span>
-            <span class="ticket-price">1,500円</span>
+            <span class="ticket-price">2,000円</span>
           </div>
           <div class="ticket-row">
             <span class="ticket-label">学生</span>
-            <span class="ticket-price">1,000円</span>
-          </div>
-          <div class="ticket-row">
-            <span class="ticket-label">中学生以下</span>
-            <span class="ticket-price">無料</span>
+            <span class="ticket-price">1,500円</span>
           </div>
           <p style="font-size:12px;opacity:0.6;margin-top:16px;line-height:1.8">
+            ※ 学生料金で入場する方は、受付で学生証の提示が必要です。<br>
             ※ 上映・監督クロストーク・授賞式を通してご覧いただけます。<br>
-            ※ チケットの販売方法は、上映プログラムの発表（2026年11月上旬）にあわせてお知らせします。
+            ※ ラストコール上映会と同じ予約システムを使用します。Webで予約し、届いたQRコードを当日受付で提示、料金は現金でお支払いください。<br>
+            ※ 予約受付はまだ開始していません。開始時期と予約URLは後日お知らせします。
           </p>
         </div>
       </div>
@@ -239,29 +242,30 @@
     <h2 class="section-title">当日のご案内</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-top:32px">
       <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:20px">
-        <div style="font-size:24px;margin-bottom:10px">🎟</div>
+        <div class="note-index">01</div>
         <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">受付・入場</div>
-        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">18:00に開場・受付開始、18:15開演です。自由席です。受付で観客賞の投票用紙をお渡しします。</p>
+        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">17:30に受付を開始し、18:00に開演します。受付で観客賞の投票用紙をお渡しします。</p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:20px">
-        <div style="font-size:24px;margin-bottom:10px">📵</div>
+        <div class="note-index">02</div>
         <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">マナー</div>
-        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">上映中のスマートフォン使用はご遠慮ください。写真撮影は指定の場面のみ可能です。</p>
+        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">ロビー、監督トーク、授賞式は撮影できます。上映中のスクリーン撮影・録画・録音や、周囲の鑑賞を妨げる撮影はご遠慮ください。</p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:20px">
-        <div style="font-size:24px;margin-bottom:10px">🛒</div>
-        <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">物販・展示</div>
-        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">ロビーにて映画祭グッズの物販・作品関連の展示を予定しています。</p>
+        <div class="note-index">03</div>
+        <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">チケット</div>
+        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">一般2,000円、学生1,500円です。学生料金をご利用の方は、当日受付で学生証をご提示ください。</p>
       </div>
       <div style="background:white;border:1px solid var(--border);border-radius:4px;padding:20px">
-        <div style="font-size:24px;margin-bottom:10px">♿</div>
-        <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">バリアフリー</div>
-        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">車椅子でのご来場も歓迎です。ご不明な点はお問い合わせください。</p>
+        <div class="note-index">04</div>
+        <div style="font-family:var(--serif);font-size:15px;font-weight:700;margin-bottom:6px">来場前のご相談</div>
+        <p style="font-size:13px;color:var(--ink-light);line-height:1.9">車椅子でのご来場など、事前確認が必要な場合はお問い合わせください。会場と確認のうえご案内します。</p>
       </div>
     </div>
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">あなたのまちの映画祭</div>
