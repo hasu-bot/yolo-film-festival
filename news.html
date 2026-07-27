@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ニュース — あなたのまちの映画祭</title>
+  <meta name="description" content="「あなたのまちの映画祭」の開催・作品募集に関する最新情報です。">
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/news.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .news-article {
@@ -38,6 +41,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
   <div class="perforations">
@@ -55,10 +59,10 @@
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
-    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+    <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="about.html">映画祭について</a>
       <a href="program.html">上映プログラム</a>
       <a href="schedule.html">タイムテーブル</a>
@@ -66,11 +70,12 @@
       <a href="news.html" class="active">ニュース</a>
       <a href="archive.html">過去の開催</a>
       <a href="entry.html">作品応募</a>
-      <a href="index.html#ticket" class="nav-ticket">チケット</a>
+      <a href="access.html#tickets" class="nav-ticket">チケット</a>
     </nav>
   </div>
 </header>
 
+<main id="main">
 <div class="page-hero">
   <div class="page-hero-label">News</div>
   <h1>ニュース</h1>
@@ -84,7 +89,7 @@
       <div class="news-article-date">2026.07.26</div>
       <div class="news-article-title">第2回の開催日が決定しました（2026年12月12日・Denkikan）</div>
       <div class="news-article-body">
-        <p>「あなたのまちの映画祭」第2回を、<strong>2026年12月12日（土）18:00〜21:00</strong>、熊本・Denkikan で開催します。第1回と同じく夜の開催です。</p>
+        <p>「あなたのまちの映画祭」第2回を、<strong>2026年12月12日（土）17:30受付開始・18:00開演</strong>、熊本・Denkikan で開催します。終演は20:45頃、21:00閉場予定です。</p>
         <p>テーマは<strong>「あなたのまち」</strong>。短編映画を<strong>実写部門</strong>と<strong>AI部門</strong>の2部門で募集します。<strong>お住まいの地域は問いません。</strong>応募は無料、本編は5〜25分。新しく撮る必要はありません。完成時期にも制限はないので、すでにある作品でご応募いただけます。</p>
         <p>締切は<strong>2026年9月30日（水）23:59</strong>。結果は10月中にメールでお知らせします。詳しくは<a href="entry.html" style="color:var(--red);text-decoration:underline">作品応募ページ</a>をご覧ください。</p>
       </div>
@@ -103,6 +108,7 @@
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">あなたのまちの映画祭</div>

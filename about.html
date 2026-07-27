@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>映画祭について — あなたのまちの映画祭</title>
+  <meta name="description" content="全国から集まる「あなたのまち」の短編を、熊本・Denkikanで上映する映画祭について紹介します。">
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/about.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .value-grid {
@@ -107,6 +110,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
   <div class="perforations">
@@ -124,10 +128,10 @@
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
-    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+    <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="about.html" class="active">映画祭について</a>
       <a href="program.html">上映プログラム</a>
       <a href="schedule.html">タイムテーブル</a>
@@ -135,15 +139,16 @@
       <a href="news.html">ニュース</a>
       <a href="archive.html">過去の開催</a>
       <a href="entry.html">作品応募</a>
-      <a href="index.html#ticket" class="nav-ticket">チケット</a>
+      <a href="access.html#tickets" class="nav-ticket">チケット</a>
     </nav>
   </div>
 </header>
 
+<main id="main">
 <div class="page-hero">
   <div class="page-hero-label">About</div>
   <h1>映画祭について</h1>
-  <p>「あなたのまち」をテーマに、九州のクリエイターが集まる短編映画祭。</p>
+  <p>「あなたのまち」をテーマに、全国から短編映画が集まる映画祭。</p>
 </div>
 
 <!-- テーマ -->
@@ -154,8 +159,8 @@
     <div style="margin-top:24px;font-size:15px;line-height:2.2;color:var(--ink-mid)">
       <p>「あなたのまちの映画祭」が掲げるテーマは、その名の通り<strong style="color:var(--ink)">「あなたのまち」</strong>。</p>
       <p style="margin-top:16px">大きな映画祭では見えにくい、地域の細やかな風景や感情。路地裏の匂い、なじみの定食屋、方言で交わされる会話——そんな「まち」だからこそ生まれる物語を、映画で伝えたい。</p>
-      <p style="margin-top:16px">九州の監督たちが「自分のまち」を舞台に短編映画をつくり、熊本・Denkikanのスクリーンで上映する。観た人がそれぞれ「自分のまち」を思い浮かべる——それが、この映画祭の目指す姿です。</p>
-      <p style="margin-top:16px">毎年続けることで、九州各地の「まちの記録」が積み重なっていく。小さな映画祭が、地域のアーカイブになる日を目指しています。</p>
+      <p style="margin-top:16px">全国の監督たちが「自分のまち」を舞台に短編映画をつくり、熊本・Denkikanのスクリーンで上映する。観た人がそれぞれ「自分のまち」を思い浮かべる——それが、この映画祭の目指す姿です。</p>
+      <p style="margin-top:16px">毎年続けることで、さまざまな土地の「まちの記録」が積み重なっていく。小さな映画祭が、地域のアーカイブになる日を目指しています。</p>
     </div>
   </div>
 </section>
@@ -173,12 +178,12 @@
       <div class="value-card">
         <div class="value-number">01</div>
         <div class="value-title">地域の物語を映画に</div>
-        <p class="value-desc">九州各地を舞台に、その土地にしか生まれない物語を映像化する。地域の風景と人を記録し、伝える。</p>
+        <p class="value-desc">全国各地を舞台に、その土地にしか生まれない物語を映像化する。地域の風景と人を記録し、伝える。</p>
       </div>
       <div class="value-card">
         <div class="value-number">02</div>
         <div class="value-title">若手クリエイターの挑戦の場</div>
-        <p class="value-desc">公募枠を設け、新しい才能が発表できる場をつくる。熊本から九州の映像文化を支える次世代を育てる。</p>
+        <p class="value-desc">地域を問わない公募を通じて、新しい才能が発表できる場をつくる。熊本から映像文化を支える次世代を育てる。</p>
       </div>
       <div class="value-card">
         <div class="value-number">03</div>
@@ -188,7 +193,7 @@
       <div class="value-card">
         <div class="value-number">04</div>
         <div class="value-title">毎年続ける映画祭に</div>
-        <p class="value-desc">単発のイベントでなく、毎年積み重なる映画祭へ。九州のまちの変化を、映画というかたちで残していく。</p>
+        <p class="value-desc">単発のイベントでなく、毎年積み重なる映画祭へ。各地のまちの変化を、映画というかたちで残していく。</p>
       </div>
     </div>
   </div>
@@ -213,7 +218,7 @@
       <div class="timeline-item">
         <div class="timeline-year">2026</div>
         <div class="timeline-event">第2回 開催決定（12月12日）</div>
-        <p class="timeline-desc">テーマを「地元」から「あなたのまち」に広げ、実写部門とAI部門の2部門で作品を公募する。九州にゆかりのある人なら誰でも応募できる形にした。</p>
+        <p class="timeline-desc">テーマを「地元」から「あなたのまち」に広げ、実写部門とAI部門の2部門で作品を公募する。地域を問わず、全国から応募できる形にした。</p>
       </div>
     </div>
   </div>
@@ -230,17 +235,17 @@
     </div>
     <div class="member-grid" style="margin-top:40px">
       <div class="member-card">
-        <div class="member-avatar">🎬</div>
+        <div class="member-avatar">運営</div>
         <div class="member-name">YOLO FILM FESTIVAL 実行委員会</div>
         <div class="member-role">主催 — 企画・運営・審査事務局</div>
       </div>
       <div class="member-card">
-        <div class="member-avatar">📷</div>
+        <div class="member-avatar">主催</div>
         <div class="member-name">Creative YOLO</div>
         <div class="member-role">熊本のクリエイティブコミュニティ</div>
       </div>
       <div class="member-card">
-        <div class="member-avatar">🏛</div>
+        <div class="member-avatar">会場</div>
         <div class="member-name">Denkikan</div>
         <div class="member-role">協力 — 会場</div>
       </div>
@@ -248,6 +253,7 @@
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">あなたのまちの映画祭</div>

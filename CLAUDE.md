@@ -18,7 +18,8 @@
 - 事業判断・コピーの方針は yolo-members リポジトリの `docs/creative-yolo/` が正。単独セッションでは add_repo で参照
 
 ## デプロイ
-GitHub Pages（main へのマージで公開。`.nojekyll` 必須、削除しない）
+Vercel（`main` へのマージで自動公開）。
+正規URLは `https://yolo-film-festival.vercel.app/`。旧GitHub Pagesは2026年7月27日に停止済みで、再び有効化しない。
 
 ## コミット規約
 Conventional Commits + 日本語本文（例: `feat: 応募ページを追加` / `design: ヒーローの余白調整`）

@@ -8,10 +8,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="作品応募 — あなたのまちの映画祭" />
   <meta property="og:description" content="テーマは「あなたのまち」。短編映画を公募します。応募無料・締切2026年9月30日・地域不問。熊本・Denkikanにて上映。" />
-  <meta property="og:url" content="https://hasu-bot.github.io/yolo-film-festival/entry.html" />
-  <meta property="og:image" content="https://hasu-bot.github.io/yolo-film-festival/assets/og-image.jpg" />
+  <meta property="og:url" content="https://yolo-film-festival.vercel.app/entry.html" />
+  <meta property="og:image" content="https://yolo-film-festival.vercel.app/assets/og-image.jpg" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/entry.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C0432C'/%3E%3Cpath d='M25 19v26l22-13z' fill='%23F7F0DF'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="assets/style.css">
   <style>
@@ -221,6 +223,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
   <div class="perforations">
@@ -238,10 +241,10 @@
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
-    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+    <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="about.html">映画祭について</a>
       <a href="program.html">上映プログラム</a>
       <a href="schedule.html">タイムテーブル</a>
@@ -252,6 +255,7 @@
   </div>
 </header>
 
+<main id="main">
 <div class="page-hero">
   <div class="page-hero-label">Call for Entries</div>
   <h1>作品を、募集しています</h1>
@@ -274,7 +278,7 @@
       <div class="spec-row"><div class="spec-key">応募料</div><div class="spec-val"><strong>無料</strong></div></div>
       <div class="spec-row"><div class="spec-key">応募締切</div><div class="spec-val"><strong>2026年9月30日（水）23:59</strong></div></div>
       <div class="spec-row"><div class="spec-key">結果通知</div><div class="spec-val">2026年10月中に、応募者全員へメールでお知らせします</div></div>
-      <div class="spec-row"><div class="spec-key">上映</div><div class="spec-val"><strong>2026年12月12日（土）18:00〜21:00</strong>・Denkikan（熊本市中央区新市街）</div></div>
+      <div class="spec-row"><div class="spec-key">上映</div><div class="spec-val"><strong>2026年12月12日（土）17:30受付開始／18:00開演</strong>・Denkikan（熊本市中央区新市街）</div></div>
     </div>
 
     <div class="callout">
@@ -355,7 +359,7 @@
         <div class="flow-num"></div>
         <div class="flow-body">
           <h3>作品と素材を準備する</h3>
-          <p>本編（限定公開URL可）／スチール写真2枚以上／あらすじ（200字）／監督プロフィールをご用意ください。AI部門の方は使用ツールの情報も。</p>
+          <p>本編（限定公開URL可）／スチール写真2枚以上／あらすじ（200字）／監督プロフィールをご用意ください。生成AIを使った方は、部門を問わず使用ツールと工程もご申告ください。</p>
         </div>
       </div>
       <div class="flow-item">
@@ -430,6 +434,10 @@
         <summary>過去に他の映画祭で上映された作品でも応募できますか？</summary>
         <p>応募いただけます。本映画祭は初公開作品に限定していません。ただし権利処理が完了している必要があります。</p>
       </details>
+      <details>
+        <summary>上映作品に選ばれた場合、どの形式で素材を提出しますか？</summary>
+        <p>上映用素材はMP4形式（映像H.264／音声AAC、1920×1080推奨）を予定しています。会場ではPCから再生し、事前にDenkikanの上映設備で映像と音声を確認します。詳しい書き出し設定と提出期限は、選出作品へのご連絡時にお知らせします。</p>
+      </details>
     </div>
   </div>
 </section>
@@ -444,6 +452,7 @@
   <p class="cta-note">締切まで、フォームから応募内容の差し替えができます。<br>ご不明な点は <strong>creative.yolo0406@gmail.com</strong> へ。</p>
 </div>
 
+</main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">あなたのまちの映画祭</div>

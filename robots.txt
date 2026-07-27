@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hasu-bot.github.io/yolo-film-festival/sitemap.xml
+Sitemap: https://yolo-film-festival.vercel.app/sitemap.xml

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>タイムテーブル — あなたのまちの映画祭</title>
+  <meta name="description" content="2026年12月12日開催、第2回「あなたのまちの映画祭」の予定タイムテーブル。17:30受付、18:00開演です。">
+  <link rel="canonical" href="https://yolo-film-festival.vercel.app/schedule.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .timetable {
@@ -114,6 +117,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
   <div class="perforations">
@@ -131,10 +135,10 @@
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
-    <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="メニュー">
+    <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="about.html">映画祭について</a>
       <a href="program.html">上映プログラム</a>
       <a href="schedule.html" class="active">タイムテーブル</a>
@@ -142,11 +146,12 @@
       <a href="news.html">ニュース</a>
       <a href="archive.html">過去の開催</a>
       <a href="entry.html">作品応募</a>
-      <a href="index.html#ticket" class="nav-ticket">チケット</a>
+      <a href="access.html#tickets" class="nav-ticket">チケット</a>
     </nav>
   </div>
 </header>
 
+<main id="main">
 <div class="page-hero">
   <div class="page-hero-label">Schedule</div>
   <h1>タイムテーブル</h1>
@@ -175,7 +180,7 @@
       <div class="timetable-track">
 
         <div class="time-slot">
-          <div class="time-label">18:00</div>
+          <div class="time-label">17:30</div>
           <div class="time-content">
             <div class="time-event event-break">
               <div class="event-title">開場・受付</div>
@@ -185,7 +190,7 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label highlight">18:15</div>
+          <div class="time-label highlight">18:00</div>
           <div class="time-content">
             <div class="time-event event-talk">
               <div class="event-type">オープニング</div>
@@ -197,7 +202,7 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label">18:25</div>
+          <div class="time-label">18:10</div>
           <div class="time-content">
             <div class="time-event event-screening">
               <div class="event-type">上映ブロック A</div>
@@ -209,7 +214,7 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label">19:30</div>
+          <div class="time-label">19:15</div>
           <div class="time-content">
             <div class="time-event event-break">
               <div class="event-title">休憩（10分）</div>
@@ -218,7 +223,7 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label">19:40</div>
+          <div class="time-label">19:25</div>
           <div class="time-content">
             <div class="time-event event-screening">
               <div class="event-type">上映ブロック B</div>
@@ -230,19 +235,19 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label">20:20</div>
+          <div class="time-label">20:05</div>
           <div class="time-content">
             <div class="time-event event-talk">
               <div class="event-type">特別企画</div>
               <div class="event-title">監督クロストーク</div>
-              <div class="event-desc">上映作品の監督が登壇し、撮影の背景や自分のまちについて話します。</div>
+              <div class="event-desc">登壇可能な監督を迎え、撮影の背景や自分のまちについて話します。</div>
               <span class="duration-badge">20分</span>
             </div>
           </div>
         </div>
 
         <div class="time-slot">
-          <div class="time-label highlight">20:40</div>
+          <div class="time-label highlight">20:25</div>
           <div class="time-content">
             <div class="time-event event-talk">
               <div class="event-type">クロージング</div>
@@ -254,10 +259,11 @@
         </div>
 
         <div class="time-slot">
-          <div class="time-label">21:00</div>
+          <div class="time-label">20:45</div>
           <div class="time-content">
             <div class="time-event event-break">
-              <div class="event-title">終演・閉場</div>
+              <div class="event-title">終演予定</div>
+              <div class="event-desc">21:00までに閉場します。</div>
             </div>
           </div>
         </div>
@@ -274,6 +280,7 @@
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">あなたのまちの映画祭</div>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/</loc><lastmod>2026-07-26</lastmod><priority>1.0</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/entry.html</loc><lastmod>2026-07-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/about.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/program.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/schedule.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/access.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/news.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://hasu-bot.github.io/yolo-film-festival/archive.html</loc><lastmod>2026-07-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/</loc><lastmod>2026-07-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/entry.html</loc><lastmod>2026-07-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/about.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/program.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/schedule.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/access.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/news.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://yolo-film-festival.vercel.app/archive.html</loc><lastmod>2026-07-27</lastmod><priority>0.7</priority></url>
 </urlset>
