@@ -28,11 +28,18 @@
 
 /* Hero actions: make the two primary next steps visible on the first screen. */
 .hero__actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}.hero__button{display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:14px 22px;border:1px solid rgba(246,237,216,.7);color:var(--cream);font-family:var(--sans);font-size:12px;letter-spacing:.14em;transition:.4s var(--ease)}.hero__button:hover{background:rgba(246,237,216,.14)}.hero__button--primary{background:var(--accent);border-color:var(--accent);color:#fff}.hero__button--primary:hover{background:var(--accent-d);border-color:var(--accent-d)}@media (max-width:900px){.hero__actions{margin-top:28px}}
-.hero__categories{display:inline-flex;align-items:center;gap:12px;margin-top:24px;padding-top:16px;border-top:1px solid rgba(246,237,216,.26);font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:rgba(246,237,216,.88)}.hero__categories span{font-family:var(--label);font-size:10px;letter-spacing:.2em;color:var(--dark-gold)}
+/* ヒーローの応募締切（締切を最初の画面で伝える） */
+.hero__deadline{display:flex;flex-direction:column;align-items:center;gap:8px;width:fit-content;margin:30px auto 0;padding:18px 30px 16px;border-top:1px solid rgba(246,237,216,.26);border-bottom:1px solid rgba(246,237,216,.26);color:var(--cream);transition:background .4s var(--ease)}
+.hero__deadline:hover{background:rgba(246,237,216,.06)}
+.hero__deadline-label{font-family:var(--label);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dark-gold)}
+.hero__deadline-date{font-family:var(--sans);font-size:13px;letter-spacing:.14em;line-height:1.4}
+.hero__deadline-date b{font-family:var(--roman);font-style:italic;font-weight:500;font-size:30px;letter-spacing:.02em;margin:0 .2em;color:var(--soft-red)}
+.hero__deadline-notes{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;font-family:var(--sans);font-size:11px;letter-spacing:.1em;line-height:1.8;color:rgba(246,237,216,.82)}
+.hero__deadline-notes span+span::before{content:"／";margin:0 .6em;color:rgba(246,237,216,.4)}
+@media (max-width:700px){.hero__deadline{width:100%;padding:16px 8px 14px}.hero__deadline-notes{display:grid;grid-template-columns:auto auto;justify-content:center;gap:2px 18px}.hero__deadline-notes span+span::before{content:none}}
 
 /* ヒーローのCTA・部門リンクを中央寄せにする（.hero は text-align:center） */
-.hero__meta,.hero__actions{justify-content:center}.hero__categories{margin-inline:auto;justify-content:center}
-@media (max-width:700px){.hero__categories{text-align:left}}
+.hero__meta,.hero__actions{justify-content:center}
 
 /* 2部門の紹介（トップ用）。※現在どのページからも未使用。マークアップ追加時に有効化する */
 .division-intro{padding:clamp(66px,10vw,118px) var(--gutter);background:var(--paper)}.division-intro__inner{max-width:var(--max);margin:auto;text-align:center}.division-intro h2{margin:0 auto 38px;font-family:var(--mincho);font-size:clamp(25px,3vw,40px);font-weight:500;line-height:1.75;letter-spacing:.08em}
