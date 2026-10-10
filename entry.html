@@ -15,10 +15,7 @@
   <link rel="canonical" href="https://yolo-film-festival.vercel.app/entry.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C0432C'/%3E%3Cpath d='M25 19v26l22-13z' fill='%23F7F0DF'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="tokens.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Shippori+Mincho+B1:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/awards.css">
   <style>
     /* ── 募集要項テーブル ── */
     .spec-table {
@@ -303,7 +300,7 @@
       <div class="spec-row"><div class="spec-key">応募部門</div><div class="spec-val">実写部門 ／ AI部門（下記）</div></div>
       <div class="spec-row"><div class="spec-key">作品の尺</div><div class="spec-val">本編 <strong>5〜25分</strong>（予告・クレジットを含む）</div></div>
       <div class="spec-row"><div class="spec-key">完成時期</div><div class="spec-val"><strong>制限はありません</strong>。すでに完成している作品、他の映画祭やネットで公開済みの作品も応募できます（第1回で上映した作品を除く）</div></div>
-      <div class="spec-row"><div class="spec-key">賞</div><div class="spec-val">グランプリ（賞金30,000円・審査員による選出）／ 観客賞（賞金10,000円・来場者投票による選出）。<a href="#awards">詳細は賞の紹介をご覧ください。</a></div></div>
+      <div class="spec-row" id="awards"><div class="spec-key">賞</div><div class="spec-val">グランプリ（賞金30,000円・審査員による選出）<br>観客賞（賞金10,000円・来場者投票による選出）<br>観客賞の投票方法・投票時間などの詳細は、決まり次第ご案内します。</div></div>
       <div class="spec-row"><div class="spec-key">応募料</div><div class="spec-val"><strong>無料</strong></div></div>
       <div class="spec-row"><div class="spec-key">応募締切</div><div class="spec-val"><strong>2026年10月20日（火）23:59</strong></div></div>
       <div class="spec-row"><div class="spec-key">結果通知</div><div class="spec-val">2026年11月上旬に、応募者全員へメールでお知らせします</div></div>
@@ -319,36 +316,6 @@
 <div class="section-inner" style="padding: 0 20px;">
   <div class="ticket-divider"><div class="ticket-divider-circle"></div></div>
 </div>
-
-    <section class="festival-awards" id="awards" aria-labelledby="awards-title">
-      <div class="festival-awards__inner">
-        <div class="festival-awards__head">
-          <div>
-            <p class="festival-awards__eyebrow">2nd Edition / Awards</p>
-            <h2 id="awards-title">物語に贈る、ふたつの賞。</h2>
-            <p class="festival-awards__lead">第2回は、グランプリと観客賞の2つの賞を設けます。</p>
-          </div>
-        </div>
-        <div class="festival-awards__grid">
-          <article class="festival-awards__card" aria-labelledby="grand-prix-title">
-            <p class="festival-awards__label">Grand Prix</p>
-            <h3 id="grand-prix-title">グランプリ</h3>
-            <p class="festival-awards__amount">賞金 30,000円</p>
-            <p class="festival-awards__selection">審査員による選出</p>
-          </article>
-          <article class="festival-awards__card" aria-labelledby="audience-award-title">
-            <p class="festival-awards__label">Audience Award</p>
-            <h3 id="audience-award-title">観客賞</h3>
-            <p class="festival-awards__amount">賞金 10,000円</p>
-            <p class="festival-awards__selection">来場者投票による選出</p>
-          </article>
-        </div>
-        <div class="festival-awards__foot">
-          <p>観客賞の投票方法・投票時間などの詳細は、決まり次第ご案内します。</p>
-          <a href="#apply">作品を応募する →</a>
-        </div>
-      </div>
-    </section>
 
 <!-- 部門 -->
 <section>
@@ -435,7 +402,6 @@
     <div class="spec-table">
       <div class="spec-row"><div class="spec-key">上映本数</div><div class="spec-val">作品の尺によって変わりますが、<strong>おおよそ5〜8本</strong>を予定しています。うち2枠はAI部門に確保します</div></div>
       <div class="spec-row"><div class="spec-key">入選作品</div><div class="spec-val">上映作品とは別に、<strong>入選作品を公式サイトに掲載</strong>します（作品名・監督名・スチール）</div></div>
-      <div class="spec-row"><div class="spec-key">賞</div><div class="spec-val">グランプリ（30,000円・審査員による選出）／ 観客賞（10,000円・来場者投票による選出）</div></div>
     </div>
 
     <div class="callout">

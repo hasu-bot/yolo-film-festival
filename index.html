@@ -20,7 +20,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Josefin+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@300;400&family=Shippori+Mincho+B1:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tokens.css" />
   <link rel="stylesheet" href="components.css" />
-  <link rel="stylesheet" href="assets/awards.css" />
   <style>
     /* 01 Concept: 画像なし・中央寄せの単一カラム表示 */
     .section-grid--solo{grid-template-columns:1fr;justify-items:center;text-align:center}
@@ -149,36 +148,6 @@
           <a class="news-item" href="news.html#entry-deadline"><time>2026.09.22</time><span>作品応募締切を10月20日（火）23:59まで延長しました</span></a>
         </div>
         <a href="news.html" class="news-more">一覧 →</a>
-      </div>
-    </section>
-
-    <section class="festival-awards" id="awards" aria-labelledby="awards-title">
-      <div class="festival-awards__inner">
-        <div class="festival-awards__head">
-          <div>
-            <p class="festival-awards__eyebrow">2nd Edition / Awards</p>
-            <h2 id="awards-title">物語に贈る、ふたつの賞。</h2>
-            <p class="festival-awards__lead">第2回は、グランプリと観客賞の2つの賞を設けます。</p>
-          </div>
-        </div>
-        <div class="festival-awards__grid">
-          <article class="festival-awards__card" aria-labelledby="grand-prix-title">
-            <p class="festival-awards__label">Grand Prix</p>
-            <h3 id="grand-prix-title">グランプリ</h3>
-            <p class="festival-awards__amount">賞金 30,000円</p>
-            <p class="festival-awards__selection">審査員による選出</p>
-          </article>
-          <article class="festival-awards__card" aria-labelledby="audience-award-title">
-            <p class="festival-awards__label">Audience Award</p>
-            <h3 id="audience-award-title">観客賞</h3>
-            <p class="festival-awards__amount">賞金 10,000円</p>
-            <p class="festival-awards__selection">来場者投票による選出</p>
-          </article>
-        </div>
-        <div class="festival-awards__foot">
-          <p>観客賞の投票方法・投票時間などの詳細は、決まり次第ご案内します。</p>
-          <a href="entry.html#awards">募集要項・賞の詳細を見る →</a>
-        </div>
       </div>
     </section>
 
@@ -312,7 +281,8 @@
             <dl>
               <div><dt>テーマ</dt><dd>あなたのまち</dd></div>
               <div><dt>応募部門</dt><dd>実写 / AI</dd></div>
-              <div><dt>賞</dt><dd>グランプリ / 観客賞</dd></div>
+              <div id="awards"><dt>賞</dt><dd>グランプリ / 観客賞</dd></div>
+              <div><dt>賞金総額</dt><dd>40,000円</dd></div>
               <div><dt>締切</dt><dd>2026.10.20 (火)</dd></div>
             </dl>
             <a class="button" href="entry.html">応募する →</a>

@@ -26,10 +26,9 @@ schedule.html    タイムテーブル
 access.html      アクセス（電気館）
 news.html        ニュース
 archive.html     過去の開催
-tokens.css       デザイントークン（配色・タイポ）＋リセット ※トップと作品応募が使用
+tokens.css       デザイントークン（配色・タイポ）＋リセット ※トップが使用
 components.css   トップ用コンポーネント
 assets/style.css 下層ページ共通スタイル
-assets/awards.css トップ・作品応募の賞紹介
 site.js          共通挙動（ヘッダー／モバイルナビ／横スクロール／reveal）
 docs/DESIGN_BRIEF.md  デザイン設計書（ハンドオフ仕様）
 ```
