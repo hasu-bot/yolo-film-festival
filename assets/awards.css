@@ -1,0 +1,31 @@
+/* Shared award presentation. All colors, fonts and spacing use design tokens. */
+.festival-awards{padding:var(--award-y) var(--award-gutter);background:var(--dark);color:var(--cream);scroll-margin-top:var(--award-y)}
+.festival-awards__inner{max-width:var(--max);margin:auto}
+.festival-awards__head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--award-gap);margin-bottom:var(--award-space-lg)}
+.festival-awards__eyebrow,.festival-awards__label{margin:0 0 var(--award-space-sm);font-family:var(--label);font-size:var(--award-small);letter-spacing:.18em;text-transform:uppercase;color:var(--dark-gold)}
+.festival-awards h2{margin:0;color:var(--cream);font-family:var(--mincho);font-size:var(--award-heading);font-weight:500;line-height:1.7}
+.festival-awards__lead{margin:var(--award-space-sm) 0 0;font-family:var(--sans);font-size:var(--award-copy);line-height:1.9;color:var(--cream)}
+.festival-awards__total{flex-shrink:0;margin:0;padding-left:var(--award-space-lg);border-left:1px solid var(--gold)}
+.festival-awards__total>span{display:block;font-family:var(--sans);font-size:var(--award-small);letter-spacing:.14em}
+.festival-awards__total strong{display:block;color:var(--dark-gold);font-family:var(--roman);font-size:var(--award-total);font-weight:500;line-height:1.2;letter-spacing:.02em;white-space:nowrap}
+.festival-awards small{margin-left:var(--award-space-xs);font-family:var(--serif);font-size:var(--award-copy);font-weight:400}
+.festival-awards__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--award-gap)}
+.festival-awards__card{min-width:0;padding:var(--award-card-padding);background:var(--dark-2);border:1px solid var(--gold)}
+.festival-awards h3{margin:0;color:var(--cream);font-family:var(--mincho);font-size:var(--award-name);font-weight:500;line-height:1.6}
+.festival-awards__amount{display:flex;align-items:baseline;gap:var(--award-space-sm);margin:var(--award-space-md) 0;line-height:1.2}
+.festival-awards__amount>span{font-family:var(--sans);font-size:var(--award-small);flex-shrink:0}
+.festival-awards__amount strong{color:var(--dark-gold);font-family:var(--roman);font-size:var(--award-amount);font-weight:500;letter-spacing:.02em;white-space:nowrap}
+.festival-awards__selection{border-top:1px solid var(--gold);padding-top:var(--award-space-sm);margin:0;font-family:var(--sans);font-size:var(--award-copy);line-height:1.8}
+.festival-awards__foot{display:flex;justify-content:space-between;align-items:baseline;gap:var(--award-gap);margin-top:var(--award-space-md);font-family:var(--sans);font-size:var(--award-small);line-height:1.9}
+.festival-awards__foot p{margin:0;max-width:36em}
+.festival-awards__foot a{color:var(--dark-gold);border-bottom:1px solid currentColor;flex-shrink:0}
+.festival-awards a:focus-visible{outline-color:var(--dark-gold)}
+.hero__prize{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:var(--award-space-xs) var(--award-space-sm);margin:var(--award-space-md) auto 0;color:var(--cream);font-family:var(--sans);font-size:var(--award-small);line-height:1.8}
+.hero__prize span{color:var(--dark-gold)}
+.hero__prize strong{font-family:var(--roman);font-size:var(--award-name);font-weight:500;line-height:1.2;letter-spacing:.03em}
+.hero__prize:focus-visible{outline-color:var(--dark-gold)}
+@media(max-width:700px){
+  .festival-awards__head,.festival-awards__foot{flex-direction:column;align-items:flex-start}
+  .festival-awards__total{padding-left:0;border-left:0}
+  .festival-awards__grid{grid-template-columns:1fr}
+}

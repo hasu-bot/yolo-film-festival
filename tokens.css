@@ -11,3 +11,20 @@
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
 :root{--hero-display:clamp(40px,5.2vw,72px);--hero-leading:1.6;--nav-size:12px;--hero-mobile:clamp(32px,9vw,46px);--hero-gutter:clamp(24px,5vw,60px)}
+/* Award section: shared rhythm for the homepage and entry guidelines. */
+:root{
+  --award-gutter:clamp(24px,6vw,96px);
+  --award-y:clamp(56px,7vw,96px);
+  --award-gap:clamp(20px,3vw,40px);
+  --award-card-padding:clamp(24px,4vw,44px);
+  --award-heading:clamp(24px,3.1vw,40px);
+  --award-name:clamp(24px,2.5vw,32px);
+  --award-amount:clamp(52px,5.4vw,76px);
+  --award-total:clamp(44px,4.6vw,64px);
+  --award-small:12px;
+  --award-copy:14px;
+  --award-space-xs:8px;
+  --award-space-sm:16px;
+  --award-space-md:24px;
+  --award-space-lg:32px;
+}
