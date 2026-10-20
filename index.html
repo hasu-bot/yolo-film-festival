@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>あなたのまちの映画祭 ｜ Your Town Film Festival</title>
-  <meta name="description" content="テーマ「あなたのまち」の短編映画を全国から募集中。実写・AI部門、応募無料、締切は2026年10月20日23:59。12月12日、熊本・Denkikanで開催。" />
+  <meta name="description" content="第2回の作品応募受付は終了しました。上映作品は11月上旬に発表予定。12月12日、熊本・Denkikanで開催。" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="あなたのまちの映画祭 ｜ Your Town Film Festival" />
-  <meta property="og:description" content="テーマ「あなたのまち」の短編映画を全国から募集中。実写・AI部門、応募無料、締切は2026年10月20日23:59。12月12日、熊本・Denkikanで開催。" />
+  <meta property="og:description" content="第2回の作品応募受付は終了しました。上映作品は11月上旬に発表予定。12月12日、熊本・Denkikanで開催。" />
   <meta property="og:url" content="https://yolo-film-festival.vercel.app/" />
   <meta property="og:image" content="https://yolo-film-festival.vercel.app/assets/og-image.jpg" />
   <meta property="og:locale" content="ja_JP" />
@@ -44,7 +44,7 @@
     "endDate": "2026-12-12T21:00+09:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "description": "テーマは「あなたのまち」。短編映画が集まる映画祭。実写部門とAI部門の2部門で、地域を問わず作品を募集しています。",
+    "description": "テーマは「あなたのまち」。短編映画が集まる映画祭。実写部門とAI部門の2部門で、作品応募受付は終了し、上映作品を選考しています。",
     "image": "https://yolo-film-festival.vercel.app/assets/og-image.jpg",
     "url": "https://yolo-film-festival.vercel.app/",
     "location": {
@@ -92,7 +92,7 @@
       <a href="access.html">会場</a>
       <a href="news.html">お知らせ</a>
       <a href="archive.html">開催記録</a>
-      <a href="entry.html">作品を応募する</a>
+      
     </nav>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-button>
       <span></span><span></span>
@@ -107,7 +107,7 @@
     <a href="access.html">会場</a>
     <a href="news.html">お知らせ</a>
     <a href="archive.html">開催記録</a>
-    <a href="entry.html">応募する</a>
+    
   </div>
 
   <main id="main">
@@ -126,13 +126,13 @@
           <span>受付 17:30 ／ 開演 18:00</span>
           <span>会場 Denkikan（熊本）</span>
         </div>
-        <a class="hero__deadline" href="entry.html" aria-label="作品募集中。応募締切は2026年10月20日（火）23時59分">
-          <span class="hero__deadline-label">Call for Entries</span>
-          <span class="hero__deadline-date">応募締切 <b>10.20</b> TUE 23:59</span>
-          <span class="hero__deadline-notes"><span>応募無料</span><span>地域不問</span><span>撮影済みの作品もOK</span><span>実写・AI部門</span></span>
-        </a>
+        <div class="hero__deadline" role="status">
+          <span class="hero__deadline-label">Entries Closed</span>
+          <span class="hero__deadline-date">作品応募の受付は終了しました</span>
+          <span class="hero__deadline-notes">たくさんのご応募、ありがとうございました。</span>
+        </div>
         <div class="hero__actions" aria-label="映画祭の主な案内">
-          <a class="hero__button hero__button--primary" href="entry.html">作品を応募する</a>
+          <a class="hero__button hero__button--primary" href="program.html">上映プログラムについて</a>
           <a class="hero__button" href="archive.html">第1回の記録を見る</a>
         </div>
       </div>
@@ -143,6 +143,7 @@
       <div class="news-strip__inner">
         <p class="section-kicker">Latest</p>
         <div class="news-list">
+          <a class="news-item" href="news.html#entries-closed"><time datetime="2026-10-21">2026.10.21</time><span>作品応募受付を終了しました</span></a>
           <a class="news-item" href="news.html#awards-announcement"><time datetime="2026-10-10">2026.10.10</time><span>グランプリと観客賞に、賞金がつきます</span></a>
           <a class="news-item" href="news.html#jury-jimbo"><time>2026.09.29</time><span>審査員に神保慶政監督が加わります</span></a>
           <a class="news-item" href="news.html#entry-deadline"><time>2026.09.22</time><span>作品応募締切を10月20日（火）23:59まで延長しました</span></a>
@@ -166,12 +167,12 @@
     <section class="section program section-dark" id="program">
       <div class="section-head section-head--stack" data-reveal>
         <p class="chapter">02</p>
-        <p class="section-kicker">Program — Entries Open</p>
-        <h2>上映作品、募集中。</h2>
+        <p class="section-kicker">Program — In Selection</p>
+        <h2>上映作品を選考中です。</h2>
       </div>
       <div class="coming-soon" data-reveal>
-        <p>いま、テーマ「あなたのまち」の短編映画を募集しています。上映プログラムは応募締切後、11月上旬に発表します。</p>
-        <a class="button" href="entry.html">作品を応募する →</a>
+        <p>作品応募受付は終了しました。たくさんのご応募、ありがとうございました。上映プログラムは11月上旬に発表します。</p>
+        
       </div>
     </section>
 
@@ -254,11 +255,11 @@
       <div class="section-head section-head--stack" data-reveal>
         <p class="chapter">05</p>
         <p class="section-kicker">Festival Features</p>
-        <h2>応募を考えている方へ。</h2>
+        <h2>映画祭の特色。</h2>
       </div>
       <div class="feature-list" data-reveal>
-        <article><span>01</span><div><h3>誰でも応募できます</h3><p>お住まいの地域も、年齢も、制作の経験も問いません。応募は無料です。完成時期にも制限はないので、すでに撮ってある一本でご応募いただけます。</p></div></article>
-        <article><span>02</span><div><h3>実写とAI、2つの部門</h3><p>本編映像の半分以上を生成AIでつくった作品はAI部門へ。カメラや機材がなくても応募できます。審査の基準は、どちらの部門も同じです。</p></div></article>
+        <article><span>01</span><div><h3>全国から集まる物語</h3><p>お住まいの地域や年齢、制作経験を問わず、全国から作品を募りました。それぞれのまちで生まれた物語が集まります。</p></div></article>
+        <article><span>02</span><div><h3>実写とAI、2つの部門</h3><p>実写部門とAI部門の2つの部門で作品を選考しています。審査の基準は、どちらの部門も同じです。</p></div></article>
         <article><span>03</span><div><h3>作品の背景を聞ける時間</h3><p>上映のあとには、登壇可能な監督を迎えたクロストークを予定しています。作品やまちへの思いを聞ける時間をつくります。</p></div></article>
         <article><span>04</span><div><h3>会場は、まちの映画館</h3><p>上映は熊本・新市街の Denkikan。第1回と同じ、まちに根ざした映画館のスクリーンで上映します。開演は12月12日（土）18:00 です。</p></div></article>
       </div>
@@ -267,9 +268,9 @@
     <section class="section entries" id="entries">
       <div class="entry-card" data-reveal>
         <div class="entry-copy">
-          <p class="section-kicker">Call for Entries</p>
-          <h2>あなたの短編を、<br>Denkikanのスクリーンへ。</h2>
-          <p>テーマは「あなたのまち」。あなたが撮った短編映画を、熊本・Denkikan のスクリーンへ。地域を問わず、応募をお待ちしています。</p>
+          <p class="section-kicker">Entries Closed</p>
+          <h2>作品応募の受付は、<br>終了しました。</h2>
+          <p>たくさんのご応募、ありがとうございました。上映作品は審査を経て、11月上旬に発表予定です。</p>
         </div>
         <div class="ticket" aria-label="応募概要">
           <div class="ticket__head">
@@ -283,9 +284,9 @@
               <div><dt>応募部門</dt><dd>実写 / AI</dd></div>
               <div id="awards"><dt>賞</dt><dd>グランプリ / 観客賞</dd></div>
               <div><dt>賞金総額</dt><dd>40,000円</dd></div>
-              <div><dt>締切</dt><dd>2026.10.20 (火)</dd></div>
+              <div><dt>応募受付</dt><dd>終了しました</dd></div>
             </dl>
-            <a class="button" href="entry.html">応募する →</a>
+            
           </div>
         </div>
       </div>
@@ -301,7 +302,7 @@
     <div class="footer-links">
       <a href="https://www.instagram.com/creative.yolo/" target="_blank" rel="noopener">Instagram</a>
       <a href="about.html">映画祭について</a><a href="program.html">上映プログラム</a><a href="schedule.html">タイムテーブル</a>
-      <a href="access.html">アクセス</a><a href="news.html">ニュース</a><a href="entry.html">作品応募</a><a href="mailto:creative.yolo0406@gmail.com">お問い合わせ</a>
+      <a href="access.html">アクセス</a><a href="news.html">ニュース</a><a href="mailto:creative.yolo0406@gmail.com">お問い合わせ</a>
       <a href="https://yolo-official.vercel.app/" target="_blank" rel="noopener">Creative YOLO 公式サイト</a>
       <a href="https://line.me/R/ti/p/@140irxqh" target="_blank" rel="noopener">LINE でコミュニティに参加</a>
     </div>
