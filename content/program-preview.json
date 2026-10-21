@@ -1,0 +1,11 @@
+{
+  "sample": true,
+  "films": [
+    {"id":"sample-01","title":"始発のあと","director":"監督名 A","category":"実写","minutes":18,"block":"A","start":"18:10","synopsis":"いつもの駅で交わす、いつもと少し違う会話。作品紹介文が入ったときの文字量と読みやすさを確認するための架空のあらすじです。"},
+    {"id":"sample-02","title":"路地の灯り","director":"監督名 B","category":"実写","minutes":20,"block":"A","start":"18:30","synopsis":"閉店後の商店街を歩く二人。まちの音と人の記憶をたどる作品を想定した、表示確認用の架空のあらすじです。"},
+    {"id":"sample-03","title":"窓辺の記憶","director":"監督名 C","category":"AI","minutes":22,"block":"A","start":"18:52","synopsis":"見慣れた窓の向こうに、まだ知らないまちが重なる。生成AI作品の紹介欄を確認するための架空のあらすじです。"},
+    {"id":"sample-04","title":"川沿いの帰り道","director":"監督名 D","category":"実写","minutes":12,"block":"B","start":"19:25","synopsis":"川沿いの道で交差する小さな日常。短い作品紹介文を入れた際の見え方を確認するための架空のあらすじです。"},
+    {"id":"sample-05","title":"まだ見ぬ交差点","director":"監督名 E","category":"AI","minutes":10,"block":"B","start":"19:39","synopsis":"もし、あの交差点を違う方向へ曲がっていたら。架空のまちを描く作品を想定した、表示確認用のあらすじです。"},
+    {"id":"sample-06","title":"また、あした","director":"監督名 F","category":"実写","minutes":13,"block":"B","start":"19:51","synopsis":"いつもの別れの言葉が、まちと誰かをつないでいる。最後の上映作品の配置を確認するための架空のあらすじです。"}
+  ]
+}

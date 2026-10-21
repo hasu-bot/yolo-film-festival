@@ -1,0 +1,34 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+const baseCommit = '0854653134b597e5d6644405a61ead547c2fb4a1';
+const {sample,films}=JSON.parse(readFileSync(new URL('../content/program-preview.json',import.meta.url),'utf8'));
+if(sample!==true)throw Error('Preview generator only accepts marked sample data');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+if(films.length!==6||films.reduce((n,f)=>n+f.minutes,0)!==95)throw Error('Expected six sample films, 95 minutes');
+const notice='<aside class="preview-notice" id="preview-notice"><strong>PREVIEW · 表示確認用</strong>作品名・監督名・あらすじはすべて架空のサンプルです。実際の選考結果ではありません。</aside>';
+const meta='<div class="preview-meta"><span>2026年12月12日（土）</span><span>17:30受付 ／ 18:00開演</span><span>Denkikan 3階・熊本</span></div>';
+const tabs='<nav class="preview-tabs" aria-label="プレビュー内の案内"><a href="program.html">上映作品を見る</a><a href="schedule.html">タイムテーブルを見る</a></nav>';
+const intro=(k,title,lead)=>`<header class="preview-intro"><p class="preview-kicker">${k} / SAMPLE PREVIEW</p><h1>${title}</h1><p>${lead}</p>${meta}${tabs}</header>`;
+const card=f=>`<article class="film-card" id="${esc(f.id)}"><div class="film-art ${f.category==='AI'?'film-art--ai':''}" aria-label="作品写真の配置イメージ。実際の作品写真ではありません"><span class="film-art__number">${f.id.slice(-2)}</span><span class="film-art__caption">STILL IMAGE / PLACEHOLDER</span></div><div class="film-card__body"><p class="film-card__tag">${esc(f.category)}部門 · ${f.minutes}分</p><h3>${esc(f.title)}</h3><p class="film-card__meta">監督：${esc(f.director)}<br>上映ブロック ${f.block} ／ ${f.start}〜</p><p class="sample-caption">表示確認用の架空作品</p><details><summary>作品紹介を読む</summary><p>${esc(f.synopsis)}</p></details><a class="film-card__time" href="schedule.html#${esc(f.id)}">上映時間を確認する →</a></div></article>`;
+const blocks=['A','B'].map(b=>`<section class="preview-block" id="block-${b}"><header class="preview-block-head"><h2>上映ブロック ${b}</h2><p>${b==='A'?'18:10–19:15 ／ 上映60分＋転換5分':'19:25–20:05 ／ 上映35分＋転換5分'}</p></header><div class="film-grid">${films.filter(f=>f.block===b).map(card).join('')}</div></section>`).join('');
+const program=intro('PROGRAM','まちの数だけ、<br>スクリーンに物語が灯る。','作品決定後は、作品写真・タイトル・監督名・上映時間をこのように一覧でご覧いただけます。以下は見え方を確認するためのサンプルです。')+'<div class="preview-summary"><div><span>上映作品（仮配置）</span><strong>6作品</strong></div><div><span>作品尺の合計</span><strong>95分</strong></div><div><span>上映ブロック</span><strong>A / B</strong></div></div>'+blocks+'<div class="preview-note">実際の掲載時には、確定した作品情報と掲載許可済みの作品写真に差し替えます。サンプルの作品名・上映順・分数は決定事項ではありません。</div>';
+const row=(t,title,body,id='')=>`<section class="agenda-row" ${id?`id="${id}"`:''}><time class="agenda-time">${t}</time><div class="agenda-content"><h2>${title}</h2>${body}</div></section>`;
+const filmRows=b=>'<div class="agenda-films">'+films.filter(f=>f.block===b).map(f=>`<a class="agenda-film" id="${esc(f.id)}" href="program.html#${esc(f.id)}"><time>${f.start}</time><div><strong>${esc(f.title)}</strong><small>${esc(f.category)}部門 ／ ${esc(f.director)} · 架空サンプル</small></div><span>${f.minutes}分</span></a>`).join('')+'</div>';
+const schedule=intro('SCHEDULE','物語を観て、<br>つくり手の声に出会う。','作品が決まると、上映ブロックの中に作品名と上映開始時刻が入ります。作品名を選ぶと、作品紹介に移動できます。')+'<div class="preview-agenda">'+row('17:30','開場・受付','<p>大人3,000円・学生2,000円。当日受付で現金払い。学生証をご提示ください。</p>')+row('18:00','開会あいさつ','<p>テーマ「あなたのまち」と、当日のご案内。司会：らぶかう❤︎</p>')+row('18:10','上映ブロック A','<p>65分枠 ／ 作品60分＋転換5分</p>'+filmRows('A'))+row('19:15','休憩','<p>10分</p>')+row('19:25','上映ブロック B','<p>40分枠 ／ 作品35分＋転換5分</p>'+filmRows('B'))+row('20:05','監督クロストーク','<p>登壇可能な監督によるトーク。登壇者は決定後にご案内します。</p>')+row('20:25','授賞式・閉会','<p>グランプリ（賞金30,000円）・観客賞（賞金10,000円）</p>')+row('20:45','終演予定','<p>21:00までに閉場します。</p>')+'<div class="preview-note">このタイムテーブルは表示確認用です。作品名・上映順・個別の開始時刻は仮配置です。観客賞の投票方法・投票時間は未定です。</div></div>';
+for(const [file,body] of [['program.html',program],['schedule.html',schedule]]){
+ const path=new URL('../'+file,import.meta.url);let html=execFileSync('git',['show',`${baseCommit}:${file}`],{encoding:'utf8'});
+ html=html.replace(/<main id="main"[\s\S]*?<\/main>/,`<main id="main" class="preview-main">${body}</main>`);
+ html=html.replace(/<title>.*?<\/title>/,'<title>表示確認プレビュー — あなたのまちの映画祭</title>');
+ html=html.replace(/<link rel="canonical"[^>]*>/,'<meta name="robots" content="noindex,nofollow,noarchive">');
+ html=html.replace(/<script src="assets\/analytics.js"><\/script>/,'').replace(/<script defer src="\/_vercel\/insights\/script.js"><\/script>/,'');
+ html=html.replace('<link rel="stylesheet" href="assets/style.css">','<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/program-preview.css">');
+ html=html.replace('<body>','<body>'+notice);
+ html=html.replace(/<meta name="description"[^>]*>/,'<meta name="description" content="作品決定後の表示確認用プレビュー。作品・監督・あらすじはすべて架空のサンプルです。">').replace(/<meta property="og:description"[^>]*>/,'<meta property="og:description" content="架空のサンプル6作品を使った表示確認用プレビューです。">').replace(/<meta property="og:title"[^>]*>/,'<meta property="og:title" content="表示確認用プレビュー — あなたのまちの映画祭">').replace(/<meta property="og:url"[^>]*>/,'');
+ html=html.split('\n').map(line=>line.trimEnd()).join('\n');
+ html=html.replace(/<nav class="site-nav"[\s\S]*?<\/nav>/,'<nav class="site-nav" id="site-nav"><a href="program.html">上映作品（サンプル）</a><a href="schedule.html">タイムテーブル（サンプル）</a><a href="https://yolo-film-festival.vercel.app/" target="_blank" rel="noopener">本番サイトを見る ↗</a></nav>');
+ html=html.replace(/href="index.html"/g,'href="program.html"');
+ html=html.replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,'<footer class="site-footer"><div class="footer-inner"><p>あなたのまちの映画祭 · 表示確認用プレビュー</p><p>架空のサンプル6作品。本番サイトの選考結果とは異なります。</p></div></footer>');
+ writeFileSync(path,html);
+}
+writeFileSync(new URL('../vercel.json',import.meta.url),JSON.stringify({redirects:[{source:'/',destination:'/program.html',permanent:false}],headers:[{source:'/(.*)',headers:[{key:'X-Robots-Tag',value:'noindex, nofollow, noarchive'}]}]},null,2)+'\n');
+console.log('Generated preview: 6 fictional films, 95 minutes; production deployment is not authorized.');
