@@ -11,3 +11,8 @@
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
 :root{--hero-display:clamp(40px,5.2vw,72px);--hero-leading:1.6;--nav-size:12px;--hero-mobile:clamp(32px,9vw,46px);--hero-gutter:clamp(24px,5vw,60px)}
+
+/* 作品決定後の表示確認用。プレビュー専用ブランチ。 */
+:root{--preview-space-1:.25rem;--preview-space-2:.5rem;--preview-space-3:.75rem;--preview-space-4:1rem;--preview-space-5:1.5rem;--preview-space-6:2rem;--preview-space-7:3rem;--preview-space-8:4rem;--preview-copy:68ch;--preview-radius:4px;--preview-notice-size:12px;--preview-small:13px;--preview-body:15px;--preview-film-title:23px;--preview-title:clamp(30px,5vw,48px);--preview-section-title:clamp(24px,3vw,32px)}
+
+:root{--preview-anchor-offset:7rem}

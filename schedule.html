@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タイムテーブル — あなたのまちの映画祭</title>
-  <meta name="description" content="2026年12月12日開催、第2回「あなたのまちの映画祭」の予定タイムテーブル。17:30受付、18:00開演です。">
+  <title>表示確認プレビュー — あなたのまちの映画祭</title>
+  <meta name="description" content="作品決定後の表示確認用プレビュー。作品・監督・あらすじはすべて架空のサンプルです。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="タイムテーブル — あなたのまちの映画祭">
-  <meta property="og:description" content="2026年12月12日開催、第2回「あなたのまちの映画祭」の予定タイムテーブル。17:30受付、18:00開演です。">
-  <meta property="og:url" content="https://yolo-film-festival.vercel.app/schedule.html">
+  <meta property="og:title" content="表示確認用プレビュー — あなたのまちの映画祭">
+  <meta property="og:description" content="架空のサンプル6作品を使った表示確認用プレビューです。">
+
   <meta property="og:image" content="https://yolo-film-festival.vercel.app/assets/og-image.jpg">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://yolo-film-festival.vercel.app/schedule.html">
+  <meta name="robots" content="noindex,nofollow,noarchive">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/program-preview.css">
   <style>
     .timetable {
       margin-top: 36px;
@@ -120,10 +120,10 @@
     }
   </style>
   <meta name="google-site-verification" content="7he0VVTEDO85Pbl_M7TtZ8FH4aKwiqdkvu4j-QHQOwU" />
-  <script src="assets/analytics.js"></script>
-  <script defer src="/_vercel/insights/script.js"></script>
+
+
 </head>
-<body>
+<body><aside class="preview-notice" id="preview-notice"><strong>PREVIEW · 表示確認用</strong>作品名・監督名・あらすじはすべて架空のサンプルです。実際の選考結果ではありません。</aside>
 <a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
@@ -138,193 +138,19 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="site-logo">
+    <a href="program.html" class="site-logo">
       <span class="logo-main">あなたのまちの映画祭</span>
       <span class="logo-sub">YOLO FILM FESTIVAL</span>
     </a>
     <button class="nav-toggle" onclick="var nav=document.querySelector('.site-nav');var open=nav.classList.toggle('open');this.setAttribute('aria-expanded',String(open))" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="site-nav">
-      <a href="about.html">映画祭について</a>
-      <a href="program.html">上映プログラム</a>
-      <a href="schedule.html" class="active">タイムテーブル</a>
-      <a href="access.html">アクセス</a>
-      <a href="news.html">ニュース</a>
-      <a href="archive.html">過去の開催</a>
-      
-      <a href="access.html#tickets" class="nav-ticket">チケット</a>
-    </nav>
+    <nav class="site-nav" id="site-nav"><a href="program.html">上映作品（サンプル）</a><a href="schedule.html">タイムテーブル（サンプル）</a><a href="https://yolo-film-festival.vercel.app/" target="_blank" rel="noopener">本番サイトを見る ↗</a></nav>
   </div>
 </header>
 
-<main id="main">
-<div class="page-hero">
-  <div class="page-hero-label">Schedule</div>
-  <h1>タイムテーブル</h1>
-  <p>第2回 / 2026年12月12日（土）@ Denkikan</p>
-  <p>司会：<a href="index.html#host" style="text-decoration:underline;text-underline-offset:3px">らぶかう❤︎</a></p>
-</div>
-
-<section>
-  <div class="section-inner" style="max-width:720px">
-
-    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:8px">
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-mid)">
-        <div style="width:12px;height:16px;background:var(--red);border-radius:2px;flex-shrink:0"></div>
-        上映
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-mid)">
-        <div style="width:12px;height:16px;background:var(--navy);border-radius:2px;flex-shrink:0"></div>
-        トーク・授賞式
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-mid)">
-        <div style="width:12px;height:16px;background:var(--border);border-radius:2px;flex-shrink:0"></div>
-        開場・休憩
-      </div>
-    </div>
-
-    <div class="timetable">
-      <div class="timetable-track">
-
-        <div class="time-slot">
-          <div class="time-label">17:30</div>
-          <div class="time-content">
-            <div class="time-event event-break">
-              <div class="event-title">開場・受付</div>
-              <div class="event-desc">17:30から受付を開始します。</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label highlight">18:00</div>
-          <div class="time-content">
-            <div class="time-event event-talk">
-              <div class="event-type">オープニング</div>
-              <div class="event-title">開会あいさつ</div>
-              <div class="event-desc">第2回のテーマ「あなたのまち」と、当日の進行について。</div>
-              <span class="duration-badge">10分</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label">18:10</div>
-          <div class="time-content">
-            <div class="time-event event-screening">
-              <div class="event-type">上映ブロック A</div>
-              <div class="event-title">短編上映（3作品前後）</div>
-              <div class="event-desc">上映作品は、応募締切後の審査を経て2026年11月上旬に発表します。</div>
-              <span class="duration-badge">65分</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label">19:15</div>
-          <div class="time-content">
-            <div class="time-event event-break">
-              <div class="event-title">休憩（10分）</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label">19:25</div>
-          <div class="time-content">
-            <div class="time-event event-screening">
-              <div class="event-type">上映ブロック B</div>
-              <div class="event-title">短編上映（3作品前後）</div>
-              <div class="event-desc">テーマ「あなたのまち」の短編映画を上映します。</div>
-              <span class="duration-badge">40分</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label">20:05</div>
-          <div class="time-content">
-            <div class="time-event event-talk">
-              <div class="event-type">特別企画</div>
-              <div class="event-title">監督クロストーク</div>
-              <div class="event-desc">登壇可能な監督を迎え、撮影の背景や自分のまちについて話します。</div>
-              <span class="duration-badge">20分</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label highlight">20:25</div>
-          <div class="time-content">
-            <div class="time-event event-talk">
-              <div class="event-type">クロージング</div>
-              <div class="event-title">授賞式・閉会</div>
-              <div class="event-desc">グランプリ（賞金30,000円）と観客賞（賞金10,000円）を発表します。</div>
-              <span class="duration-badge">20分</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="time-slot">
-          <div class="time-label">20:45</div>
-          <div class="time-content">
-            <div class="time-event event-break">
-              <div class="event-title">終演予定</div>
-              <div class="event-desc">21:00までに閉場します。</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="timetable-note">
-      ※ 上記は第2回（2026年12月12日）の予定進行です。上映作品名は決定次第（2026年11月上旬）掲載します。<br>
-      ※ 作品の尺の組み合わせにより、各ブロックの本数・時間は前後する場合があります。<br>
-      ※ 観客賞は来場者投票による選出です。投票方法・投票時間などの詳細は、決まり次第ご案内します。
-    </div>
-
-  </div>
-</section>
-
-</main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-logo">あなたのまちの映画祭</div>
-    <div class="footer-tagline">YOLO FILM FESTIVAL — KUMAMOTO</div>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="about.html">映画祭について</a>
-        <a href="program.html">上映プログラム</a>
-        <a href="schedule.html">タイムテーブル</a>
-        <a href="access.html">アクセス</a>
-      </div>
-      <div class="footer-col">
-        <h4>More</h4>
-        <a href="news.html">ニュース</a>
-        <a href="archive.html">過去の開催</a>
-      </div>
-      <div class="footer-col">
-        <h4>Organizer</h4>
-        <a href="about.html">YOLO（熊本）</a>
-        <a href="mailto:creative.yolo0406@gmail.com">お問い合わせ</a>
-      </div>
-      <div class="footer-col">
-        <h4>Creative YOLO</h4>
-        <a href="https://yolo-official.vercel.app/" target="_blank" rel="noopener">公式サイト</a>
-        <a href="https://line.me/R/ti/p/@140irxqh" target="_blank" rel="noopener">LINE で参加</a>
-        <a href="https://yolo-members.vercel.app/" target="_blank" rel="noopener">YOLO HUB</a>
-        <a href="https://yolo-magazine.rencame.net/" target="_blank" rel="noopener">YOLO MAGAZINE</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 あなたのまちの映画祭 / YOLO</p>
-      <p>Denkikan, Kumamoto</p>
-    </div>
-  </div>
-</footer>
+<main id="main" class="preview-main"><header class="preview-intro"><p class="preview-kicker">SCHEDULE / SAMPLE PREVIEW</p><h1>物語を観て、<br>つくり手の声に出会う。</h1><p>作品が決まると、上映ブロックの中に作品名と上映開始時刻が入ります。作品名を選ぶと、作品紹介に移動できます。</p><div class="preview-meta"><span>2026年12月12日（土）</span><span>17:30受付 ／ 18:00開演</span><span>Denkikan 3階・熊本</span></div><nav class="preview-tabs" aria-label="プレビュー内の案内"><a href="program.html">上映作品を見る</a><a href="schedule.html">タイムテーブルを見る</a></nav></header><div class="preview-agenda"><section class="agenda-row" ><time class="agenda-time">17:30</time><div class="agenda-content"><h2>開場・受付</h2><p>大人3,000円・学生2,000円。当日受付で現金払い。学生証をご提示ください。</p></div></section><section class="agenda-row" ><time class="agenda-time">18:00</time><div class="agenda-content"><h2>開会あいさつ</h2><p>テーマ「あなたのまち」と、当日のご案内。司会：らぶかう❤︎</p></div></section><section class="agenda-row" ><time class="agenda-time">18:10</time><div class="agenda-content"><h2>上映ブロック A</h2><p>65分枠 ／ 作品60分＋転換5分</p><div class="agenda-films"><a class="agenda-film" id="sample-01" href="program.html#sample-01"><time>18:10</time><div><strong>始発のあと</strong><small>実写部門 ／ 監督名 A · 架空サンプル</small></div><span>18分</span></a><a class="agenda-film" id="sample-02" href="program.html#sample-02"><time>18:30</time><div><strong>路地の灯り</strong><small>実写部門 ／ 監督名 B · 架空サンプル</small></div><span>20分</span></a><a class="agenda-film" id="sample-03" href="program.html#sample-03"><time>18:52</time><div><strong>窓辺の記憶</strong><small>AI部門 ／ 監督名 C · 架空サンプル</small></div><span>22分</span></a></div></div></section><section class="agenda-row" ><time class="agenda-time">19:15</time><div class="agenda-content"><h2>休憩</h2><p>10分</p></div></section><section class="agenda-row" ><time class="agenda-time">19:25</time><div class="agenda-content"><h2>上映ブロック B</h2><p>40分枠 ／ 作品35分＋転換5分</p><div class="agenda-films"><a class="agenda-film" id="sample-04" href="program.html#sample-04"><time>19:25</time><div><strong>川沿いの帰り道</strong><small>実写部門 ／ 監督名 D · 架空サンプル</small></div><span>12分</span></a><a class="agenda-film" id="sample-05" href="program.html#sample-05"><time>19:39</time><div><strong>まだ見ぬ交差点</strong><small>AI部門 ／ 監督名 E · 架空サンプル</small></div><span>10分</span></a><a class="agenda-film" id="sample-06" href="program.html#sample-06"><time>19:51</time><div><strong>また、あした</strong><small>実写部門 ／ 監督名 F · 架空サンプル</small></div><span>13分</span></a></div></div></section><section class="agenda-row" ><time class="agenda-time">20:05</time><div class="agenda-content"><h2>監督クロストーク</h2><p>登壇可能な監督によるトーク。登壇者は決定後にご案内します。</p></div></section><section class="agenda-row" ><time class="agenda-time">20:25</time><div class="agenda-content"><h2>授賞式・閉会</h2><p>グランプリ（賞金30,000円）・観客賞（賞金10,000円）</p></div></section><section class="agenda-row" ><time class="agenda-time">20:45</time><div class="agenda-content"><h2>終演予定</h2><p>21:00までに閉場します。</p></div></section><div class="preview-note">このタイムテーブルは表示確認用です。作品名・上映順・個別の開始時刻は仮配置です。観客賞の投票方法・投票時間は未定です。</div></div></main>
+<footer class="site-footer"><div class="footer-inner"><p>あなたのまちの映画祭 · 表示確認用プレビュー</p><p>架空のサンプル6作品。本番サイトの選考結果とは異なります。</p></div></footer>
 
 </body>
 </html>
