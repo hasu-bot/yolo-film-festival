@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>上映プログラム — あなたのまちの映画祭</title>
-  <meta name="description" content="第2回「あなたのまちの映画祭」の上映プログラムと部門案内。上映作品は2026年11月上旬に発表します。">
+  <meta name="description" content="第2回「あなたのまちの映画祭」の上映プログラムと部門案内。上映作品7本と入選4作品をご紹介します。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="上映プログラム — あなたのまちの映画祭">
-  <meta property="og:description" content="第2回「あなたのまちの映画祭」の上映プログラムと部門案内。上映作品は2026年11月上旬に発表します。">
+  <meta property="og:description" content="第2回「あなたのまちの映画祭」の上映プログラムと部門案内。上映作品7本と入選4作品をご紹介します。">
   <meta property="og:url" content="https://yolo-film-festival.vercel.app/program.html">
   <meta property="og:image" content="https://yolo-film-festival.vercel.app/assets/og-image.jpg">
   <meta property="og:locale" content="ja_JP">
@@ -49,6 +49,45 @@
       color: var(--ink-light);
       margin: 20px auto 0;
       letter-spacing: 0.04em;
+    }
+
+    .section-lead {
+      font-size: 14px;
+      color: var(--ink-mid);
+      margin-top: 8px;
+    }
+    .film-block {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px 26px;
+      margin-top: 20px;
+    }
+    .film-block h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .film-block ol, .film-block ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .film-block li {
+      border-top: 1px solid var(--border);
+      padding: 12px 0;
+    }
+    .film-title {
+      display: block;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .film-meta {
+      display: block;
+      font-size: 13px;
+      color: var(--ink-mid);
     }
 
     .section-heading {
@@ -162,13 +201,40 @@
 <section>
   <div class="section-inner" style="max-width:820px">
 
+    <h2 class="section-heading">上映作品</h2>
+    <p class="section-lead">応募作品の中から、上映作品7本が決定しました。上映順に掲載しています。</p>
+    <div class="film-block">
+      <h3>前半（65分）</h3>
+      <ol>
+        <li><span class="film-title">STILL HERE</span><span class="film-meta">監督：谷川ケン ／ 12分</span></li>
+        <li><span class="film-title">ウチの宇宙は三角形</span><span class="film-meta">監督：門田樹 ／ 8分</span></li>
+        <li><span class="film-title">エッセル坂を越えて</span><span class="film-meta">監督：西端実歩 ／ 25分</span></li>
+        <li><span class="film-title">探す未来</span><span class="film-meta">監督：なかやま　えりか ／ 20分</span></li>
+      </ol>
+    </div>
+    <div class="film-block">
+      <h3>後半（55分）</h3>
+      <ol>
+        <li><span class="film-title">出前少女タンポポ</span><span class="film-meta">監督：鬼村悠希 ／ 25分</span></li>
+        <li><span class="film-title">専属美容師</span><span class="film-meta">監督：難波弘二・鴨頭圭佑・軽澤杏乃（共同監督） ／ 8分</span></li>
+        <li><span class="film-title">最後の生活</span><span class="film-meta">監督：渡邉高章 ／ 22分</span></li>
+      </ol>
+    </div>
     <div class="program-status">
-      <div class="program-status-label">ANNOUNCING IN EARLY NOVEMBER 2026</div>
-      <h2>作品応募受付終了。<br>上映作品を選考中です。</h2>
-      <p>第2回の作品応募受付は終了しました。たくさんのご応募、ありがとうございました。上映作品は現在選考中で、<strong>11月上旬に発表予定</strong>です。</p>
-      
+      <div class="program-status-label">TICKETS</div>
       <p class="program-status-sub">大人3,000円・学生2,000円 ／ 当日現金払い</p>
       <a href="https://yolo-tickets.vercel.app/yolo-ff-20261212/reserve" class="btn btn-primary">来場予約をする</a>
+    </div>
+
+    <h2 class="section-heading" id="selected-works">入選</h2>
+    <p class="section-lead">当日の上映はありませんが、審査で評価された4作品を入選作品としてご紹介します。掲載は受付番号順です。</p>
+    <div class="film-block">
+      <ul>
+        <li><span class="film-title">紫が見える</span><span class="film-meta">監督：山田純 ／ 22分</span></li>
+        <li><span class="film-title">ちくわっちゃ！</span><span class="film-meta">監督：三坂 知絵子 ／ 25分</span></li>
+        <li><span class="film-title">味。</span><span class="film-meta">監督：岩本崇穂 ／ 8分</span></li>
+        <li><span class="film-title">消えない光</span><span class="film-meta">監督：江口 寛武 ／ 25分</span></li>
+      </ul>
     </div>
 
     <h2 class="section-heading">2つの部門</h2>
@@ -187,7 +253,7 @@
 
     <h2 class="section-heading">当日の上映について</h2>
     <div class="info-block">
-      <p>作品の尺によって本数は変わりますが、おおよそ5〜8本を予定しています。全作品の上映後、登壇した監督によるクロストークと授賞式を行います。当日の進行は<a href="schedule.html">タイムテーブル</a>をご覧ください。</p>
+      <p>上映は全7作品、合計120分です。全作品の上映後、登壇した監督によるクロストークと授賞式を行います。当日の進行は<a href="schedule.html">タイムテーブル</a>をご覧ください。</p>
     </div>
     <div class="info-block">
       <h3>第1回（2025年）の記録</h3>
