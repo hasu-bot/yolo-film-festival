@@ -11,3 +11,25 @@
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
 :root{--hero-display:clamp(40px,5.2vw,72px);--hero-leading:1.6;--nav-size:12px;--hero-mobile:clamp(32px,9vw,46px);--hero-gutter:clamp(24px,5vw,60px)}
+
+/* 2026 program gallery — isolated tokens, shared by the program and home preview. */
+:root {
+  --program-white: #fffdf8;
+  --program-photo-bg: #e8e0d2;
+  --program-space-xs: 8px;
+  --program-space-sm: 16px;
+  --program-space-md: 24px;
+  --program-space-lg: 40px;
+  --program-space-xl: 64px;
+  --program-section-space: clamp(64px, 8vw, 104px);
+  --program-row-space: clamp(32px, 5vw, 64px);
+  --program-gutter: clamp(20px, 5vw, 64px);
+  --program-width: 1120px;
+  --program-title-size: clamp(32px, 4.5vw, 52px);
+  --program-section-size: clamp(26px, 3vw, 36px);
+  --program-film-size: clamp(23px, 2.5vw, 30px);
+  --program-text-size: 14px;
+  --program-small-size: 12px;
+  --program-label-size: 11px;
+  --program-leading: 2;
+}

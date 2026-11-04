@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Josefin+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@300;400&family=Shippori+Mincho+B1:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tokens.css" />
   <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="assets/program-preview.css" />
   <style>
     /* 01 Concept: 画像なし・中央寄せの単一カラム表示 */
     .section-grid--solo{grid-template-columns:1fr;justify-items:center;text-align:center}
@@ -27,10 +28,6 @@
     .section-grid--solo .section-copy p:not(.chapter):not(.section-kicker){margin-left:auto;margin-right:auto}
     .section-grid--solo .keyword-row{margin-left:auto;margin-right:auto;max-width:680px}
 
-    /* 02 Program: 作品募集中の Coming Soon 表示 */
-    .coming-soon{max-width:640px;margin:0 auto;text-align:center}
-    .coming-soon p{color:rgba(246,237,216,.82);margin:0 0 30px;line-height:2;font-size:15px}
-    .coming-soon .button{width:auto;display:inline-flex;padding:14px 36px}
   </style>
   <meta name="google-site-verification" content="7he0VVTEDO85Pbl_M7TtZ8FH4aKwiqdkvu4j-QHQOwU" />
   <script src="assets/analytics.js"></script>
@@ -170,10 +167,13 @@
         <p class="section-kicker">Program — Official Selection</p>
         <h2>上映作品が決定しました。</h2>
       </div>
-      <div class="coming-soon" data-reveal>
-        <p>たくさんのご応募、ありがとうございました。上映作品7本と入選4作品は、<a href="program.html">上映プログラム</a>でご覧いただけます。</p>
-        
+      <p class="program-preview-lead">それぞれのまちで生まれた、7本の物語。<br>作品の風景とともに、上映ラインナップをご紹介します。</p>
+      <div class="program-preview-grid">
+        <a class="program-preview-item" href="program.html#film-049"><img src="assets/program-2026/049.webp" alt="『探す未来』の場面写真" width="1440" height="613" loading="lazy"><span>前半 ／ 20分</span><h3>探す未来</h3><p>監督：なかやま　えりか</p></a>
+        <a class="program-preview-item" href="program.html#film-013"><img src="assets/program-2026/013.webp" alt="『出前少女タンポポ』の場面写真" width="1200" height="800" loading="lazy"><span>後半 ／ 25分</span><h3>出前少女タンポポ</h3><p>監督：鬼村悠希</p></a>
+        <a class="program-preview-item" href="program.html#film-008"><img src="assets/program-2026/008.webp" alt="『最後の生活』の場面写真" width="1440" height="810" loading="lazy"><span>後半 ／ 22分</span><h3>最後の生活</h3><p>監督：渡邉高章</p></a>
       </div>
+      <a class="program-preview-more" href="program.html">上映7作品・入選4作品をすべて見る <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="section jury" id="jury" aria-labelledby="jury-title">

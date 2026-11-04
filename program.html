@@ -15,148 +15,12 @@
   <link rel="canonical" href="https://yolo-film-festival.vercel.app/program.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    .program-status {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 56px 32px;
-      text-align: center;
-      margin-top: 32px;
-    }
-    .program-status-label {
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      color: var(--red);
-      margin-bottom: 18px;
-    }
-    .program-status h2 {
-      font-family: var(--serif);
-      font-size: clamp(22px, 4vw, 30px);
-      font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-    .program-status p {
-      font-size: 14px;
-      color: var(--ink-mid);
-      line-height: 2;
-      max-width: 560px;
-      margin: 0 auto 28px;
-    }
-    .program-status-sub {
-      font-size: 12px;
-      color: var(--ink-light);
-      margin: 20px auto 0;
-      letter-spacing: 0.04em;
-    }
-
-    .section-lead {
-      font-size: 14px;
-      color: var(--ink-mid);
-      margin-top: 8px;
-    }
-    .film-block {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 24px 26px;
-      margin-top: 20px;
-    }
-    .film-block h3 {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .film-block ol, .film-block ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .film-block li {
-      border-top: 1px solid var(--border);
-      padding: 12px 0;
-    }
-    .film-title {
-      display: block;
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 700;
-    }
-    .film-meta {
-      display: block;
-      font-size: 13px;
-      color: var(--ink-mid);
-    }
-
-    .section-heading {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 48px;
-      margin-bottom: 4px;
-    }
-
-    .dept-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .dept-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 26px 24px;
-    }
-    .dept-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 4px 10px;
-      border-radius: 2px;
-      background: var(--navy);
-      color: white;
-      margin-bottom: 14px;
-    }
-    .dept-tag.ai { background: var(--red); }
-    .dept-card h3 {
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .dept-card p {
-      font-size: 13px;
-      color: var(--ink-mid);
-      line-height: 1.95;
-    }
-
-    .info-block {
-      background: var(--ivory-dark);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 24px 26px;
-      margin-top: 20px;
-    }
-    .info-block h3 {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .info-block p {
-      font-size: 13px;
-      color: var(--ink-mid);
-      line-height: 1.95;
-    }
-  </style>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="assets/program.css">
   <meta name="google-site-verification" content="7he0VVTEDO85Pbl_M7TtZ8FH4aKwiqdkvu4j-QHQOwU" />
   <script src="assets/analytics.js"></script>
 </head>
-<body>
+<body class="program-page">
 <a class="skip-link" href="#main">本文へ移動</a>
 
 <div class="film-strip">
@@ -192,85 +56,103 @@
 </header>
 
 <main id="main">
-<div class="page-hero">
-  <div class="page-hero-label">Program</div>
-  <h1>上映プログラム</h1>
-  <p>第2回 / 2026年12月12日（土）17:30受付開始・18:00開演 ／ Denkikan 3階</p>
-</div>
-
-<section>
-  <div class="section-inner" style="max-width:820px">
-
-    <h2 class="section-heading">上映作品</h2>
-    <p class="section-lead">応募作品の中から、上映作品7本が決定しました。上映順に掲載しています。</p>
-    <div class="film-block">
-      <h3>前半（65分）</h3>
-      <ol>
-        <li><span class="film-title">STILL HERE</span><span class="film-meta">監督：谷川ケン ／ 12分</span></li>
-        <li><span class="film-title">ウチの宇宙は三角形</span><span class="film-meta">監督：門田樹 ／ 8分</span></li>
-        <li><span class="film-title">エッセル坂を越えて</span><span class="film-meta">監督：西端実歩 ／ 25分</span></li>
-        <li><span class="film-title">探す未来</span><span class="film-meta">監督：なかやま　えりか ／ 20分</span></li>
-      </ol>
-    </div>
-    <div class="film-block">
-      <h3>後半（55分）</h3>
-      <ol>
-        <li><span class="film-title">出前少女タンポポ</span><span class="film-meta">監督：鬼村悠希 ／ 25分</span></li>
-        <li><span class="film-title">専属美容師</span><span class="film-meta">監督：難波弘二・鴨頭圭佑・軽澤杏乃（共同監督） ／ 8分</span></li>
-        <li><span class="film-title">最後の生活</span><span class="film-meta">監督：渡邉高章 ／ 22分</span></li>
-      </ol>
-    </div>
-    <div class="program-status">
-      <div class="program-status-label">TICKETS</div>
-      <p class="program-status-sub">大人3,000円・学生2,000円 ／ 当日現金払い</p>
-      <a href="https://yolo-tickets.vercel.app/yolo-ff-20261212/reserve" class="btn btn-primary">来場予約をする</a>
-    </div>
-
-    <h2 class="section-heading" id="selected-works">入選</h2>
-    <p class="section-lead">当日の上映はありませんが、審査で評価された4作品を入選作品としてご紹介します。掲載は受付番号順です。</p>
-    <div class="film-block">
-      <ul>
-        <li><span class="film-title">紫が見える</span><span class="film-meta">監督：山田純 ／ 22分</span></li>
-        <li><span class="film-title">ちくわっちゃ！</span><span class="film-meta">監督：三坂 知絵子 ／ 25分</span></li>
-        <li><span class="film-title">味。</span><span class="film-meta">監督：岩本崇穂 ／ 8分</span></li>
-        <li><span class="film-title">消えない光</span><span class="film-meta">監督：江口 寛武 ／ 25分</span></li>
-      </ul>
-    </div>
-
-    <h2 class="section-heading">2つの部門</h2>
-    <div class="dept-grid">
-      <div class="dept-card">
-        <span class="dept-tag">実写部門</span>
-        <h3>実写部門</h3>
-        <p>カメラで撮影した実写の短編映画。ドラマ・ドキュメンタリー・実験映像など、形式は問いません。舞台は、あなたのまち。</p>
-      </div>
-      <div class="dept-card">
-        <span class="dept-tag ai">AI部門</span>
-        <h3>AI部門</h3>
-        <p>本編の映像の半分以上を生成AIでつくった作品。生成AIによる表現を扱います。審査の基準は実写部門と同じで、「物語」と「まちらしさ」を見ます。</p>
-      </div>
-    </div>
-
-    <h2 class="section-heading">当日の上映について</h2>
-    <div class="info-block">
-      <p>上映は全7作品、合計120分です。全作品の上映後、登壇した監督によるクロストークと授賞式を行います。当日の進行は<a href="schedule.html">タイムテーブル</a>をご覧ください。</p>
-    </div>
-    <div class="info-block">
-      <h3>第1回（2025年）の記録</h3>
-      <p>2025年9月23日、Denkikan 3F にて第1回を開催しました。当日の様子は<a href="archive.html">過去の開催</a>でご覧いただけます。</p>
-    </div>
-
-  </div>
-</section>
-
-<section style="background:var(--ivory-dark);padding:40px 20px">
-  <div class="section-inner" style="text-align:center">
-    <h3 style="font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:16px">タイムテーブルも確認する</h3>
-    <p style="font-size:14px;color:var(--ink-light);margin-bottom:24px">全上映・トークの詳細スケジュールはこちら</p>
-    <a href="schedule.html" class="btn btn-primary">タイムテーブルを見る</a>
-  </div>
-</section>
-
+<header class="program-hero"><div class="program-container"><div class="program-hero-copy">
+ <p class="program-kicker">PROGRAM / 2ND EDITION 2026</p><h1>上映プログラム</h1>
+ <p class="program-intro">まちの数だけ、物語がある。<br>7本の短編映画を、<br>熊本のスクリーンで。</p>
+ <p class="program-date">2026年12月12日（土）<br class="mobile-break"> 17:30受付開始・18:00開演 ／ Denkikan 3階</p>
+ <nav class="program-jump" aria-label="プログラム内の移動"><a href="#first-half">前半 4作品 <span aria-hidden="true">↓</span></a><a href="#second-half">後半 3作品 <span aria-hidden="true">↓</span></a><a href="#selected-works">入選 4作品 <span aria-hidden="true">↓</span></a></nav>
+</div><div class="program-hero-frames" aria-label="上映作品の風景">
+ <a class="program-hero-frame program-hero-frame--wide" href="#film-049"><img src="assets/program-2026/049.webp" alt="『探す未来』の場面写真" width="1440" height="613" fetchpriority="high"><span>探す未来</span></a>
+ <a class="program-hero-frame" href="#film-013"><img src="assets/program-2026/013.webp" alt="『出前少女タンポポ』の場面写真" width="1200" height="800"><span>出前少女タンポポ</span></a>
+ <a class="program-hero-frame" href="#film-008"><img src="assets/program-2026/008.webp" alt="『最後の生活』の場面写真" width="1440" height="810"><span>最後の生活</span></a>
+ </div></div></header>
+<section class="program-lineup" aria-labelledby="screening-title"><div class="program-container">
+ <div class="program-section-head"><div><p class="program-kicker">OFFICIAL SELECTION</p><h2 id="screening-title">上映作品</h2></div><p>7作品 ／ 合計120分</p></div>
+ <p class="program-lead">応募作品の中から、上映作品7本が決定しました。上映順に掲載しています。</p>
+ <section class="program-block" id="first-half" aria-labelledby="first-title"><div class="program-block-head"><h3 id="first-title">前半</h3><p>4作品 ／ 65分</p></div>
+ <ol class="film-list"><li><article class="film-feature" id="film-011" aria-labelledby="film-title-011">
+ <figure class="film-visual film-visual--poster"><img src="assets/program-2026/011.webp" alt="『STILL HERE』のポスター" width="1020" height="1440" loading="lazy" decoding="async"><figcaption>POSTER — STILL HERE</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>01</span> 福岡県・福岡市天神</p><h4 id="film-title-011">STILL HERE</h4>
+ <p class="film-byline">監督：谷川ケン<span>実写 ／ 12分</span></p>
+ <p class="film-synopsis">この街は、上から見ないと存在しない。<br>都市再開発が進む大都市の中心、歴史ある商店街の“上”に取り残された長屋。そこに住む最後の若者三人は、「まだ、ここにいる」ことを証明するため、SNSで街を発信する。やがて彼らは、思いもよらない選択を迫られる。<br>守ることは、歩みを止めることなのか？<br>今年取り壊される福岡・天神「新天町」をモデルに描くシニカル・コメディ。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>20代前半、初めて手がけたTVCMが「新天町」でした。30年以上を経て、映像仕事の原点ともいえるこの場所が再開発で姿を消すと知り、その風景と空気を映像に残したいという思いから『STILL HERE』を制作しました。</p></details><a class="film-trailer" href="https://youtu.be/Dn_WcSDQ1MA" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li><li><article class="film-feature" id="film-036" aria-labelledby="film-title-036">
+ <div class="film-visual film-visual--pending" aria-label="ウチの宇宙は三角形の作品写真は準備中"><span class="film-visual-label">YOUR TOWN FILM FESTIVAL</span><p>ウチの宇宙は三角形</p><span class="film-visual-note">作品写真は準備中です</span></div>
+ <div class="film-copy"><p class="film-eyebrow"><span>02</span> 宮崎県・延岡市</p><h4 id="film-title-036">ウチの宇宙は三角形</h4>
+ <p class="film-byline">監督：門田樹<span>実写 ／ 8分</span></p>
+ <p class="film-synopsis">うちのお母さんは「あと2週間で世界が滅亡する」という。でも教科書にはそんなことは書かれていない。長谷川先生も「そんなことはない」という。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>宮崎県延岡市で生活しながら映画を撮るプロジェクトから生まれた作品です。出演する二人も延岡で暮らす、俳優ではない本当の親子。まちで出会った人々と風景から生まれた映画です。</p></details></div>
+ </article></li><li><article class="film-feature" id="film-015" aria-labelledby="film-title-015">
+ <div class="film-visual film-visual--pending" aria-label="エッセル坂を越えての作品写真は準備中"><span class="film-visual-label">YOUR TOWN FILM FESTIVAL</span><p>エッセル坂を越えて</p><span class="film-visual-note">作品写真は準備中です</span></div>
+ <div class="film-copy"><p class="film-eyebrow"><span>03</span> 福井県・坂井市三国町</p><h4 id="film-title-015">エッセル坂を越えて</h4>
+ <p class="film-byline">監督：西端実歩<span>実写 ／ 25分</span></p>
+ <p class="film-synopsis">福井県三国町で暮らす16歳の少女・内田翠。母の暮らすフランスへの移住を夏休みの終わりに控え、故郷への愛着と新たな生活への不安の間で揺れ動いていた。<br>翠は町の美しい風景や思い出をカメラに収めながら、三国に残る船箪笥職人の父・達治と、残された時間を過ごしていく。<br>故郷を離れる娘と、娘を送り出す父。それぞれが別れへの寂しさを抱えながら、自分自身と向き合い、新たな一歩を踏み出していく、夏の終わりの物語</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>本作の舞台は、私の故郷である福井県坂井市三国町です。美しい港町の風景や伝統工芸の船箪笥を通して、故郷を離れる少女と残る父の想い、そして私自身が暮らしていた頃には気づけなかった、身近にあった故郷の美しさを描きました。</p></details><a class="film-trailer" href="https://youtu.be/ypy1WPFJ2ho?si=EvksbxCUVZjIVEX7" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li><li><article class="film-feature" id="film-049" aria-labelledby="film-title-049">
+ <figure class="film-visual"><img src="assets/program-2026/049.webp" alt="『探す未来』の場面写真" width="1440" height="613" loading="lazy" decoding="async"><figcaption>STILL — 探す未来</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>04</span> 東京都・月島</p><h4 id="film-title-049">探す未来</h4>
+ <p class="film-byline">監督：なかやま　えりか<span>実写 ／ 20分</span></p>
+ <p class="film-synopsis">都市再開発の計画を前に、さまざまな意見を持つ住人たち。主人公・未来(17)は、身の回りで起きた悩みを誰にも打ち明けられずにいた。街の将来を見つめる、ささやかな物語。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>日米の垣根を越え交流を続けてきた月島の住民たちの熱い想いから生まれた映画です。タワマン建設による再開発は、一体誰の未来を豊かにするのか。月島から日本全国へ通じるグローカルな問いを、世代と国境を超えた視点で描いています。</p></details><a class="film-trailer" href="https://youtu.be/chMVxXcay4k" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li></ol></section>
+ <section class="program-block" id="second-half" aria-labelledby="second-title"><div class="program-block-head"><h3 id="second-title">後半</h3><p>3作品 ／ 55分</p></div>
+ <ol class="film-list" start="5"><li><article class="film-feature" id="film-013" aria-labelledby="film-title-013">
+ <figure class="film-visual"><img src="assets/program-2026/013.webp" alt="『出前少女タンポポ』の場面写真" width="1200" height="800" loading="lazy" decoding="async"><figcaption>STILL — 出前少女タンポポ</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>05</span> 兵庫県・神戸市長田区</p><h4 id="film-title-013">出前少女タンポポ</h4>
+ <p class="film-byline">監督：鬼村悠希<span>実写 ／ 25分</span></p>
+ <p class="film-synopsis">父のラーメン店を手伝う少女タンポポ(12才)は、出前先のダンススクールに心惹かれ内緒で通い始める。小さなお店しか知らなかった少女が外の世界に踏み出す成長を描いた下町ミュージカル映画</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>神戸市長田区の下町を舞台に撮影しました。下町のラーメン店を舞台に、下町で暮らす女の子を主役にした「下町ミュージカル映画」に挑戦しました。地域の商店街、飲食店、子どもたちと協働して制作しました。子どもから大人まで楽しめる映画になっています。楽しんでいただけましたら幸いです。</p></details><a class="film-trailer" href="https://youtu.be/lKYeLsZQ7jg" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li><li><article class="film-feature" id="film-016" aria-labelledby="film-title-016">
+ <figure class="film-visual"><img src="assets/program-2026/016.webp" alt="『専属美容師』の場面写真" width="1440" height="866" loading="lazy" decoding="async"><figcaption>STILL — 専属美容師</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>06</span> 愛媛県</p><h4 id="film-title-016">専属美容師</h4>
+ <p class="film-byline">監督：難波弘二・鴨頭圭佑・軽澤杏乃（共同監督）<span>実写 ／ 8分</span></p>
+ <p class="film-synopsis">数年ぶりに愛媛の実家に帰省した香那(30)は、美容師の仕事を辞めるかどうか悩んでいた。無口な父(56)の髪を切りながらその葛藤を伝えるが、父の反応はすこぶる鈍い。その後、台所で母(56)の切った柿を届けるために近所の公園へ向かった香那は、父の意外な姿を目撃する―。<br>監督の実際の姉・父・母・祖母がメインキャストをつとめる、不器用な父と娘の関係を描いたヒューマンドラマ。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>初めて監督を務めるにあたり「実感を伴った映画」にしたいという思いから、地元の愛媛で撮影し、愛媛で暮らす家族が出演しています。私にとってかけがえのない「まち」と「家族」の穏やかな空気感と温かさを表現しようとしました。</p></details><a class="film-trailer" href="https://www.youtube.com/watch?v=_7uUSKENsrk" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li><li><article class="film-feature" id="film-008" aria-labelledby="film-title-008">
+ <figure class="film-visual"><img src="assets/program-2026/008.webp" alt="『最後の生活』の場面写真" width="1440" height="1065" loading="lazy" decoding="async"><figcaption>STILL — 最後の生活</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>07</span> 東京都・八王子市</p><h4 id="film-title-008">最後の生活</h4>
+ <p class="film-byline">監督：渡邉高章<span>実写 ／ 22分</span></p>
+ <p class="film-synopsis">父を亡くしてから学校へ行かなくなった小学生の春陽は、母の秋と二人暮らし。秋は自身の仕事を続けるために、小説家の兄を呼び春陽の面倒を見てもらうことにする。春陽と「おじさん」の心の交流を描いたある夏の物語。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>東京・八王子市を舞台に、父を亡くし学校へ行けなくなった少年と、小説家の叔父とのひと夏の交流を描いた物語です。八王子の街や風景の中で、家族や人とのつながり、うまくいかない日々も含めて、その「生活」を大切に描きました。</p></details><a class="film-trailer" href="https://youtu.be/Ypdy060cZ3o" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li></ol></section>
+ <p class="program-image-credit">作品画像・あらすじ・まちとのつながり：各作品の応募・提供資料より</p>
+ <aside class="program-tickets" aria-labelledby="ticket-title"><div><p class="program-kicker">AT THE CINEMA</p><h2 id="ticket-title">この物語を、映画館で。</h2><p>大人3,000円・学生2,000円 ／ 当日現金払い</p></div><a href="https://yolo-tickets.vercel.app/yolo-ff-20261212/reserve" class="btn btn-primary">来場予約をする <span aria-hidden="true">↗</span></a></aside>
+</div></section>
+<section class="program-selected" id="selected-works" aria-labelledby="selected-title"><div class="program-container">
+ <div class="program-section-head"><div><p class="program-kicker">HONORABLE MENTIONS</p><h2 id="selected-title">入選作品</h2></div><p>4作品</p></div>
+ <p class="program-lead">当日の上映はありませんが、審査で評価された4作品を入選作品としてご紹介します。掲載は受付番号順です。</p>
+ <ul class="film-list film-list--selected"><li><article class="film-feature" id="film-006" aria-labelledby="film-title-006">
+ <figure class="film-visual"><img src="assets/program-2026/006.webp" alt="『紫が見える』の場面写真" width="1440" height="810" loading="lazy" decoding="async"><figcaption>STILL — 紫が見える</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>入選</span> 神奈川県・横浜市</p><h4 id="film-title-006">紫が見える</h4>
+ <p class="film-byline">監督：山田純<span>実写 ／ 22分</span></p>
+ <p class="film-synopsis">高校生の絢は、亡き親友・紫織になりすまし、認知症の祖母を訪ねる「嘘」を続けていた。それは紫織の父に頼まれての行為でだったが、不安定な母子家庭で孤独を抱える彼女にとって、偽りの面会は心安らげる場と化していた。祖母の怪我を機に面会は途絶えるものの、形見のネックレスを返しに訪れた絢は、寝たきりとなった祖母の最期の意志に触れる。想いを引き継ぐ決心をした彼女は、バイト先の同僚から放たれたある一言に微笑む。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>仕事で通った横浜、本が好きで通った丸善 横浜みなとみらい店、ここをロケ地にできて幸せでした。</p></details></div>
+ </article></li><li><article class="film-feature" id="film-020" aria-labelledby="film-title-020">
+ <figure class="film-visual"><img src="assets/program-2026/020.webp" alt="『ちくわっちゃ！』の場面写真" width="1440" height="601" loading="lazy" decoding="async"><figcaption>STILL — ちくわっちゃ！</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>入選</span> 山口県・下関市</p><h4 id="film-title-020">ちくわっちゃ！</h4>
+ <p class="film-byline">監督：三坂 知絵子<span>実写 ／ 25分</span></p>
+ <p class="film-synopsis">責任感が強く、夢を追うことへの葛藤がある兄・カイ。感情のコントロールがうまくできず、こだわりの強い弟・ヒロ。東京で暮らす２人は、家の事情で、下関の叔母の家で夏休みを過ごすことに。豊かな自然の中での経験を通じ、多様な価値観を知る２人。ある日、カイは浜辺で歌う少女キノと出会う。キノの祖父シゲルが作る「ちくわ」を食べ、その美味しさに感動したカイは、ちくわの魅力を伝える配信番組作りに挑戦する。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>ロケ地である山口県下関市は、私自身の故郷です。子どもたちのイキイキとした多面的な魅力を伝えたいと思い、この映画を製作しました。<br>下関の美しい風景とともに、子どもたちのひと夏の挑戦の物語を楽しんでいただけたら嬉しいです！</p></details><a class="film-trailer" href="https://www.youtube.com/watch?v=s333DRF5-Ew" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li><li><article class="film-feature" id="film-051" aria-labelledby="film-title-051">
+ <figure class="film-visual"><img src="assets/program-2026/051.webp" alt="『味。』の場面写真" width="1440" height="540" loading="lazy" decoding="async"><figcaption>STILL — 味。</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>入選</span> 静岡県・裾野市</p><h4 id="film-title-051">味。</h4>
+ <p class="film-byline">監督：岩本崇穂<span>実写 ／ 8分</span></p>
+ <p class="film-synopsis">孤独を抱える中学生タケルは、学校で開かれている「朝の食事会」と味噌汁やおにぎりの温もりに触れ、少しずつ心を開いていく。<br>食卓がつなぐ、小さな友情の物語。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>静岡県裾野市の劇団での子どもたちと作り上げた映画です。<br>裾野市の綺麗な景色、学校、そこで実際に暮らしている子どもちが出演しています。</p></details></div>
+ </article></li><li><article class="film-feature" id="film-060" aria-labelledby="film-title-060">
+ <figure class="film-visual"><img src="assets/program-2026/060.webp" alt="『消えない光』の場面写真" width="1440" height="810" loading="lazy" decoding="async"><figcaption>STILL — 消えない光</figcaption></figure>
+ <div class="film-copy"><p class="film-eyebrow"><span>入選</span> 佐賀県・佐賀市富士町</p><h4 id="film-title-060">消えない光</h4>
+ <p class="film-byline">監督：江口 寛武<span>実写 ／ 25分</span></p>
+ <p class="film-synopsis">「妹が怖い」事件を起こした妹・莉子が、保護観察のもと姉・明香里の家に戻ってくる。家族なのに、目の前にいる妹が怖い。過去に起きた出来事と、離れていた時間が、二人の間に距離を作っていた。妹が戻った事で、周囲からの視線が変わっていく中、二人は同じ家で食卓を囲み、同じ時間を過ごしていく。そして、台風の夜を迎えた二人の間に、小さな変化が訪れる。佐賀市富士町の集落を舞台に、姉妹の距離の変化を静かに描いた作品。</p>
+ <details class="film-town"><summary>この作品と、まちのつながり</summary><p>姉妹が向き合う古い家や、集落を包む静かな空気も、この物語にとって欠かせない存在です。観光地としての佐賀ではなく、自分の町にある集落で、家族の物語が生まれているという視点から、この場所を舞台にしました。</p></details><a class="film-trailer" href="https://youtu.be/JsXmBAtg9yU" target="_blank" rel="noopener">予告編を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブで開きます）</span></a></div>
+ </article></li></ul>
+</div></section>
+<section class="program-information" aria-labelledby="day-title"><div class="program-container">
+ <p class="program-kicker">INFORMATION</p><h2 id="day-title">当日の上映について</h2><p>上映は全7作品、合計120分です。全作品の上映後、登壇した監督によるクロストークと授賞式を行います。当日の進行はタイムテーブルをご覧ください。</p>
+ <a class="program-text-link" href="schedule.html">タイムテーブルを見る <span aria-hidden="true">→</span></a>
+ <details class="program-departments"><summary>映画祭の2つの部門について</summary><div class="dept-grid"><div><h3>実写部門</h3><p>カメラで撮影した実写の短編映画。ドラマ・ドキュメンタリー・実験映像など、形式は問いません。舞台は、あなたのまち。</p></div><div><h3>AI部門</h3><p>本編の映像の半分以上を生成AIでつくった作品。生成AIによる表現を扱います。審査の基準は実写部門と同じで、「物語」と「まちらしさ」を見ます。</p></div></div></details>
+ <p class="program-archive">第1回（2025年）の記録は<a href="archive.html">過去の開催 <span aria-hidden="true">↗</span></a>をご覧ください。</p>
+</div></section>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
