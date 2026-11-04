@@ -27,9 +27,6 @@
 .film-visual--poster { display: flex; flex-direction: column; align-items: center; }
 .film-visual--poster img { width: auto; max-width: 100%; max-height: 450px; object-fit: contain; }
 .film-visual--poster figcaption { align-self: stretch; }
-.film-visual--pending { min-height: 260px; padding: var(--program-space-lg); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border); background: var(--ivory-dark); }
-.film-visual-label, .film-visual-note { font-size: var(--program-label-size); color: var(--ink-light); letter-spacing: .1em; }
-.film-visual--pending > p { font-family: var(--serif); font-size: var(--program-film-size); margin-block: var(--program-space-lg); }
 .film-eyebrow { display: flex; gap: var(--program-space-sm); align-items: baseline; font-size: var(--program-small-size); color: var(--ink-light); line-height: 1.7; }
 .film-eyebrow span { color: var(--red-dark); font-family: var(--label); letter-spacing: .08em; }
 .film-copy h4 { font-family: var(--serif); font-size: var(--program-film-size); line-height: 1.6; font-weight: 600; margin-top: var(--program-space-xs); overflow-wrap: anywhere; }
