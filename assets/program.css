@@ -6,9 +6,6 @@
 .program-intro { font-family: var(--serif); font-size: var(--program-film-size); margin-top: var(--program-space-lg); line-height: 1.9; }
 .program-date { font-size: var(--program-small-size); color: var(--ink-light); margin-top: var(--program-space-md); line-height: var(--program-leading); }
 .mobile-break { display: none; }
-.program-jump { display: flex; flex-wrap: wrap; gap: var(--program-space-sm); margin-top: var(--program-space-lg); }
-.program-jump a { display: flex; justify-content: space-between; align-items: center; gap: var(--program-space-lg); border: 1px solid var(--border); padding: var(--program-space-xs) var(--program-space-sm); font-size: var(--program-small-size); }
-.program-jump a:hover { background: var(--program-white); }
 .program-page .program-lineup, .program-page .program-selected, .program-page .program-information { padding: var(--program-section-space) var(--program-gutter); }
 .program-section-head { display: flex; align-items: end; justify-content: space-between; gap: var(--program-space-md); }
 .program-section-head h2, .program-information h2 { font-family: var(--serif); font-size: var(--program-section-size); font-weight: 600; margin-top: var(--program-space-xs); }
@@ -61,21 +58,43 @@
  .program-section-head > p { margin-top: var(--program-space-xs); }
  .film-list--selected { grid-template-columns: 1fr; }
  .mobile-break { display: block; }
- .program-jump { gap: var(--program-space-xs); }
- .program-jump a { gap: var(--program-space-sm); }
  .program-tickets { padding: var(--program-space-md); }
  .program-tickets .btn { width: 100%; }
  .dept-grid { grid-template-columns: 1fr; gap: var(--program-space-md); }
 }
-.program-hero > .program-container { display: grid; grid-template-columns: 1fr 1fr; gap: var(--program-space-xl); align-items: center; }
-.program-hero-frames { display: grid; grid-template-columns: 1fr 1fr; gap: var(--program-space-sm); align-items: start; }
-.program-hero-frame { display: block; min-width: 0; }
-.program-hero-frame--wide { grid-column: 1 / -1; }
-.program-hero-frame img { width: 100%; height: auto; }
-.program-hero-frame > span { display: block; font-size: var(--program-label-size); margin-top: var(--program-space-xs); color: var(--ink-light); }
-.program-hero-frame:hover > span { color: var(--red-dark); }
-@media (max-width: 1000px) { .program-hero > .program-container { grid-template-columns: 1fr; gap: var(--program-space-lg); } .program-hero-frames { max-width: 640px; } }
-@media (min-width:375px) and (max-width:760px) {
- .program-jump { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
- .program-jump a { gap: var(--program-space-xs); padding-inline: var(--program-space-xs); }
+/* Hero: the full lineup at a glance (all 7 films, screening order). */
+.program-page .program-hero { padding: var(--program-space-lg) var(--program-gutter); }
+.program-hero > .program-container { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: var(--program-space-md) var(--program-space-lg); }
+.program-hero-copy { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--program-space-sm) var(--program-space-lg); }
+.program-hero h1 { margin-top: var(--program-space-xs); line-height: 1.3; }
+.program-hero-meta { text-align: right; }
+.program-hero .program-date { margin-top: 0; }
+.program-hero .program-intro { font-size: var(--program-text-size); line-height: var(--program-leading); margin-top: 0; color: var(--ink-mid); }
+.program-index-head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: var(--program-space-xs); border-bottom: 1px solid var(--ink); }
+.program-index-head h2 { font-family: var(--serif); font-size: var(--program-text-size); font-weight: 600; letter-spacing: .12em; line-height: 1.6; }
+.program-index-head p { font-size: var(--program-label-size); color: var(--ink-light); line-height: 1.6; }
+.program-index-list { list-style: none; margin: 0; padding: 0; }
+.program-index-list > li { border-bottom: 1px solid var(--border); }
+.program-index-item { display: grid; grid-template-columns: var(--program-index-thumb) minmax(0,1fr); gap: var(--program-space-sm); align-items: center; padding-block: var(--program-index-row-pad); }
+.program-index-thumb { display: block; aspect-ratio: 16 / 9; background: var(--program-photo-bg); }
+.program-index-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.program-index-text { display: flex; flex-direction: column; min-width: 0; font-size: var(--program-label-size); color: var(--ink-light); line-height: 1.6; }
+.program-index-text strong { display: flex; gap: var(--program-space-xs); align-items: baseline; font-family: var(--serif); font-size: var(--program-index-title-size); font-weight: 600; color: var(--ink); line-height: 1.5; overflow-wrap: anywhere; }
+.program-index-no { font-family: var(--label); font-size: var(--program-label-size); letter-spacing: .08em; color: var(--red-dark); flex-shrink: 0; }
+.program-index-item:hover strong { color: var(--red-dark); }
+.program-index-selected { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--program-space-xs) var(--program-space-md); align-items: baseline; font-size: var(--program-small-size); color: var(--ink-light); line-height: var(--program-leading); }
+.program-index-selected a { display: inline-flex; gap: var(--program-space-sm); border-bottom: 1px solid var(--ink); color: var(--ink); }
+.program-index-selected a:hover { color: var(--red-dark); }
+@media (max-width: 1000px) { .program-hero-meta { text-align: left; } }
+@media (max-width: 760px) {
+ .program-page .program-hero { padding-block: var(--program-space-sm) var(--program-space-md); }
+ .program-hero > .program-container { grid-template-columns: 1fr; gap: var(--program-space-sm); }
+ .program-hero-copy { display: block; }
+ .program-hero .program-kicker, .program-hero .program-intro { display: none; }
+ .program-hero h1 { font-size: var(--program-section-size); margin-top: 0; }
+ .program-hero-meta { text-align: left; }
+ .program-hero .program-date { font-size: var(--program-label-size); line-height: 1.6; }
+ .program-index-item { grid-template-columns: var(--program-index-thumb-sm) minmax(0,1fr); gap: var(--program-space-xs) var(--program-space-sm); padding-block: var(--program-index-row-pad-sm); }
+ .program-index-text strong { font-size: var(--program-text-size); }
+ .program-index-text > span:last-child { display: none; }
 }
