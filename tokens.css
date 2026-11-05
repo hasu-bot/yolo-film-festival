@@ -32,4 +32,9 @@
   --program-small-size: 12px;
   --program-label-size: 11px;
   --program-leading: 2;
+  --program-index-title-size: 16px;
+  --program-index-thumb: 128px;
+  --program-index-thumb-sm: 72px;
+  --program-index-row-pad: 12px;
+  --program-index-row-pad-sm: 6px;
 }
