@@ -17,7 +17,7 @@
 | 作品 | サイト内ファイル | 応募・提供素材 |
 | --- | --- | --- |
 | STILL HERE | `assets/program-2026/011.webp` | `STILLHERE_flierA.jpg`、縦ポスター |
-| ウチの宇宙は三角形 | `assets/program-2026/036.webp` | 昨日の保存画像 `selected/YTFF2-036.jpg`（1280×720）。YouTubeサムネイル。前回の画像一覧で使用を確認済み |
+| ウチの宇宙は三角形 | `assets/program-2026/036.webp` | 2026-11-05 ユーザー指定の場面写真（2560×1440、河原の後ろ姿）。WebPは1440×810、トリミングなし。以前のYouTubeサムネイルから差し替え |
 | エッセル坂を越えて | `assets/program-2026/015.webp` | ユーザー指定 `main.00_02_12_09.静止画023.jpg`（1920×1080）。作品タイトル入り。WebPは1440×810、トリミングなし |
 | 探す未来 | `assets/program-2026/049.webp` | 提出Drive内 `1.jpg` |
 | 出前少女タンポポ | `assets/program-2026/013.webp` | 提出Drive内 `tampopo_001.jpg`。結果通知への返信でも素材の提供を確認 |
