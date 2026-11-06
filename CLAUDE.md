@@ -19,7 +19,7 @@
 
 ## デプロイ
 Vercel（`main` へのマージで自動公開）。
-正規URLは `https://yolo-film-festival.vercel.app/`。旧GitHub Pagesは2026年7月27日に停止済みで、再び有効化しない。
+正規URLは `https://festival.creativeyolo.com/`。旧GitHub Pagesは2026年7月27日に停止済みで、再び有効化しない。
 
 ## コミット規約
 Conventional Commits + 日本語本文（例: `feat: 応募ページを追加` / `design: ヒーローの余白調整`）

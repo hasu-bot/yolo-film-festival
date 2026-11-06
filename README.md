@@ -6,7 +6,7 @@
 第2回の賞はグランプリ30,000円（審査員による選出）と観客賞10,000円（来場者投票による選出）、賞金総額40,000円です。投票方法・投票時間は未確定です。
 
 第2回は2026年12月12日（土）、17:30受付開始・18:00開演。入場料は大人3,000円、学生2,000円（学生証提示必須）です。
-会場はDenkikan 3階。チケットは `yolo-tickets` で予約し、QR受付・当日現金払いとします。予約URLは `https://yolo-tickets.vercel.app/yolo-ff-20261212/reserve` です。上映作品は現在選考中で、11月上旬に発表予定です。
+会場はDenkikan 3階。チケットは `yolo-tickets` で予約し、QR受付・当日現金払いとします。予約URLは `https://tickets.creativeyolo.com/yolo-ff-20261212/reserve` です。上映作品は現在選考中で、11月上旬に発表予定です。
 
 **デザイン: 「上映前の、あの一瞬」＝暖色の光・感動トーン**（明朝・小さめ・余白・生成り＋琥珀＋朱赤）。
 意図の詳細は `docs/DESIGN_BRIEF.md` を参照。
@@ -38,7 +38,7 @@ docs/DESIGN_BRIEF.md  デザイン設計書（ハンドオフ仕様）
 **Vercel（`main` ブランチから自動デプロイ）**。push すると自動で再ビルド・反映される。
 ローカル確認は `npx http-server . -p 8080`。
 
-正規URLは `https://yolo-film-festival.vercel.app/`。
+正規URLは `https://festival.creativeyolo.com/`。
 旧GitHub Pagesは2026年7月27日に停止済み。サイト内の canonical・OGP・sitemap はVercelへ統一する。
 
 最終形態はスタンドアロン静的HTML想定。**この専用リポジトリで独立管理**します
