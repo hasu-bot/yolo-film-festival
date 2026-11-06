@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yolo-film-festival.vercel.app/sitemap.xml
+Sitemap: https://festival.creativeyolo.com/sitemap.xml
